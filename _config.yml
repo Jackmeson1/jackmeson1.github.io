@@ -41,6 +41,7 @@ defaults:
 # Locale settings
 timezone: Asia/Shanghai
 lang: en
+future: true
 
 # Syntax highlighting
 highlighter: rouge
