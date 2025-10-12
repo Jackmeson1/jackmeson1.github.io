@@ -1,0 +1,224 @@
+---
+layout: default
+---
+
+{%- comment -%}
+Resolve hero / featured / quick links / ctas / updates
+{%- endcomment -%}
+{% assign hero = page.hero | default: site.hero %}
+{% assign featured_identifiers = page.featured_posts | default: site.featured_posts %}
+{% assign featured_posts = '' | split: '' %}
+{% if featured_identifiers and featured_identifiers.size > 0 %}
+  {% for identifier in featured_identifiers %}
+    {% assign post_match = site.posts | where: 'slug', identifier | first %}
+    {% if post_match == nil %}
+      {% assign post_match = site.posts | where: 'path', identifier | first %}
+    {% endif %}
+    {% if post_match == nil %}
+      {% assign post_match = site.posts | where: 'id', identifier | first %}
+    {% endif %}
+    {% if post_match %}
+      {% assign featured_posts = featured_posts | push: post_match %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if featured_posts == empty %}
+  {% assign featured_posts = site.posts | slice: 0, 4 %}
+{% endif %}
+{% assign quick_links = page.quick_links | default: site.quick_links %}
+{% assign ctas = page.ctas | default: site.ctas %}
+{% assign updates = site.data.updates | default: empty %}
+{% if updates and updates.size > 0 %}
+  {% assign updates = updates | sort: 'date' | reverse %}
+{% endif %}
+
+{%- comment -%}
+Compute recent posts for “Latest publications”
+{%- endcomment -%}
+{% assign recent_posts_source = page.featured_posts | default: site.posts %}
+{% assign recent_posts = recent_posts_source | sort: 'date' | reverse %}
+
+<main class="ds-main u-bg-surface">
+  <!-- HERO -->
+  <section class="ds-section hero u-bg-gradient">
+    <div class="ds-container u-stack-xl">
+      <div class="hero__content u-stack-md">
+        {% if hero.tagline %}<p class="hero__kicker">{{ hero.tagline }}</p>{% endif %}
+        {% if hero.name %}
+          <h1 class="hero__title">{{ hero.name }}</h1>
+        {% else %}
+          <h1 class="hero__title">{{ site.title }}</h1>
+        {% endif %}
+        {% if hero.subtitle %}<p class="hero__subtitle">{{ hero.subtitle }}</p>{% endif %}
+        {% if hero.socials %}
+          <div class="hero__actions u-flex u-flex-wrap u-gap-sm">
+            {% for social in hero.socials %}
+              <a class="ds-button ds-button--ghost" href="{{ social.url }}" rel="noopener" target="_blank">{{ social.label }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if ctas and ctas.size > 0 %}
+        <div class="hero__ctas u-grid u-gap-md">
+          {% for block in ctas %}
+            <div class="ds-card ds-card--translucent u-stack-sm">
+              <h2 class="ds-card__title">{{ block.title }}</h2>
+              <p class="ds-card__body">{{ block.body }}</p>
+              {% if block.action and block.action.url and block.action.label %}
+                <a class="ds-button" href="{{ block.action.url }}">{{ block.action.label }}</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- SEARCH (from codex) -->
+  <section class="ds-section u-bg-page">
+    <div class="ds-container">
+      <div class="search-box surface-card u-flex u-items-center u-gap-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197M15.803 15.803A7.5 7.5 0 1 0 5 5a7.5 7.5 0 0 0 10.803 10.803Z" />
+        </svg>
+        <label class="sr-only" for="site-search">Search the knowledge base</label>
+        <input id="site-search" type="search" class="input" placeholder="Search insights, models, and case studies" data-search-input>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </section>
+
+  <!-- FEATURED (from main) -->
+  <section class="ds-section u-bg-page">
+    <div class="ds-container u-stack-lg">
+      <header class="ds-section__header u-stack-xxs">
+        <p class="ds-kicker">Spotlight</p>
+        <h2 class="ds-section__title">Featured research highlights</h2>
+        <p class="ds-section__subtitle">A cross-section of AI infrastructure, energy transition, and risk frameworks.</p>
+      </header>
+      <div class="ds-grid ds-grid--cards">
+        {% for post in featured_posts %}
+          <article class="ds-card ds-card--elevated u-stack-sm">
+            <div class="ds-card__badge">{% if post.tldr %}TL;DR{% elsif post.badge %}{{ post.badge }}{% else %}Featured{% endif %}</div>
+            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }} · {% if post.categories and post.categories.size > 0 %}{{ post.categories[0] | replace: '-', ' ' | capitalize }}{% else %}Research{% endif %}</p>
+            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.tldr %}
+              <p class="ds-card__body">{{ post.tldr }}</p>
+            {% elsif post.description %}
+              <p class="ds-card__body">{{ post.description }}</p>
+            {% else %}
+              <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 36 }}</p>
+            {% endif %}
+            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read the full analysis →</a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST (codex idea,用设计系统样式) -->
+  <section class="ds-section u-bg-surface">
+    <div class="ds-container u-stack-md">
+      <div class="u-flex u-items-center u-justify-between u-wrap u-gap-sm u-mb-sm">
+        <h2 class="ds-section__title">Latest publications</h2>
+        <a class="ds-button ds-button--ghost" href="{{ '/archive' | relative_url }}">View all</a>
+      </div>
+      <div class="ds-grid ds-grid--cards">
+        {%- for post in recent_posts limit:6 -%}
+          <article class="ds-card u-stack-sm">
+            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }}</p>
+            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read →</a>
+          </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS (optional, from codex) -->
+  {%- if page.tabs -%}
+  <section class="ds-section u-bg-surface">
+    <div class="ds-container">
+      {% include tabs.html tabs=page.tabs %}
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- TIMELINE: 优先 page.timeline，否则用 data.updates -->
+  {% if page.timeline %}
+    <section class="ds-section u-bg-page">
+      <div class="ds-container u-stack-lg">
+        <h2 class="ds-section__title">Trajectory</h2>
+        {% include timeline.html events=page.timeline %}
+      </div>
+    </section>
+  {% elsif updates and updates.size > 0 %}
+    <section class="ds-section u-bg-surface">
+      <div class="ds-container u-stack-lg">
+        <header class="ds-section__header u-stack-xxs">
+          <p class="ds-kicker">Field notes</p>
+          <h2 class="ds-section__title">Latest updates</h2>
+          <p class="ds-section__subtitle">Snapshots from recent projects, research sprints, and community work.</p>
+        </header>
+        <ol class="timeline u-stack-md">
+          {% for entry in updates %}
+            <li class="timeline__item u-stack-xxs">
+              <div class="timeline__meta">{{ entry.date | date: "%b %d, %Y" }}</div>
+              <h3 class="timeline__title">{{ entry.title }}</h3>
+              <p class="timeline__body">{{ entry.description }}</p>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- CALLOUTS (optional, from codex) -->
+  {%- if page.callouts -%}
+  <section class="ds-section u-bg-page">
+    <div class="ds-container ds-grid ds-grid--cards">
+      {%- for callout in page.callouts -%}
+        <article class="ds-card ds-card--inverse u-stack-sm">
+          <h3 class="ds-card__title">{{ callout.title }}</h3>
+          <div class="u-stack-xs u-text-muted">
+            {{ callout.body | markdownify }}
+          </div>
+          {%- if callout.link -%}
+            <a class="ds-button ds-button--ghost" href="{{ callout.link.url }}">{{ callout.link.label | default: 'Learn more' }}</a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+</main>
+
+<!-- Scripts (from codex) -->
+<script defer src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
+{%- if page.tabs -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab-target');
+        tabs.forEach((btn) => {
+          const isActive = btn === tab;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+        panels.forEach((panel) => {
+          const show = panel.id === target;
+          panel.classList.toggle('is-active', show);
+        });
+      });
+    });
+  });
+</script>
+{%- endif -%}
+

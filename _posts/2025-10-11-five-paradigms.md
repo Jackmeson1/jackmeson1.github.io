@@ -3,17 +3,34 @@ layout: post
 title: "The Five Paradigms: A Unified Framework for Strategic Decision-Making"
 date: 2025-10-11 12:00:00 +0800
 last_modified_at: 2025-10-11 12:00:00 +0800
-categories: [strategy, decision-making]
-tags: [framework, risk-management, portfolio-theory, systems-thinking, asia-pacific]
+categories: [systems, mindfulness]
+tags: [strategic-ops, antifragility, leadership-rituals, systems-thinking]
 author: Jackmeson
-description: "Deploy a five-layer operating system for resilient strategy across Asia-Pacific, North America, and global innovation hubs."
+description: Design a five-layer operating system that balances survival, growth, stakeholder stability, asymmetric bets, and rule-making for global leadership teams.
+image: /assets/images/posts/five-paradigms.svg
+lang: en
+featured: true
+tldr:
+  - "Five distinct paradigms help leaders juggle survival, growth, stability, convex bets, and meta-governance at once."
+  - "Each paradigm maps to clear KPIs so executives can brief teams without losing the multi-horizon narrative."
+  - "Regional context matters—deploy scenario drills tuned to Asia, North America, and emerging innovation hubs."
+key_takeaways:
+  - "MinMax safeguards against ruin while Kelly growth targets unlock compounding in volatile markets."
+  - "Mean Maximization and Convexity Speculation create a barbell between stakeholder trust and optionality capital."
+  - "Meta-Game governance lets operators shape rulesets, standards, and ecosystems to their advantage."
+faqs:
+  - question: "How often should leadership teams revisit the five paradigms?"
+    answer: "Run the checklist quarterly at minimum and before any major capital allocation or market entry decision to keep incentives aligned."
+  - question: "Can smaller teams apply this framework?"
+    answer: "Yes—start with lightweight metrics per paradigm and scale instrumentation as headcount and market complexity grow."
+  - question: "What signals that one paradigm is over-dominating?"
+    answer: "If meetings devolve into a single KPI set—like only CAGR or only risk dashboards—you need to rebalance resources across the remaining layers."
 redirect_from:
   - /strategy/decision-making/2025/10/12/five-paradigms.html
   - /Strategy/Decision-Making/2025/10/12/five-paradigms.html
 seo_title: "Five Paradigms Framework for Global Strategy Leaders"
 keywords: [strategic decision-making, five paradigms framework, asia pacific strategy, risk governance, antifragility]
 location: "Singapore | Hong Kong | San Francisco"
-lang: en
 ---
 
 > **Global leaders across Singapore, Hong Kong, and San Francisco are rebalancing playbooks to survive tail risks while compounding upside.** This article gives you a geographic-aware checklist to do the same.

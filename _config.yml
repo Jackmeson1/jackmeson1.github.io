@@ -1,13 +1,22 @@
 # Site metadata
-title: Financial Analysis Lab
-description: Deep Financial Research | AI & Industry Insights | Data-Driven Perspectives
+title: "Jiajun Liang’s Digital Garden"
+tagline: "Cultivating explorations across finance, travel, and lifelong learning."
+description: "Ideas, research notes, and travel logs from Jiajun Liang’s evolving digital garden."
 author:
-  name: Jackmeson
-  url: https://jackmeson1.github.io/about/
+  name: "Jiajun Liang"
+  url: https://jackmeson1.github.io/pages/about/
   email: jli785330@gmail.com
   same_as:
     - https://github.com/jackmeson1
     - https://www.linkedin.com/in/jiajun-liang-qa/
+contact:
+  email: jli785330@gmail.com
+  linkedin: https://www.linkedin.com/in/jiajun-liang-qa/
+  github: https://github.com/jackmeson1
+social:
+  github: https://github.com/jackmeson1
+  linkedin: https://www.linkedin.com/in/jiajun-liang-qa/
+  rss: https://jackmeson1.github.io/feed.xml
 email: jli785330@gmail.com
 baseurl: ""
 url: "https://jackmeson1.github.io"
@@ -26,13 +35,15 @@ permalink: /:categories/:year/:month/:day/:slug/
 # Navigation menu
 header_pages:
   - index.md
-  - pages/about.md
-  - pages/portfolio.md
-  - pages/travel.md
-  - pages/library.md
-  - pages/garden.md
-  - pages/contact.md
-  - archive.md
+- pages/about.md
+- pages/portfolio.md
+- pages/blog.md
+- pages/travel.md
+- pages/library.md
+- pages/garden.md
+- pages/contact.md
+- archive.md
+
 
 # Pagination settings
 paginate: 10
@@ -46,10 +57,66 @@ github_username: jackmeson1
 # Default post settings
 defaults:
   - scope:
+      path: "index.md"
+    values:
+      layout: personal-home
+      categories: ["home"]
+      tags: ["garden"]
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: page
+      lang: en-US
+      categories: ["garden"]
+      tags: []
+  - scope:
+      path: "pages/about.md"
+    values:
+      categories: ["about"]
+      tags: ["profile"]
+  - scope:
+      path: "pages/portfolio"
+      type: "pages"
+    values:
+      layout: portfolio
+      categories: ["portfolio"]
+      tags: ["case-study"]
+  - scope:
+      path: "pages/blog.md"
+    values:
+      categories: ["blog"]
+      tags: ["index"]
+  - scope:
+      path: "pages/travel.md"
+    values:
+      categories: ["travel"]
+      tags: ["itinerary"]
+  - scope:
+      path: "pages/library.md"
+    values:
+      categories: ["library"]
+      tags: ["reading-list"]
+  - scope:
+      path: "pages/contact.md"
+    values:
+      categories: ["contact"]
+      tags: ["connect"]
+  - scope:
+      path: "portfolio"
+      type: "pages"
+    values:
+      layout: portfolio
+      categories: ["portfolio"]
+      tags: ["case-study"]
+  - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"
+      layout: post
+      categories: ["blog"]
+      tags: ["garden"]
+      lang: en-US
       comments: true
   - scope:
       path: ""
@@ -66,8 +133,8 @@ collections:
 
 # Locale settings
 timezone: Asia/Shanghai
-lang: en
-future: true
+lang: en-US
+future: false
 
 # Syntax highlighting
 highlighter: rouge

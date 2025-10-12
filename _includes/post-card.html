@@ -1,0 +1,18 @@
+<article class="post-card surface-card" itemscope itemtype="https://schema.org/Article">
+  <a class="post-card__link" href="{{ post.url | relative_url }}" itemprop="url">
+    <div class="post-card__meta flex align-center gap-1 text-xs text-muted">
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: '%b %d, %Y' }}</time>
+      {%- if post.categories -%}
+        <span class="chip chip-muted">{{ post.categories | join: ', ' }}</span>
+      {%- endif -%}
+    </div>
+    <h3 class="post-card__title" itemprop="headline">{{ post.title | escape }}</h3>
+    {%- if post.excerpt -%}
+      <p class="post-card__excerpt text-muted" itemprop="description">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    {%- endif -%}
+    <div class="post-card__footer flex justify-between align-center text-xs text-muted">
+      <span>Read more</span>
+      <span aria-hidden="true">→</span>
+    </div>
+  </a>
+</article>
