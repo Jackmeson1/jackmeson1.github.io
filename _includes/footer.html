@@ -1,5 +1,5 @@
 <footer class="site-footer surface-raised" role="contentinfo">
-  <div class="container grid cols-1 md:cols-3 gap-3 py-5">
+  <div class="container grid cols-1 md:cols-2 gap-3 py-5">
     <div>
       <h2 class="text-lg font-semibold mb-2">{{ site.title | escape }}</h2>
       <p class="text-muted">{{ site.description | escape }}</p>
@@ -16,15 +16,6 @@
           {%- endfor -%}
         {%- endif -%}
       </ul>
-    </div>
-    <div>
-      <h3 class="text-sm uppercase tracking">Stay in the loop</h3>
-      <p class="text-muted">Insights on markets, AI, and product strategy delivered straight to your inbox.</p>
-      <form class="stack gap-1 mt-2" action="{{ site.newsletter_action | default: '#' }}" method="post">
-        <label class="sr-only" for="footer-email">Email address</label>
-        <input id="footer-email" type="email" name="email" placeholder="you@example.com" class="input" required>
-        <button type="submit" class="btn btn-primary">Subscribe</button>
-      </form>
     </div>
   </div>
   <div class="container border-top py-3 flex justify-between wrap gap-1 text-xs text-muted">

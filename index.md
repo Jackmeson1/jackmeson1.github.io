@@ -4,8 +4,7 @@ title: Home
 hero:
   tagline: "Digital Garden"
   name: "Hi, I'm Jiajun"
-  subtitle: "I write code, study markets, travel light, and meditate to stay grounded."
-  summary: "Former QA engineer exploring how technology, finance, travel, and mindfulness weave together."
+  subtitle: "Former QA engineer writing about code, markets, travel, and systems."
   socials:
     - label: GitHub
       url: "https://github.com/jackmeson1"
