@@ -3,9 +3,9 @@ layout: post
 title: "The New Energy Vehicle Value Chain: From Lithium Mines to Showrooms"
 date: 2025-10-10 15:30:00 +0800
 last_modified_at: 2025-10-10 15:30:00 +0800
-categories: [tech, finance]
+categories: [tech]
 tags: [electric-mobility, battery-materials, supply-chain, capital-allocation]
-author: Jackmeson
+author: Jiajun Liang
 description: Follow the NEV supply chain from lithium pits to showroom floors to pinpoint durable margin, resilient capacity, and investor leverage.
 image: /assets/images/posts/nev-value-chain.svg
 lang: en

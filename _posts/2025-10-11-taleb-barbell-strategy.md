@@ -3,9 +3,9 @@ layout: post
 title: "Taleb's Barbell Strategy: Why the Middle Ground Is Where You Die"
 date: 2025-10-11 18:00:00 +0800
 last_modified_at: 2025-10-11 18:00:00 +0800
-categories: [finance, systems]
+categories: [finance]
 tags: [risk-barbell, tail-risk, capital-allocation, antifragility]
-author: Jackmeson
+author: Jiajun Liang
 description: Translate Taleb's barbell into modern portfolio design with safety anchors, convex upside bets, and region-specific drills for global allocators.
 image: /assets/images/posts/taleb-barbell.svg
 lang: en

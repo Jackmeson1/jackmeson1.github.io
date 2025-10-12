@@ -1,20 +1,16 @@
 tech:
   name: Tech
-  description: Frontier engineering, digital infrastructure, and product breakthroughs reshaping how we build and live.
-  permalink: /tech/
+  description: Hands-on QA, DevOps experiments, and tooling notes from building reliable software systems.
+  permalink: /blog/tech/
 finance:
   name: Finance
-  description: Capital allocation playbooks, risk disciplines, and market intelligence for resilient portfolios.
-  permalink: /finance/
+  description: Capital allocation playbooks, risk disciplines, and market intelligence for resilient personal portfolios.
+  permalink: /blog/finance/
 travel:
   name: Travel
-  description: Immersive field notes and mobility experiments that translate journeys into actionable cultural fluency.
-  permalink: /travel/
-mindfulness:
-  name: Mindfulness
-  description: Practices, reflections, and rituals that ground high-performance operators in clarity and presence.
-  permalink: /mindfulness/
-systems:
-  name: Systems
-  description: Frameworks and second-order thinking for designing adaptive organizations and complex strategies.
-  permalink: /systems/
+  description: Field notes, city routines, and packing systems for life between Vancouver and Asia.
+  permalink: /blog/travel/
+mind:
+  name: Mind
+  description: Mindfulness experiments, reflective essays, and the inner frameworks guiding this sabbatical.
+  permalink: /blog/mind/

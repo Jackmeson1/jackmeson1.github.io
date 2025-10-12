@@ -1,9 +1,11 @@
 ---
 layout: category
 category: finance
-permalink: /finance/
-title: Finance & Capital Strategy
+permalink: /blog/finance/
+title: Finance Notes
 hero_kicker: "Category"
-description: "Discipline, risk radar, and cash-flow storytelling for allocators navigating volatile regimes."
-intro: "Step into playbooks for structuring resilient portfolios, stress testing scenarios, and translating macro shifts into action."
+description: "Personal research on capital allocation, risk, and building antifragile portfolios."
+intro: "I translate dense papers and on-the-ground interviews into practical playbooks for individual investors and small teams."
+redirect_from:
+  - /finance/
 ---
