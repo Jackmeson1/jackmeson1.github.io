@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="safeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="convexGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="burningGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+
+  <!-- Title -->
+  <text x="600" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Taleb's Barbell Revolution
+  </text>
+  <text x="600" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">
+    Burn the Middle, Keep Only the Extremes
+  </text>
+
+  <!-- Traditional Framework (Top Half) -->
+  <text x="100" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#f1f5f9">
+    Traditional Framework: Five Paradigms
+  </text>
+
+  <!-- Five boxes in a row -->
+  <g id="traditional-paradigms">
+    <!-- Paradigm 5 (Meta-Game) -->
+    <rect x="100" y="180" width="180" height="120" rx="8" fill="#475569" opacity="0.3"/>
+    <text x="190" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cbd5e1" text-anchor="middle">
+      Paradigm 5
+    </text>
+    <text x="190" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#e2e8f0" text-anchor="middle">
+      Meta-Game
+    </text>
+    <text x="190" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+      Rule-setting
+    </text>
+    <text x="190" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+      level
+    </text>
+
+    <!-- Paradigm 1 (MinMax) -->
+    <rect x="310" y="180" width="180" height="120" rx="8" fill="#10b981" opacity="0.3"/>
+    <text x="400" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#6ee7b7" text-anchor="middle">
+      Paradigm 1
+    </text>
+    <text x="400" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#d1fae5" text-anchor="middle">
+      MinMax
+    </text>
+    <text x="400" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle">
+      Survival
+    </text>
+    <text x="400" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle">
+      foundation
+    </text>
+
+    <!-- Paradigm 2 (Kelly) - TO BE BURNED -->
+    <rect x="520" y="180" width="180" height="120" rx="8" fill="#ef4444" opacity="0.5" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="610" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#fca5a5" text-anchor="middle">
+      Paradigm 2
+    </text>
+    <text x="610" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#fecaca" text-anchor="middle">
+      Kelly
+    </text>
+    <text x="610" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">
+      Compound
+    </text>
+    <text x="610" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">
+      growth engine
+    </text>
+    <!-- X mark -->
+    <line x1="540" y1="200" x2="680" y2="280" stroke="#dc2626" stroke-width="4"/>
+    <line x1="680" y1="200" x2="540" y2="280" stroke="#dc2626" stroke-width="4"/>
+
+    <!-- Paradigm 3 (Mean Max) - TO BE BURNED -->
+    <rect x="730" y="180" width="180" height="120" rx="8" fill="#ef4444" opacity="0.5" stroke="#dc2626" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="820" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#fca5a5" text-anchor="middle">
+      Paradigm 3
+    </text>
+    <text x="820" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#fecaca" text-anchor="middle">
+      Mean Max
+    </text>
+    <text x="820" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">
+      Stability
+    </text>
+    <text x="820" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fca5a5" text-anchor="middle">
+      suspension
+    </text>
+    <!-- X mark -->
+    <line x1="750" y1="200" x2="890" y2="280" stroke="#dc2626" stroke-width="4"/>
+    <line x1="890" y1="200" x2="750" y2="280" stroke="#dc2626" stroke-width="4"/>
+
+    <!-- Paradigm 4 (Convexity) -->
+    <rect x="940" y="180" width="180" height="120" rx="8" fill="#f59e0b" opacity="0.3"/>
+    <text x="1030" y="215" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#fbbf24" text-anchor="middle">
+      Paradigm 4
+    </text>
+    <text x="1030" y="235" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#fde68a" text-anchor="middle">
+      Convexity
+    </text>
+    <text x="1030" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle">
+      Asymmetric
+    </text>
+    <text x="1030" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbbf24" text-anchor="middle">
+      speculation
+    </text>
+  </g>
+
+  <!-- Arrow pointing down -->
+  <path d="M 600 330 L 600 390" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Taleb's Revolution Text -->
+  <text x="600" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#f59e0b" text-anchor="middle">
+    TALEB'S REVOLUTION
+  </text>
+
+  <!-- Barbell Strategy (Bottom Half) -->
+  <text x="100" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="#f1f5f9">
+    Barbell Strategy: Extremes Only
+  </text>
+
+  <!-- Three boxes showing the barbell -->
+  <g id="barbell-structure">
+    <!-- Left plate: 90% Safe (includes Paradigm 1) -->
+    <rect x="100" y="460" width="380" height="250" rx="12" fill="url(#safeGradient)" opacity="0.2" stroke="#10b981" stroke-width="3"/>
+    <text x="290" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#d1fae5" text-anchor="middle">
+      90% EXTREME SAFETY
+    </text>
+    <text x="290" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6ee7b7" text-anchor="middle">
+      Paradigm 1 (MinMax) + Paradigm 5
+    </text>
+    <text x="290" y="570" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">
+      • Treasury bills
+    </text>
+    <text x="290" y="595" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">
+      • Cash equivalents
+    </text>
+    <text x="290" y="620" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">
+      • FDIC-insured deposits
+    </text>
+    <text x="290" y="655" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#34d399" text-anchor="middle">
+      Risk of ruin = 0
+    </text>
+    <text x="290" y="680" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#34d399" text-anchor="middle">
+      Unbreakable foundation
+    </text>
+
+    <!-- Middle bar: 0% (THE VOID) -->
+    <rect x="510" y="520" width="180" height="130" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="4" stroke-dasharray="10,5"/>
+    <text x="600" y="555" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">
+      0% MIDDLE
+    </text>
+    <text x="600" y="585" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">
+      THE VOID
+    </text>
+    <text x="600" y="615" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">
+      No stocks
+    </text>
+    <text x="600" y="635" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">
+      No bonds
+    </text>
+
+    <!-- Warning symbol in middle -->
+    <g transform="translate(600, 485)">
+      <polygon points="0,-18 16,10 -16,10" fill="none" stroke="#ef4444" stroke-width="2"/>
+      <text x="0" y="3" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#ef4444" text-anchor="middle">!</text>
+    </g>
+
+    <!-- Right plate: 10% Convex (Paradigm 4) -->
+    <rect x="720" y="460" width="380" height="250" rx="12" fill="url(#convexGradient)" opacity="0.2" stroke="#f59e0b" stroke-width="3"/>
+    <text x="910" y="500" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#fde68a" text-anchor="middle">
+      10% EXTREME CONVEXITY
+    </text>
+    <text x="910" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#fbbf24" text-anchor="middle">
+      Paradigm 4 (Convexity) + Paradigm 5
+    </text>
+    <text x="910" y="570" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fcd34d" text-anchor="middle">
+      • OTM options
+    </text>
+    <text x="910" y="595" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fcd34d" text-anchor="middle">
+      • Angel investments
+    </text>
+    <text x="910" y="620" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fcd34d" text-anchor="middle">
+      • Frontier research
+    </text>
+    <text x="910" y="655" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#fbbf24" text-anchor="middle">
+      Downside capped at 10%
+    </text>
+    <text x="910" y="680" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#fbbf24" text-anchor="middle">
+      Upside unbounded (10x-1000x)
+    </text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="600" y="750" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-style="italic" fill="#94a3b8" text-anchor="middle">
+    "The Barbell doesn't just survive chaos — it feeds on chaos."
+  </text>
+</svg>

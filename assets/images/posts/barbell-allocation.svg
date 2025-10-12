@@ -1,0 +1,213 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="safeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="convexGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Practical Barbell Implementation
+  </text>
+  <text x="600" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">
+    A Modern Portfolio Structure for Surviving and Thriving in Extremistan
+  </text>
+
+  <!-- Visual Barbell -->
+  <g id="visual-barbell" transform="translate(600, 180)">
+    <!-- Left weight (90%) -->
+    <rect x="-480" y="-80" width="280" height="160" rx="12" fill="url(#safeGrad)" stroke="#10b981" stroke-width="4"/>
+    <text x="-340" y="-20" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="#d1fae5" text-anchor="middle">90%</text>
+    <text x="-340" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#6ee7b7" text-anchor="middle">SAFE</text>
+    <text x="-340" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a7f3d0" text-anchor="middle">Immortality</text>
+
+    <!-- Bar connecting -->
+    <rect x="-180" y="-15" width="360" height="30" rx="4" fill="#475569"/>
+    <text x="0" y="10" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">0%</text>
+
+    <!-- Right weight (10%) -->
+    <rect x="200" y="-80" width="280" height="160" rx="12" fill="url(#convexGrad)" stroke="#f59e0b" stroke-width="4"/>
+    <text x="340" y="-20" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold" fill="#fde68a" text-anchor="middle">10%</text>
+    <text x="340" y="15" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#fbbf24" text-anchor="middle">CONVEX</text>
+    <text x="340" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fcd34d" text-anchor="middle">Explosiveness</text>
+  </g>
+
+  <!-- 90% Safe Bucket Details -->
+  <g id="safe-bucket">
+    <rect x="50" y="350" width="500" height="500" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+
+    <text x="300" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#10b981" text-anchor="middle">
+      90% Safe Bucket
+    </text>
+    <text x="300" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#6ee7b7" text-anchor="middle">
+      Absolute Survival + Dry Powder
+    </text>
+
+    <!-- Allocation breakdown -->
+    <g transform="translate(80, 450)">
+      <!-- Treasury bills -->
+      <rect x="0" y="0" width="400" height="50" rx="6" fill="#10b981" opacity="0.6"/>
+      <text x="10" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#d1fae5">
+        60% Short-term Treasury Bills (1-6 months)
+      </text>
+
+      <!-- High-yield savings -->
+      <rect x="0" y="70" width="267" height="50" rx="6" fill="#10b981" opacity="0.4"/>
+      <text x="10" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#d1fae5">
+        20% FDIC High-Yield Savings
+      </text>
+
+      <!-- TIPS -->
+      <rect x="0" y="140" width="133" height="50" rx="6" fill="#10b981" opacity="0.3"/>
+      <text x="10" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#d1fae5">
+        10% TIPS
+      </text>
+    </g>
+
+    <!-- Characteristics -->
+    <g transform="translate(80, 670)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#6ee7b7">
+        Expected Return:
+      </text>
+      <text x="150" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#a7f3d0">
+        ~4-5% annually
+      </text>
+
+      <text x="0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#6ee7b7">
+        Risk:
+      </text>
+      <text x="150" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#a7f3d0">
+        Near-zero principal loss
+      </text>
+
+      <text x="0" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#6ee7b7">
+        Purpose:
+      </text>
+      <text x="150" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#a7f3d0">
+        Never die. Always solvent.
+      </text>
+
+      <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#6ee7b7">
+        Crisis Behavior:
+      </text>
+      <text x="150" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#a7f3d0">
+        Flight to safety ↑
+      </text>
+
+      <text x="0" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-style="italic" fill="#34d399">
+        ✓ You always have capital to redeploy
+      </text>
+      <text x="0" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-style="italic" fill="#34d399">
+        ✓ You always live to play another day
+      </text>
+    </g>
+  </g>
+
+  <!-- 10% Convex Bucket Details -->
+  <g id="convex-bucket">
+    <rect x="650" y="350" width="500" height="500" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="3"/>
+
+    <text x="900" y="390" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#f59e0b" text-anchor="middle">
+      10% Convex Bucket
+    </text>
+    <text x="900" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle">
+      Maximum Asymmetry
+    </text>
+
+    <!-- Allocation breakdown -->
+    <g transform="translate(680, 450)">
+      <!-- Put options -->
+      <rect x="0" y="0" width="176" height="50" rx="6" fill="#f59e0b" opacity="0.7"/>
+      <text x="10" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fde68a">
+        4% OTM Put Options
+      </text>
+      <text x="10" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#fcd34d">
+        (6-12 month exp.)
+      </text>
+
+      <!-- Angel investments -->
+      <rect x="0" y="70" width="132" height="50" rx="6" fill="#f59e0b" opacity="0.5"/>
+      <text x="10" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fde68a">
+        3% Angel Investing
+      </text>
+      <text x="10" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#fcd34d">
+        (early startups)
+      </text>
+
+      <!-- Call options -->
+      <rect x="0" y="140" width="88" height="50" rx="6" fill="#f59e0b" opacity="0.4"/>
+      <text x="10" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fde68a">
+        2% Calls
+      </text>
+      <text x="10" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#fcd34d">
+        (asymmetric)
+      </text>
+
+      <!-- Lottery tickets -->
+      <rect x="0" y="210" width="44" height="50" rx="6" fill="#f59e0b" opacity="0.3"/>
+      <text x="10" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fde68a">
+        1%
+      </text>
+      <text x="10" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#fcd34d">
+        Lottery
+      </text>
+    </g>
+
+    <!-- Characteristics -->
+    <g transform="translate(680, 670)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fbbf24">
+        Expected Outcome:
+      </text>
+      <text x="170" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#fcd34d">
+        Lose most of it
+      </text>
+
+      <text x="0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fbbf24">
+        Required Outcome:
+      </text>
+      <text x="170" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#fcd34d">
+        1-2 hits at 50x+
+      </text>
+
+      <text x="0" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fbbf24">
+        Max Loss:
+      </text>
+      <text x="170" y="60" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#fcd34d">
+        10% of total portfolio
+      </text>
+
+      <text x="0" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fbbf24">
+        Max Gain:
+      </text>
+      <text x="170" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#fcd34d">
+        Unlimited (10x-1000x)
+      </text>
+
+      <text x="0" y="130" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-style="italic" fill="#fbbf24">
+        ✓ Capture positive Black Swans
+      </text>
+      <text x="0" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-style="italic" fill="#fbbf24">
+        ✓ Transform entire position with one hit
+      </text>
+    </g>
+  </g>
+
+  <!-- Zero allocation banner at bottom -->
+  <g id="zero-middle">
+    <rect x="50" y="860" width="1100" height="30" fill="#ef4444" opacity="0.2" stroke="#dc2626" stroke-width="2" rx="4"/>
+    <text x="600" y="880" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#ef4444" text-anchor="middle">
+      0% in Traditional "Middle" Assets (Stocks, Bonds, REITs, Balanced Funds) — Deliberately Empty
+    </text>
+  </g>
+</svg>

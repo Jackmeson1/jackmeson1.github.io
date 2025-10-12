@@ -1,0 +1,309 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="type1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="type2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8" />
+    </linearGradient>
+    <linearGradient id="type3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#db2777;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Three Types of Convexity
+  </text>
+  <text x="700" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">
+    How to Structure the 10% Convex Portion for Maximum Asymmetry
+  </text>
+
+  <!-- Type 1: Natural Convexity (Financial) -->
+  <g id="type1">
+    <rect x="50" y="130" width="420" height="720" rx="12" fill="url(#type1Grad)" opacity="0.15" stroke="#06b6d4" stroke-width="3"/>
+
+    <text x="260" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#06b6d4" text-anchor="middle">
+      Type 1: Natural Convexity
+    </text>
+    <text x="260" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#67e8f9" text-anchor="middle">
+      (Financial Instruments)
+    </text>
+
+    <!-- Structure -->
+    <g transform="translate(80, 240)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#22d3ee">
+        Structure:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        Pay small premium → Get unbounded upside
+      </text>
+    </g>
+
+    <!-- Examples -->
+    <g transform="translate(80, 300)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#22d3ee">
+        Examples:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        • Call options on volatile assets
+      </text>
+      <text x="0" y="53" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        • Insurance arbitrage (sell overpriced,
+      </text>
+      <text x="12" y="73" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        buy underpriced)
+      </text>
+      <text x="0" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        • Lottery-style investments with
+      </text>
+      <text x="12" y="118" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        capped loss
+      </text>
+      <text x="0" y="143" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#a5f3fc">
+        • Deep OTM put options (tail hedges)
+      </text>
+    </g>
+
+    <!-- Mechanics box -->
+    <rect x="80" y="480" width="360" height="200" rx="8" fill="#164e63" opacity="0.5"/>
+    <text x="260" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#67e8f9" text-anchor="middle">
+      Mechanics
+    </text>
+
+    <g transform="translate(100, 535)">
+      <text x="0" y="0" font-family="'Courier New', monospace" font-size="13" fill="#cffafe">
+        Cost: $1,000 (OTM call option)
+      </text>
+      <text x="0" y="25" font-family="'Courier New', monospace" font-size="13" fill="#cffafe">
+        Max loss: $1,000
+      </text>
+      <text x="0" y="50" font-family="'Courier New', monospace" font-size="13" fill="#cffafe">
+        Potential gain: Unlimited
+      </text>
+      <text x="0" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#a5f3fc">
+        If asset 10x → you make $10,000+
+      </text>
+      <text x="0" y="110" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#a5f3fc">
+        Asymmetry ratio: 10:1 or higher
+      </text>
+      <text x="0" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#22d3ee">
+        ✓ Pure financial engineering
+      </text>
+    </g>
+
+    <!-- Why it works -->
+    <g transform="translate(80, 710)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#22d3ee">
+        Why it works:
+      </text>
+      <text x="0" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#a5f3fc">
+        Markets misprice tail risk. You profit
+      </text>
+      <text x="0" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#a5f3fc">
+        from volatility explosions.
+      </text>
+    </g>
+  </g>
+
+  <!-- Type 2: Structural Convexity (Design) -->
+  <g id="type2">
+    <rect x="490" y="130" width="420" height="720" rx="12" fill="url(#type2Grad)" opacity="0.15" stroke="#8b5cf6" stroke-width="3"/>
+
+    <text x="700" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#8b5cf6" text-anchor="middle">
+      Type 2: Structural Convexity
+    </text>
+    <text x="700" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#c4b5fd" text-anchor="middle">
+      (System Design)
+    </text>
+
+    <!-- Structure -->
+    <g transform="translate(520, 240)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#a78bfa">
+        Structure:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        Many small experiments vs. one large bet
+      </text>
+    </g>
+
+    <!-- Examples -->
+    <g transform="translate(520, 300)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#a78bfa">
+        Examples:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        • 10 small restaurants vs. 1 mega
+      </text>
+      <text x="0" y="53" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        • 20 angel investments vs. 1 PE bet
+      </text>
+      <text x="0" y="78" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        • Modular architecture vs. monolith
+      </text>
+      <text x="0" y="103" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        • Portfolio of side projects
+      </text>
+      <text x="0" y="128" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#ddd6fe">
+        • Multiple revenue streams
+      </text>
+    </g>
+
+    <!-- Why it works box -->
+    <rect x="520" y="480" width="360" height="240" rx="8" fill="#4c1d95" opacity="0.5"/>
+    <text x="700" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#c4b5fd" text-anchor="middle">
+      Why It Works
+    </text>
+
+    <g transform="translate(540, 535)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#e9d5ff">
+        <tspan font-weight="600">Fragmentation creates convexity:</tspan>
+      </text>
+      <text x="0" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ddd6fe">
+        • Each failure is localized
+      </text>
+      <text x="12" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#c4b5fd">
+        (lose 1 restaurant, not all 10)
+      </text>
+      <text x="0" y="75" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ddd6fe">
+        • Success scales non-linearly
+      </text>
+      <text x="12" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#c4b5fd">
+        (1 hit → franchise empire)
+      </text>
+      <text x="0" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#ddd6fe">
+        • You learn from each experiment
+      </text>
+      <text x="12" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#c4b5fd">
+        (knowledge compounds)
+      </text>
+      <text x="0" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#a78bfa">
+        ✓ Optionality through modularity
+      </text>
+    </g>
+
+    <!-- Key insight -->
+    <g transform="translate(520, 750)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#a78bfa">
+        Key Insight:
+      </text>
+      <text x="0" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#ddd6fe">
+        Fragmentation → convexity
+      </text>
+    </g>
+  </g>
+
+  <!-- Type 3: Cognitive Convexity (Learning) -->
+  <g id="type3">
+    <rect x="930" y="130" width="420" height="720" rx="12" fill="url(#type3Grad)" opacity="0.15" stroke="#ec4899" stroke-width="3"/>
+
+    <text x="1140" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#ec4899" text-anchor="middle">
+      Type 3: Cognitive Convexity
+    </text>
+    <text x="1140" y="205" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#fbcfe8" text-anchor="middle">
+      (Trial & Error Learning)
+    </text>
+
+    <!-- Structure -->
+    <g transform="translate(960, 240)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f472b6">
+        Structure:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        Experimentation as investment strategy
+      </text>
+    </g>
+
+    <!-- Examples -->
+    <g transform="translate(960, 300)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f472b6">
+        Examples:
+      </text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        • Career pivots (each "failure" teaches)
+      </text>
+      <text x="0" y="53" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        • Scientific experiments (negative
+      </text>
+      <text x="12" y="73" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        results = knowledge)
+      </text>
+      <text x="0" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        • Entrepreneurial attempts
+      </text>
+      <text x="0" y="123" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        • Skill acquisition experiments
+      </text>
+      <text x="0" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#fce7f3">
+        • Content creation (each post tests)
+      </text>
+    </g>
+
+    <!-- Why powerful box -->
+    <rect x="960" y="480" width="360" height="250" rx="8" fill="#831843" opacity="0.5"/>
+    <text x="1140" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#fbcfe8" text-anchor="middle">
+      Why It's Powerful
+    </text>
+
+    <g transform="translate(980, 535)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#fce7f3">
+        Downside: Capped
+      </text>
+      <text x="0" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbcfe8">
+        (time, effort, small capital)
+      </text>
+
+      <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#fce7f3">
+        Upside: Unbounded
+      </text>
+      <text x="0" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbcfe8">
+        (one breakthrough changes everything)
+      </text>
+
+      <text x="0" y="100" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#fce7f3">
+        Each iteration improves model:
+      </text>
+      <text x="0" y="120" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbcfe8">
+        • Failure → better intuition
+      </text>
+      <text x="0" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbcfe8">
+        • Success → compounding edge
+      </text>
+      <text x="0" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fbcfe8">
+        • Experience ≠ lost, it accumulates
+      </text>
+
+      <text x="0" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#f472b6">
+        ✓ How evolution works
+      </text>
+    </g>
+
+    <!-- Taleb's favorite -->
+    <g transform="translate(960, 760)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#f472b6">
+        Taleb's Favorite:
+      </text>
+      <text x="0" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#fce7f3">
+        Random mutations (cheap) + natural
+      </text>
+      <text x="0" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-style="italic" fill="#fce7f3">
+        selection → occasional breakthrough
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom synthesis -->
+  <rect x="50" y="860" width="1300" height="30" fill="#1e293b" stroke="#64748b" stroke-width="2" rx="4"/>
+  <text x="700" y="882" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-style="italic" fill="#cbd5e1" text-anchor="middle">
+    All three types share the same core: capped downside + unbounded upside + each failure improves position
+  </text>
+</svg>
