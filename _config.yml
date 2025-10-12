@@ -1,0 +1,54 @@
+# 网站基本信息
+title: 金融分析研究室
+description: 深度金融分析 | AI与产业研究 | 数据驱动洞察
+author: Jackmeson
+email: your-email@example.com
+baseurl: ""
+url: "https://jackmeson1.github.io"
+
+# 构建设置
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# 导航菜单
+header_pages:
+  - index.md
+  - about.md
+  - archive.md
+
+# 分页设置
+paginate: 10
+paginate_path: "/page:num/"
+
+# 社交媒体链接（可选）
+github_username: jackmeson1
+# twitter_username: your_username
+# linkedin_username: your_username
+
+# 文章默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
+# 时区和语言
+timezone: Asia/Shanghai
+lang: zh-CN
+
+# 代码高亮
+highlighter: rouge
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
