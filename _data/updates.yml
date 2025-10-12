@@ -1,0 +1,12 @@
+- date: 2025-10-15
+  title: Published the AI power infrastructure model
+  description: Released an updated demand stack for hyperscale campuses and stress-tested grid upgrade timelines with new load growth scenarios.
+- date: 2025-10-08
+  title: Clean energy storage field interviews
+  description: Conducted 12 expert calls across battery integrators and EPCs to benchmark project IRRs under different policy regimes.
+- date: 2025-10-01
+  title: Barbell allocation primer workshop
+  description: Led a session with family office analysts on constructing risk-seeking vs. risk-free buckets using Taleb-inspired frameworks.
+- date: 2025-09-18
+  title: Portfolio analytics tooling refresh
+  description: Shipped a lightweight Python dashboard that visualizes factor exposures and rolling drawdowns across thematic baskets.
