@@ -1,14 +1,14 @@
 ---
 layout: page
-title: 文章归档
+title: Archive
 permalink: /archive/
 ---
 
 <div class="archive">
-  <p class="archive-intro">共 {{ site.posts | size }} 篇文章</p>
+  <p class="archive-intro">{{ site.posts | size }} posts in total</p>
 
   {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-  
+
   {% for year in postsByYear %}
     <h2 class="year-header">{{ year.name }}</h2>
     <ul class="archive-list">
@@ -31,7 +31,7 @@ permalink: /archive/
     margin-bottom: 30px;
     font-style: italic;
   }
-  
+
   .year-header {
     color: #667eea;
     border-bottom: 2px solid #667eea;
@@ -39,19 +39,19 @@ permalink: /archive/
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  
+
   .archive-list {
     list-style: none;
     padding: 0;
   }
-  
+
   .archive-item {
     padding: 12px 0;
     border-bottom: 1px dashed #e1e8ed;
     display: flex;
     align-items: center;
   }
-  
+
   .archive-date {
     color: #657786;
     font-family: 'Monaco', 'Courier New', monospace;
@@ -59,17 +59,17 @@ permalink: /archive/
     margin-right: 20px;
     min-width: 50px;
   }
-  
+
   .archive-item a {
     color: #1a1a1a;
     text-decoration: none;
     flex: 1;
   }
-  
+
   .archive-item a:hover {
     color: #667eea;
   }
-  
+
   .archive-category {
     background: #f0f0f0;
     color: #555;

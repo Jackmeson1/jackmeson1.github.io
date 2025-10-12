@@ -1,52 +1,52 @@
 ---
 layout: page
-title: 关于
+title: About
 permalink: /about/
 ---
 
-## 关于本站
+## About This Site
 
-欢迎来到**金融分析研究室**！
+Welcome to the **Financial Analysis Lab**!
 
-这里是一个专注于深度金融分析的个人博客，致力于通过数据驱动的方法，探索和分析各类投资机会与行业趋势。
+This is a personal blog dedicated to deep-dive financial research, using data-driven methods to uncover investment opportunities and industry trends.
 
-### 📊 研究方向
+### 📊 Research Themes
 
-- **AI与产业融合**：关注人工智能在传统产业中的应用，特别是AI电力、智能制造等领域
-- **新能源转型**：深入研究光伏、风电、储能等清洁能源产业链
-- **量化投资**：运用统计学和机器学习方法进行市场分析
-- **公司基本面**：财务建模、估值分析、竞争力评估
+- **AI and Industry Integration**: Examining how artificial intelligence transforms legacy industries, with a focus on power systems and intelligent manufacturing.
+- **Energy Transition**: Analyzing the value chain for solar, wind, and energy storage as clean energy adoption accelerates.
+- **Quantitative Investing**: Applying statistics and machine learning to study market behavior.
+- **Company Fundamentals**: Financial modeling, valuation work, and competitive analysis.
 
-### 🎯 内容特色
+### 🎯 What to Expect
 
-- **深度研究**：每篇文章都基于充分的数据调研和分析
-- **数据可视化**：用图表让复杂的数据更易理解
-- **客观中立**：基于事实和数据，避免主观臆断
-- **持续更新**：跟踪行业最新动态，及时更新观点
+- **Deep Research**: Each article is grounded in thorough data gathering and analysis.
+- **Data Visualization**: Charts and visuals make complex datasets easier to digest.
+- **Objective & Balanced**: Insights are rooted in evidence rather than speculation.
+- **Ongoing Updates**: Continuous coverage of the latest industry developments.
 
-### 📝 写作理念
+### 📝 Writing Philosophy
 
 > "In God we trust, all others must bring data." — W. Edwards Deming
 
-我相信数据的力量。在这个信息过载的时代，我希望通过严谨的分析方法，为读者提供有价值的洞察。
+I believe in the power of data. In an age of information overload, my goal is to provide readers with rigorous, evidence-based perspectives.
 
-### 🔍 方法论
+### 🔍 Methodology
 
-1. **数据收集**：从公开渠道获取可靠数据
-2. **定量分析**：使用统计模型和财务模型
-3. **定性研究**：结合行业专家观点和公司调研
-4. **批判思考**：质疑假设，寻找证伪证据
-5. **持续跟踪**：动态更新分析结论
+1. **Data Collection**: Source reliable datasets from public channels.
+2. **Quantitative Analysis**: Employ statistical and financial models.
+3. **Qualitative Research**: Incorporate expert commentary and company due diligence.
+4. **Critical Thinking**: Challenge assumptions and seek disconfirming evidence.
+5. **Continuous Monitoring**: Update conclusions as new information emerges.
 
-### 📫 联系方式
+### 📫 Contact
 
 - GitHub: [@jackmeson1](https://github.com/jackmeson1)
 - Email: your-email@example.com
 
-### ⚠️ 免责声明
+### ⚠️ Disclaimer
 
-本站所有内容仅供学习和研究使用，不构成任何投资建议。投资有风险，决策需谨慎。请在做出任何投资决定前，咨询专业的财务顾问。
+All content is for educational purposes only and does not constitute investment advice. Markets involve risk; please consult a licensed financial advisor before making any investment decisions.
 
 ---
 
-*最后更新：{{ site.time | date: "%Y-%m-%d" }}*
+*Last updated: {{ site.time | date: "%Y-%m-%d" }}*
