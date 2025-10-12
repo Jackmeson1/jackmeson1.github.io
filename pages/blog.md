@@ -1,10 +1,9 @@
 ---
----
 layout: default
 title: "Research Log"
 permalink: /blog/
 subtitle: "Long-form signals on markets, technology, and risk"
-lede: "A living feed of essays, research briefs, and operator notes from the Financial Analysis Lab."
+lede: "A living feed of essays, research briefs, and operator notes from Jiajun Liang’s digital garden."
 ---
 
 <div class="blog-page">
@@ -32,16 +31,18 @@ lede: "A living feed of essays, research briefs, and operator notes from the Fin
         <button class="carousel-control prev" type="button" aria-label="Previous featured post">‹</button>
         <div class="carousel-track" data-carousel-track>
           {% for post in featured_posts %}
+            {% assign featured_title = post.title | default: '(Untitled post)' %}
+            {% assign featured_summary = post.description | default: post.excerpt | strip_html | truncatewords: 30 %}
             <article class="featured-card" data-index="{{ forloop.index0 }}">
               <a class="featured-card-link" href="{{ post.url | relative_url }}">
                 {% assign image_path = post.image | default: '/assets/images/posts/default-feature.svg' %}
                 <div class="featured-image" role="presentation">
-                  <img src="{{ image_path | relative_url }}" alt="{{ post.title }} cover art" loading="lazy">
+                  <img src="{{ image_path | relative_url }}" alt="{{ featured_title }} cover art" loading="lazy">
                 </div>
                 <div class="featured-content">
                   <p class="featured-meta">{{ post.date | date: "%b %d, %Y" }}</p>
-                  <h3>{{ post.title }}</h3>
-                  <p class="featured-description">{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+                  <h3>{{ featured_title }}</h3>
+                  <p class="featured-description">{{ featured_summary }}</p>
                   <div class="featured-categories">
                     {% for cat in post.categories %}
                       <span class="chip">{{ site.data.categories[cat].name | default: cat | replace: '-', ' ' | capitalize }}</span>
@@ -76,6 +77,8 @@ lede: "A living feed of essays, research briefs, and operator notes from the Fin
     <div class="post-feed-list">
       {% assign ordered_posts = site.posts | sort: 'date' | reverse %}
       {% for post in ordered_posts %}
+        {% assign post_title = post.title | default: '(Untitled post)' %}
+        {% assign post_summary = post.description | default: post.excerpt | strip_html | truncatewords: 36 %}
         <article class="post-feed-card" data-categories="{{ post.categories | join: ' ' }}">
           <header class="post-feed-header">
             <p class="post-feed-date">{{ post.date | date: "%B %d, %Y" }}</p>
@@ -86,8 +89,8 @@ lede: "A living feed of essays, research briefs, and operator notes from the Fin
             </div>
           </header>
           <div class="post-feed-body">
-            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 36 }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post_title }}</a></h3>
+            <p>{{ post_summary }}</p>
             {% if post.tags %}
               <ul class="post-feed-tags">
                 {% for tag in post.tags %}

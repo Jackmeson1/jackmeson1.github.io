@@ -16,7 +16,6 @@ lede: "I’m building a digital garden to document how code, capital, travel, an
 
 - M.Eng. in Industrial Engineering, Peking University
 - M.Sc. in Computer Security, University of Victoria
-- Winner, Damo Academy Large Model Star Challenge
 
 ## 💡 Why This Garden Exists
 
@@ -29,7 +28,7 @@ I left my QA role to create space for cross-disciplinary learning. This site is 
 
 ## 📍 Now
 
-- Location: Vancouver, Canada (curious about 日本小樽)
+- Location: Vancouver, Canada (scouting Otaru, Japan)
 - Reading: *Antifragile* by Nassim Nicholas Taleb
 - Learning: Docker, Kubernetes, Playwright
 - Thinking about: how systems thinking applies to everyday choices

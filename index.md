@@ -29,14 +29,14 @@ spotlight_cards:
     url: "/blog/finance/2025/10/11/taleb-barbell-strategy/"
   - category: travel
     title: "One Month Into the Sabbatical"
-    description: "Notes from leaving Vancouver, scouting 日本小樽, and designing a mobile workspace."
-    url: "/blog/travel/2024/12/08/one-month-into-the-sabbatical/"
+    description: "Notes from leaving Vancouver, scouting Otaru, Japan, and designing a mobile workspace."
+    url: "/blog/travel/2024/12/08/sabbatical-first-month/"
   - category: mind
     title: "Why I Resigned and What Comes Next"
     description: "Tracking the mindset shift from corporate rhythms to a curiosity-led life."
     url: "/blog/mind/2024/12/01/why-i-quit/"
 now:
-  location: "Vancouver, Canada (curious about 日本小樽)"
+  location: "Vancouver, Canada (scouting Otaru, Japan)"
   reading: "Antifragile by Nassim Nicholas Taleb"
   learning: "Docker, Kubernetes, Playwright"
   thinking: "How systems thinking can guide everyday decisions."
