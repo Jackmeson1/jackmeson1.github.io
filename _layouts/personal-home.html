@@ -1,0 +1,136 @@
+---
+layout: default
+---
+{% assign hero = page.hero | default: site.hero %}
+{% assign featured_identifiers = page.featured_posts | default: site.featured_posts %}
+{% assign featured_posts = '' | split: '' %}
+{% if featured_identifiers and featured_identifiers.size > 0 %}
+  {% for identifier in featured_identifiers %}
+    {% assign post_match = site.posts | where: 'slug', identifier | first %}
+    {% if post_match == nil %}
+      {% assign post_match = site.posts | where: 'path', identifier | first %}
+    {% endif %}
+    {% if post_match == nil %}
+      {% assign post_match = site.posts | where: 'id', identifier | first %}
+    {% endif %}
+    {% if post_match %}
+      {% assign featured_posts = featured_posts | push: post_match %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if featured_posts == empty %}
+  {% assign featured_posts = site.posts | slice: 0, 4 %}
+{% endif %}
+{% assign quick_links = page.quick_links | default: site.quick_links %}
+{% assign ctas = page.ctas | default: site.ctas %}
+{% assign updates = site.data.updates | default: empty %}
+{% if updates and updates.size > 0 %}
+  {% assign updates = updates | sort: 'date' | reverse %}
+{% endif %}
+
+<main class="ds-main u-bg-surface">
+  <section class="ds-section hero u-bg-gradient">
+    <div class="ds-container u-stack-xl">
+      <div class="hero__content u-stack-md">
+        {% if hero.tagline %}
+          <p class="hero__kicker">{{ hero.tagline }}</p>
+        {% endif %}
+        {% if hero.name %}
+          <h1 class="hero__title">{{ hero.name }}</h1>
+        {% else %}
+          <h1 class="hero__title">{{ site.title }}</h1>
+        {% endif %}
+        {% if hero.subtitle %}
+          <p class="hero__subtitle">{{ hero.subtitle }}</p>
+        {% endif %}
+        {% if hero.socials %}
+          <div class="hero__actions u-flex u-flex-wrap u-gap-sm">
+            {% for social in hero.socials %}
+              <a class="ds-button ds-button--ghost" href="{{ social.url }}" rel="noopener" target="_blank">{{ social.label }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {% if ctas and ctas.size > 0 %}
+        <div class="hero__ctas u-grid u-gap-md">
+          {% for block in ctas %}
+            <div class="ds-card ds-card--translucent u-stack-sm">
+              <h2 class="ds-card__title">{{ block.title }}</h2>
+              <p class="ds-card__body">{{ block.body }}</p>
+              {% if block.action and block.action.url and block.action.label %}
+                <a class="ds-button" href="{{ block.action.url }}">{{ block.action.label }}</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="ds-section u-bg-page">
+    <div class="ds-container u-stack-lg">
+      <header class="ds-section__header u-stack-xxs">
+        <p class="ds-kicker">Spotlight</p>
+        <h2 class="ds-section__title">Featured research highlights</h2>
+        <p class="ds-section__subtitle">A cross-section of AI infrastructure, energy transition, and risk frameworks.</p>
+      </header>
+      <div class="ds-grid ds-grid--cards">
+        {% for post in featured_posts %}
+          <article class="ds-card ds-card--elevated u-stack-sm">
+            <div class="ds-card__badge">{% if post.tldr %}TL;DR{% elsif post.badge %}{{ post.badge }}{% else %}Featured{% endif %}</div>
+            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }} · {% if post.categories and post.categories.size > 0 %}{{ post.categories[0] | replace: '-', ' ' | capitalize }}{% else %}Research{% endif %}</p>
+            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            {% if post.tldr %}
+              <p class="ds-card__body">{{ post.tldr }}</p>
+            {% elsif post.description %}
+              <p class="ds-card__body">{{ post.description }}</p>
+            {% else %}
+              <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 36 }}</p>
+            {% endif %}
+            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read the full analysis →</a>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% if updates and updates.size > 0 %}
+    <section class="ds-section u-bg-surface">
+      <div class="ds-container u-stack-lg">
+        <header class="ds-section__header u-stack-xxs">
+          <p class="ds-kicker">Field notes</p>
+          <h2 class="ds-section__title">Latest updates</h2>
+          <p class="ds-section__subtitle">Snapshots from recent projects, research sprints, and community work.</p>
+        </header>
+        <ol class="timeline u-stack-md">
+          {% for entry in updates %}
+            <li class="timeline__item u-stack-xxs">
+              <div class="timeline__meta">{{ entry.date | date: "%b %d, %Y" }}</div>
+              <h3 class="timeline__title">{{ entry.title }}</h3>
+              <p class="timeline__body">{{ entry.description }}</p>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if quick_links and quick_links.size > 0 %}
+    <section class="ds-section u-bg-page">
+      <div class="ds-container u-stack-md">
+        <header class="ds-section__header u-stack-xxs u-text-center">
+          <p class="ds-kicker">Navigate</p>
+          <h2 class="ds-section__title">Quick links</h2>
+        </header>
+        <div class="ds-grid ds-grid--quick-links">
+          {% for item in quick_links %}
+            <a class="ds-card ds-card--compact" href="{{ item.url }}">
+              <span>{{ item.label }}</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+</main>
