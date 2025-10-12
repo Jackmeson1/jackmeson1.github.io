@@ -1,0 +1,4 @@
+<span class="chip {{ include.variant | default: 'chip-muted' }}">
+  {%- if include.icon -%}<span class="chip__icon" aria-hidden="true">{{ include.icon }}</span>{%- endif -%}
+  {{ include.label | default: include.content | default: 'Label' }}
+</span>

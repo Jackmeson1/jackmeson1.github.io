@@ -1,18 +1,26 @@
 ---
 layout: default
 ---
-<article class="post" lang="{{ page.lang | default: site.lang }}">
-  <header class="post-header">
-    <p class="post-meta">
-      <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+
+<article class="post container surface-card stack gap-2" lang="{{ page.lang | default: site.lang }}" itemscope itemtype="https://schema.org/BlogPosting">
+  <header class="post-header stack gap-1">
+    <p class="post-meta text-muted text-xs flex align-center gap-1 wrap">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %d, %Y" }}</time>
       {% if page.last_modified_at and page.last_modified_at != page.date %}
-        <span class="post-updated">Updated {{ page.last_modified_at | date: "%B %d, %Y" }}</span>
+        <span class="post-updated">· Updated {{ page.last_modified_at | date: "%B %d, %Y" }}</span>
+        <meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">
       {% endif %}
+      {% if page.author or site.author.name %}
+        <span>· by <span itemprop="author">{{ page.author | default: site.author.name }}</span></span>
+      {% endif %}
+      {% if page.reading_time %}<span>· {{ page.reading_time }} min read</span>{% endif %}
     </p>
-    <h1 class="post-title">{{ page.title }}</h1>
+
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
     {% if page.description %}
-      <p class="post-description">{{ page.description }}</p>
+      <p class="post-description text-muted" itemprop="description">{{ page.description }}</p>
     {% endif %}
+
     {% if page.categories %}
       <div class="post-categories">
         {% for cat in page.categories %}
@@ -26,9 +34,11 @@ layout: default
         {% endfor %}
       </div>
     {% endif %}
+
     {% if page.image %}
-      <figure class="post-hero">
+      <figure class="post-hero" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
         <img src="{{ page.image | relative_url }}" alt="{{ page.hero_alt | default: page.title }} illustration" loading="lazy">
+        <meta itemprop="url" content="{{ page.image | relative_url }}">
       </figure>
     {% endif %}
   </header>
@@ -55,7 +65,7 @@ layout: default
     </section>
   {% endif %}
 
-  <div class="post-content">
+  <div class="post-content prose" itemprop="articleBody">
     {{ content }}
   </div>
 
@@ -72,146 +82,62 @@ layout: default
       </div>
     </section>
   {% endif %}
+
+  {% if page.tags %}
+    <div class="tag-cloud">
+      {% for tag in page.tags %}
+        {% include chip.html label=tag %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </article>
 
+{% if page.map %}
+<section class="site-main-section container">
+  <h2>{{ page.map.title | default: 'In context' }}</h2>
+  <div class="surface-card" style="height: 24rem; overflow: hidden;">
+    <div data-map data-lat="{{ page.map.lat }}" data-lng="{{ page.map.lng }}" data-zoom="{{ page.map.zoom | default: 11 }}" data-marker="{{ page.map.marker | escape }}" style="height: 100%;"></div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.related_posts %}
+<section class="site-main-section container">
+  <h2>Related</h2>
+  <div class="card-grid auto-fit">
+    {% for post in page.related_posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.map %}
+  <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
+{% endif %}
+
 <style>
-  .post {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
-  }
-
-  .post-header {
-    text-align: center;
-    margin-bottom: 32px;
-  }
-
-  .post-meta {
-    color: #6b7280;
-    font-size: 0.9em;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .post-title {
-    margin-bottom: 16px;
-  }
-
-  .post-description {
-    color: #4b5563;
-    line-height: 1.7;
-    margin-bottom: 20px;
-  }
-
-  .post-categories {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 24px;
-  }
-
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 14px;
-    border-radius: 999px;
-    background: #eef2ff;
-    color: #4338ca;
-    text-decoration: none;
-    font-size: 0.85em;
-  }
-
-  .chip:hover {
-    background: #c7d2fe;
-  }
-
-  .post-hero {
-    margin: 32px auto 0;
-    max-width: 720px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 16px 40px rgba(79, 70, 229, 0.18);
-  }
-
-  .post-hero img {
-    width: 100%;
-    display: block;
-  }
-
-  .post-summary,
-  .post-takeaways,
-  .post-faqs {
-    margin-bottom: 40px;
-    padding: 24px;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    background: #f9fafb;
-  }
-
-  .post-summary h2,
-  .post-takeaways h2,
-  .post-faqs h2 {
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
-
-  .post-summary ul,
-  .post-takeaways ul {
-    margin: 0;
-    padding-left: 20px;
-    color: #1f2937;
-    line-height: 1.7;
-  }
-
-  .post-content {
-    color: #1f2937;
-    line-height: 1.8;
-  }
-
-  .post-content h2,
-  .post-content h3 {
-    margin-top: 32px;
-  }
-
-  .post-faqs .faq-grid {
-    display: grid;
-    gap: 16px;
-  }
-
-  .post-faqs details {
-    border-radius: 12px;
-    border: 1px solid #d1d5db;
-    background: #fff;
-    padding: 16px 20px;
-  }
-
-  .post-faqs summary {
-    cursor: pointer;
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .faq-answer {
-    margin-top: 12px;
-    color: #374151;
-  }
-
-  .post-faqs details[open] {
-    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.08);
-  }
-
+  .post { max-width: 760px; margin: 0 auto; padding: 40px 20px 80px; }
+  .post-header { text-align: center; margin-bottom: 32px; }
+  .post-meta { color: #6b7280; font-size: 0.9em; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .post-title { margin-bottom: 16px; }
+  .post-description { color: #4b5563; line-height: 1.7; margin-bottom: 20px; }
+  .post-categories { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .chip { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; background: #eef2ff; color: #4338ca; text-decoration: none; font-size: 0.85em; }
+  .chip:hover { background: #c7d2fe; }
+  .post-hero { margin: 32px auto 0; max-width: 720px; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(79,70,229,.18); }
+  .post-hero img { width: 100%; display: block; }
+  .post-summary, .post-takeaways, .post-faqs { margin-bottom: 40px; padding: 24px; border: 1px solid #e5e7eb; border-radius: 16px; background: #f9fafb; }
+  .post-content { color: #1f2937; line-height: 1.8; }
+  .post-content h2, .post-content h3 { margin-top: 32px; }
+  .post-faqs .faq-grid { display: grid; gap: 16px; }
+  .post-faqs details { border-radius: 12px; border: 1px solid #d1d5db; background: #fff; padding: 16px 20px; }
+  .post-faqs summary { cursor: pointer; font-weight: 600; color: #111827; }
+  .faq-answer { margin-top: 12px; color: #374151; }
+  .post-faqs details[open] { box-shadow: 0 12px 24px rgba(79,70,229,.08); }
   @media (max-width: 640px) {
-    .post {
-      padding: 32px 16px 60px;
-    }
-
-    .post-summary,
-    .post-takeaways,
-    .post-faqs {
-      padding: 20px;
-    }
+    .post { padding: 32px 16px 60px; }
+    .post-summary, .post-takeaways, .post-faqs { padding: 20px; }
   }
 </style>
+
