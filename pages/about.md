@@ -6,37 +6,28 @@ subtitle: "Engineer, market researcher, traveler, meditator"
 lede: "I’m building a digital garden to document how code, capital, travel, and inner work feed each other."
 ---
 
-## 👋 Who I Am
+## 👤 Who I Am
 
-- 🔧 Former QA Engineer at Fortinet (3 years)
-- 📊 Quant-curious researcher exploring AI, energy, and market structure
-- ✈️ Slow traveler designing routines that work across cities
+- 🔧 Former QA Engineer @ Fortinet (**Mar 2022 – Sep 2025**)
+- 📊 Quant-curious on AI, energy, market structure
+- ✈️ Slow traveler optimizing cross-city routines
 
-## 🎓 Roots
+## 🎓 Background
 
-- M.Eng. in Industrial Engineering, Peking University
-- M.Sc. in Computer Security, University of Victoria
+- M.Eng., Peking University · M.Sc., University of Victoria
 
-## 💡 Why This Garden Exists
+## 💡 Why This Site
 
-I left my QA role to create space for cross-disciplinary learning. This site is the notebook where I connect:
-
-- Technical craft from building test infrastructure
-- Finance frameworks for antifragile investing
-- Travel systems that keep remote work lightweight
-- Mind practices that stabilize focus and decision-making
+To create space for cross-disciplinary learning—technical craft, finance frameworks, travel systems, and mind practices—captured in public.
 
 ## 📍 Now
 
-- Location: Vancouver, Canada (scouting Otaru, Japan)
-- Reading: *Antifragile* by Nassim Nicholas Taleb
-- Learning: Docker, Kubernetes, Playwright
-- Thinking about: how systems thinking applies to everyday choices
+- **Location**: Vancouver · **Learning**: Docker, Kubernetes, Playwright
 
-_Last updated: January 15, 2025_
+*Last updated: {{ site.time | date: "%b %d, %Y" }}*
 
 ## 📬 Connect
 
-- Email: [jli785330@gmail.com](mailto:jli785330@gmail.com)
-- GitHub: [jackmeson1](https://github.com/jackmeson1)
-- LinkedIn: [jiajun-liang](https://www.linkedin.com/in/jiajun-liang-qa/)
+Email: [jli785330@gmail.com](mailto:jli785330@gmail.com) · GitHub: [jackmeson1](https://github.com/jackmeson1) · LinkedIn: [jiajun-liang](https://www.linkedin.com/in/jiajun-liang-qa/)
+
+**Want my full resume?** View on LinkedIn or download the CV.
