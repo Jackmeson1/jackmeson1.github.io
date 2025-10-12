@@ -41,7 +41,7 @@ Compute recent posts for “Latest publications”
 <main class="ds-main u-bg-surface">
   <!-- HERO -->
   <section class="ds-section hero hero--garden u-bg-surface">
-    <div class="ds-container u-stack-lg">
+    <div class="ds-container ds-container--wide u-stack-lg">
       <div class="hero__content u-stack-sm">
         {% if hero.tagline %}<p class="hero__kicker">{{ hero.tagline }}</p>{% endif %}
         {% if hero.name %}
@@ -89,7 +89,7 @@ Compute recent posts for “Latest publications”
   <!-- FEATURED (from main) -->
   {% if spotlight_cards and spotlight_cards.size > 0 %}
     <section class="ds-section u-bg-page">
-      <div class="ds-container u-stack-md">
+      <div class="ds-container ds-container--wide u-stack-md">
         <header class="ds-section__header u-stack-xxs">
           <p class="ds-kicker">Recent curiosities</p>
           <h2 class="ds-section__title">What I'm exploring right now</h2>
@@ -111,7 +111,7 @@ Compute recent posts for “Latest publications”
 
   <!-- LATEST (codex idea,用设计系统样式) -->
   <section class="ds-section u-bg-surface">
-    <div class="ds-container u-stack-md">
+    <div class="ds-container ds-container--narrow u-stack-md">
       <div class="latest-header u-flex u-flex-wrap u-gap-sm">
         <h2 class="ds-section__title">Latest writing</h2>
         <a class="ds-button ds-button--outline" href="{{ '/archive/' | relative_url }}">Browse the archive</a>
@@ -146,14 +146,14 @@ Compute recent posts for “Latest publications”
   <!-- TIMELINE: 优先 page.timeline，否则用 data.updates -->
   {% if page.timeline %}
     <section class="ds-section u-bg-page">
-      <div class="ds-container u-stack-lg">
+      <div class="ds-container ds-container--narrow u-stack-lg">
         <h2 class="ds-section__title">Trajectory</h2>
         {% include timeline.html events=page.timeline %}
       </div>
     </section>
   {% elsif updates and updates.size > 0 %}
     <section class="ds-section u-bg-surface">
-      <div class="ds-container u-stack-lg">
+      <div class="ds-container ds-container--narrow u-stack-lg">
         <header class="ds-section__header u-stack-xxs">
           <p class="ds-kicker">Field notes</p>
           <h2 class="ds-section__title">Latest updates</h2>
@@ -174,7 +174,7 @@ Compute recent posts for “Latest publications”
 
   {% if now %}
     <section class="ds-section u-bg-page">
-      <div class="ds-container now-section u-stack-sm">
+      <div class="ds-container ds-container--wide now-section u-stack-sm">
         <header class="u-stack-xxs">
           <p class="ds-kicker">Now</p>
           <h2 class="ds-section__title">Where my attention lives</h2>

@@ -1,6 +1,8 @@
 :root {
   --ds-font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
   --ds-page-max: 1100px;
+  --ds-page-wide: 1400px;
+  --ds-page-reading: 820px;
   --ds-space-xxs: 0.375rem;
   --ds-space-xs: 0.5rem;
   --ds-space-sm: 0.75rem;
@@ -52,6 +54,20 @@ a {
   width: min(100%, var(--ds-page-max));
   margin-inline: auto;
   padding-inline: min(5vw, var(--ds-space-lg));
+}
+
+.ds-container--wide {
+  width: min(100%, var(--ds-page-wide));
+}
+
+.ds-container--narrow {
+  width: min(100%, var(--ds-page-reading));
+}
+
+@media (min-width: 87.5rem) {
+  .ds-container--wide {
+    width: min(100%, 1600px);
+  }
 }
 
 .u-stack-xxs { display: grid; gap: var(--ds-space-xxs); }
