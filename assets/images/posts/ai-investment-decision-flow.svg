@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1400">
+  <defs>
+    <linearGradient id="p1-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p2-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p3-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p4-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="p5-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1400" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    Case Study: Should I Go All-In on AI Agents?
+  </text>
+  <text x="500" y="70" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748b">
+    Applying the Five Paradigms Framework
+  </text>
+
+  <!-- Question Box -->
+  <rect x="200" y="100" width="600" height="70" rx="10" fill="#eef2ff" stroke="#4338ca" stroke-width="2"/>
+  <text x="500" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4338ca">
+    Investment Opportunity
+  </text>
+  <text x="500" y="150" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#4338ca">
+    $100K available | AI Agents showing 40% monthly gains | High volatility
+  </text>
+
+  <!-- Paradigm 1: MinMax -->
+  <g transform="translate(0, 210)">
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="url(#p1-grad)" opacity="0.1"/>
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="none" stroke="url(#p1-grad)" stroke-width="3"/>
+
+    <rect x="70" y="15" width="200" height="40" rx="8" fill="url(#p1-grad)"/>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      P1: MINMAX
+    </text>
+
+    <text x="80" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#b91c1c">
+      Question: Can I survive -50% crash?
+    </text>
+
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Portfolio = $100K cash, $200K stocks, $150K home equity
+    </text>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Worst case: Lose entire $100K → Still have $350K total
+    </text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Emergency fund: $50K separate (6 months expenses)
+    </text>
+
+    <rect x="700" y="55" width="230" height="60" rx="8" fill="#fecaca"/>
+    <text x="815" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#b91c1c">
+      ✓ MINMAX CHECK PASSES
+    </text>
+    <text x="815" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#b91c1c">
+      Can sustain total loss
+    </text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="500" y1="395" x2="500" y2="430" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Paradigm 2: Kelly -->
+  <g transform="translate(0, 440)">
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="url(#p2-grad)" opacity="0.1"/>
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="none" stroke="url(#p2-grad)" stroke-width="3"/>
+
+    <rect x="70" y="15" width="200" height="40" rx="8" fill="url(#p2-grad)"/>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      P2: KELLY
+    </text>
+
+    <text x="80" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1d4ed8">
+      Question: What's the optimal bet size?
+    </text>
+
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Expected value: 40% gain × 60% prob - 50% loss × 40% prob = +4%
+    </text>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Kelly fraction: (0.6 × 0.4 - 0.4 × 0.5) / 0.5 = 0.08 (8%)
+    </text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Half-Kelly (safer): 4% of portfolio = $18K (of $450K total)
+    </text>
+
+    <rect x="700" y="55" width="230" height="60" rx="8" fill="#bfdbfe"/>
+    <text x="815" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1d4ed8">
+      ALLOCATION: $18K
+    </text>
+    <text x="815" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#1d4ed8">
+      Optimal growth size
+    </text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="500" y1="625" x2="500" y2="660" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Paradigm 3: Mean Max -->
+  <g transform="translate(0, 670)">
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="url(#p3-grad)" opacity="0.1"/>
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="none" stroke="url(#p3-grad)" stroke-width="3"/>
+
+    <rect x="70" y="15" width="200" height="40" rx="8" fill="url(#p3-grad)"/>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      P3: MEAN MAX
+    </text>
+
+    <text x="80" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#047857">
+      Question: Will this destabilize my portfolio?
+    </text>
+
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Current volatility: 12% annual (diversified portfolio)
+    </text>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Adding $18K AI (4%) with 80% volatility → Portfolio vol: ~15%
+    </text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Acceptable increase (under 20% threshold)
+    </text>
+
+    <rect x="700" y="55" width="230" height="60" rx="8" fill="#d1fae5"/>
+    <text x="815" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#047857">
+      ✓ STABILITY OK
+    </text>
+    <text x="815" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#047857">
+      Volatility contained
+    </text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="500" y1="855" x2="500" y2="890" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Paradigm 4: Convexity -->
+  <g transform="translate(0, 900)">
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="url(#p4-grad)" opacity="0.1"/>
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="none" stroke="url(#p4-grad)" stroke-width="3"/>
+
+    <rect x="70" y="15" width="200" height="40" rx="8" fill="url(#p4-grad)"/>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      P4: CONVEXITY
+    </text>
+
+    <text x="80" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">
+      Question: Is upside unlimited, downside capped?
+    </text>
+
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Max loss: $18K (capped at investment amount)
+    </text>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Potential upside: 10x-100x if AI agents become standard
+    </text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Asymmetry ratio: ~50:1 (upside:downside)
+    </text>
+
+    <rect x="700" y="55" width="230" height="60" rx="8" fill="#e9d5ff"/>
+    <text x="815" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#5b21b6">
+      ✓ STRONG CONVEXITY
+    </text>
+    <text x="815" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#5b21b6">
+      Asymmetric payoff
+    </text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="500" y1="1085" x2="500" y2="1120" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Paradigm 5: Meta-Game -->
+  <g transform="translate(0, 1130)">
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="url(#p5-grad)" opacity="0.1"/>
+    <rect x="50" y="0" width="900" height="180" rx="12" fill="none" stroke="url(#p5-grad)" stroke-width="3"/>
+
+    <rect x="70" y="15" width="200" height="40" rx="8" fill="url(#p5-grad)"/>
+    <text x="170" y="42" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      P5: META-GAME
+    </text>
+
+    <text x="80" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#92400e">
+      Question: Can I change the rules?
+    </text>
+
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Build AI agent consulting practice (leverage expertise)
+    </text>
+    <text x="80" y="125" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Create content about AI implementation (positioning)
+    </text>
+    <text x="80" y="145" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      • Investment gives hands-on learning → Career advantage
+    </text>
+
+    <rect x="700" y="55" width="230" height="60" rx="8" fill="#fef3c7"/>
+    <text x="815" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#92400e">
+      ✓ META ADVANTAGE
+    </text>
+    <text x="815" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#92400e">
+      Position for future
+    </text>
+  </g>
+
+  <!-- Final Decision Box -->
+  <rect x="150" y="1330" width="700" height="60" rx="12" fill="#10b981" opacity="0.9"/>
+  <text x="500" y="1355" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+    FINAL DECISION: INVEST $18K
+  </text>
+  <text x="500" y="1378" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+    All 5 paradigms aligned • Risk managed • Opportunity maximized
+  </text>
+</svg>

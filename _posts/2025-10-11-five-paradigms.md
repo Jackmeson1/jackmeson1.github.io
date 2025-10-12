@@ -7,7 +7,7 @@ categories: [mind]
 tags: [strategic-ops, antifragility, leadership-rituals, systems-thinking]
 author: Jiajun Liang
 description: Design a five-layer operating system that balances survival, growth, stakeholder stability, asymmetric bets, and rule-making for global leadership teams.
-image: /assets/images/posts/five-paradigms.svg
+image: /assets/images/posts/five-paradigms-framework.svg
 lang: en
 featured: true
 tldr:
@@ -64,6 +64,9 @@ After years of synthesis across finance, game theory, and strategic thinking, I'
 ## The Five Paradigms: An Operating System for Decisions
 
 Think of decision-making as a sophisticated machine with five critical components:
+
+![Five Paradigms Framework](/assets/images/posts/five-paradigms-framework.svg)
+*The Five Paradigms operate simultaneously as an integrated decision system*
 
 ### **Paradigm 5: Meta-Game (The Operating System)**
 - **Function**: Rule-setting and game design
@@ -145,6 +148,9 @@ These geo-specific prompts make the framework searchable for city-level operator
 
 ## How Traditional Frameworks Fail
 
+![Framework Comparison](/assets/images/posts/frameworks-comparison.svg)
+*Traditional frameworks optimize one dimension. Five Paradigms optimizes all five simultaneously.*
+
 ### **Modern Portfolio Theory (MPT)**
 - Uses: Paradigm 3 only (mean-variance optimization)
 - Missing: Survival constraints, compound growth optimization, tail risks, rule-setting
@@ -174,6 +180,9 @@ What traditional theory treats as contradictions, the Five Paradigms treats as c
 ## Case Study: "Should I Go All-In on AI Agents?"
 
 Let's apply the framework to a concrete decision.
+
+![AI Investment Decision Flow](/assets/images/posts/ai-investment-decision-flow.svg)
+*Step-by-step application of all five paradigms to a real investment decision*
 
 ### **Traditional Approach (Kelly Only)**
 ```
@@ -281,6 +290,9 @@ The Five Paradigms aren't just for investing. They apply to any complex decision
 ## The Decision Matrix
 
 When facing any complex decision, run this checklist:
+
+![Decision Matrix Checklist](/assets/images/posts/decision-matrix-checklist.svg)
+*A practical checklist for applying all five paradigms to any major decision*
 
 **□ Paradigm 1 (MinMax)**: What's the worst case? Can I survive it?
 
