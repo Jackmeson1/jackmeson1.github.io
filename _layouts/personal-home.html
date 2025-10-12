@@ -26,11 +26,12 @@ Resolve hero / featured / quick links / ctas / updates
   {% assign featured_posts = site.posts | slice: 0, 4 %}
 {% endif %}
 {% assign quick_links = page.quick_links | default: site.quick_links %}
-{% assign ctas = page.ctas | default: site.ctas %}
+{% assign spotlight_cards = page.spotlight_cards | default: site.spotlight_cards %}
 {% assign updates = site.data.updates | default: empty %}
 {% if updates and updates.size > 0 %}
   {% assign updates = updates | sort: 'date' | reverse %}
 {% endif %}
+{% assign now = page.now | default: site.now %}
 
 {%- comment -%}
 Compute recent posts for “Latest publications”
@@ -39,9 +40,9 @@ Compute recent posts for “Latest publications”
 
 <main class="ds-main u-bg-surface">
   <!-- HERO -->
-  <section class="ds-section hero u-bg-gradient">
-    <div class="ds-container u-stack-xl">
-      <div class="hero__content u-stack-md">
+  <section class="ds-section hero hero--garden u-bg-surface">
+    <div class="ds-container u-stack-lg">
+      <div class="hero__content u-stack-sm">
         {% if hero.tagline %}<p class="hero__kicker">{{ hero.tagline }}</p>{% endif %}
         {% if hero.name %}
           <h1 class="hero__title">{{ hero.name }}</h1>
@@ -49,28 +50,25 @@ Compute recent posts for “Latest publications”
           <h1 class="hero__title">{{ site.title }}</h1>
         {% endif %}
         {% if hero.subtitle %}<p class="hero__subtitle">{{ hero.subtitle }}</p>{% endif %}
+        {% if hero.summary %}<p class="hero__summary">{{ hero.summary }}</p>{% endif %}
+      </div>
+
+      <div class="hero__footer u-stack-sm">
+        {% if quick_links %}
+          <div class="hero__nav u-flex u-flex-wrap u-gap-sm">
+            {% for link in quick_links %}
+              <a class="ds-button ds-button--outline" href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
         {% if hero.socials %}
-          <div class="hero__actions u-flex u-flex-wrap u-gap-sm">
+          <div class="hero__socials u-flex u-flex-wrap u-gap-sm">
             {% for social in hero.socials %}
-              <a class="ds-button ds-button--ghost" href="{{ social.url }}" rel="noopener" target="_blank">{{ social.label }}</a>
+              <a class="ds-button ds-button--link" href="{{ social.url }}" rel="noopener" target="_blank">{{ social.label }}</a>
             {% endfor %}
           </div>
         {% endif %}
       </div>
-
-      {% if ctas and ctas.size > 0 %}
-        <div class="hero__ctas u-grid u-gap-md">
-          {% for block in ctas %}
-            <div class="ds-card ds-card--translucent u-stack-sm">
-              <h2 class="ds-card__title">{{ block.title }}</h2>
-              <p class="ds-card__body">{{ block.body }}</p>
-              {% if block.action and block.action.url and block.action.label %}
-                <a class="ds-button" href="{{ block.action.url }}">{{ block.action.label }}</a>
-              {% endif %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
   </section>
 
@@ -82,54 +80,54 @@ Compute recent posts for “Latest publications”
           <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197M15.803 15.803A7.5 7.5 0 1 0 5 5a7.5 7.5 0 0 0 10.803 10.803Z" />
         </svg>
         <label class="sr-only" for="site-search">Search the knowledge base</label>
-        <input id="site-search" type="search" class="input" placeholder="Search insights, models, and case studies" data-search-input>
+        <input id="site-search" type="search" class="input" placeholder="Search posts, travel notes, and experiments" data-search-input>
       </div>
       <div class="search-results" data-search-results></div>
     </div>
   </section>
 
   <!-- FEATURED (from main) -->
-  <section class="ds-section u-bg-page">
-    <div class="ds-container u-stack-lg">
-      <header class="ds-section__header u-stack-xxs">
-        <p class="ds-kicker">Spotlight</p>
-        <h2 class="ds-section__title">Featured research highlights</h2>
-        <p class="ds-section__subtitle">A cross-section of AI infrastructure, energy transition, and risk frameworks.</p>
-      </header>
-      <div class="ds-grid ds-grid--cards">
-        {% for post in featured_posts %}
-          <article class="ds-card ds-card--elevated u-stack-sm">
-            <div class="ds-card__badge">{% if post.tldr %}TL;DR{% elsif post.badge %}{{ post.badge }}{% else %}Featured{% endif %}</div>
-            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }} · {% if post.categories and post.categories.size > 0 %}{{ post.categories[0] | replace: '-', ' ' | capitalize }}{% else %}Research{% endif %}</p>
-            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            {% if post.tldr %}
-              <p class="ds-card__body">{{ post.tldr }}</p>
-            {% elsif post.description %}
-              <p class="ds-card__body">{{ post.description }}</p>
-            {% else %}
-              <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 36 }}</p>
-            {% endif %}
-            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read the full analysis →</a>
-          </article>
-        {% endfor %}
+  {% if spotlight_cards and spotlight_cards.size > 0 %}
+    <section class="ds-section u-bg-page">
+      <div class="ds-container u-stack-md">
+        <header class="ds-section__header u-stack-xxs">
+          <p class="ds-kicker">Recent curiosities</p>
+          <h2 class="ds-section__title">What I'm exploring right now</h2>
+          <p class="ds-section__subtitle">A rotating mix of technology, finance, travel, and mind practice.</p>
+        </header>
+        <div class="spotlight-grid">
+          {% for card in spotlight_cards %}
+            <article class="spotlight-card spotlight-card--{{ card.category }} u-stack-xs">
+              <span class="spotlight-card__tag">{{ card.category | replace: '-', ' ' | capitalize }}</span>
+              <h3 class="spotlight-card__title"><a href="{{ card.url | relative_url }}">{{ card.title }}</a></h3>
+              <p class="spotlight-card__body">{{ card.description }}</p>
+              <a class="spotlight-card__link" href="{{ card.url | relative_url }}">Read →</a>
+            </article>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {% endif %}
 
   <!-- LATEST (codex idea,用设计系统样式) -->
   <section class="ds-section u-bg-surface">
     <div class="ds-container u-stack-md">
-      <div class="u-flex u-items-center u-justify-between u-wrap u-gap-sm u-mb-sm">
-        <h2 class="ds-section__title">Latest publications</h2>
-        <a class="ds-button ds-button--ghost" href="{{ '/archive/' | relative_url }}">View all</a>
+      <div class="latest-header u-flex u-flex-wrap u-gap-sm">
+        <h2 class="ds-section__title">Latest writing</h2>
+        <a class="ds-button ds-button--outline" href="{{ '/archive/' | relative_url }}">Browse the archive</a>
       </div>
-      <div class="ds-grid ds-grid--cards">
-        {%- for post in recent_posts limit:6 -%}
-          <article class="ds-card u-stack-sm">
-            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }}</p>
-            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
-            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read →</a>
+      <div class="latest-list">
+        {%- for post in recent_posts limit:5 -%}
+          <article class="latest-item">
+            <div class="latest-item__meta">
+              <span>{{ post.date | date: "%b %d, %Y" }}</span>
+              {% if post.categories and post.categories.size > 0 %}
+                <span class="latest-item__tag latest-item__tag--{{ post.categories[0] | slugify }}">{{ post.categories[0] | replace: '-', ' ' | capitalize }}</span>
+              {% endif %}
+            </div>
+            <h3 class="latest-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="latest-item__excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+            <a class="spotlight-card__link" href="{{ post.url | relative_url }}">Read →</a>
           </article>
         {%- endfor -%}
       </div>
@@ -170,6 +168,46 @@ Compute recent posts for “Latest publications”
             </li>
           {% endfor %}
         </ol>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if now %}
+    <section class="ds-section u-bg-page">
+      <div class="ds-container now-section u-stack-sm">
+        <header class="u-stack-xxs">
+          <p class="ds-kicker">Now</p>
+          <h2 class="ds-section__title">Where my attention lives</h2>
+        </header>
+        <dl class="now-grid">
+          {% if now.location %}
+            <div>
+              <dt>Location</dt>
+              <dd>{{ now.location }}</dd>
+            </div>
+          {% endif %}
+          {% if now.reading %}
+            <div>
+              <dt>Reading</dt>
+              <dd>{{ now.reading }}</dd>
+            </div>
+          {% endif %}
+          {% if now.learning %}
+            <div>
+              <dt>Learning</dt>
+              <dd>{{ now.learning }}</dd>
+            </div>
+          {% endif %}
+          {% if now.thinking %}
+            <div>
+              <dt>Thinking about</dt>
+              <dd>{{ now.thinking }}</dd>
+            </div>
+          {% endif %}
+        </dl>
+        {% if now.updated %}
+          <p class="now-updated">Last updated {{ now.updated | date: "%b %d, %Y" }}</p>
+        {% endif %}
       </div>
     </section>
   {% endif %}

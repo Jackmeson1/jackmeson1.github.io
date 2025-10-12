@@ -3,9 +3,9 @@ layout: post
 title: "The Five Paradigms: A Unified Framework for Strategic Decision-Making"
 date: 2025-10-11 12:00:00 +0800
 last_modified_at: 2025-10-11 12:00:00 +0800
-categories: [systems, mindfulness]
+categories: [mind]
 tags: [strategic-ops, antifragility, leadership-rituals, systems-thinking]
-author: Jackmeson
+author: Jiajun Liang
 description: Design a five-layer operating system that balances survival, growth, stakeholder stability, asymmetric bets, and rule-making for global leadership teams.
 image: /assets/images/posts/five-paradigms.svg
 lang: en

@@ -30,7 +30,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
-permalink: /:categories/:year/:month/:day/:slug/
+permalink: /blog/:categories/:year/:month/:day/:slug/
 
 # Pagination settings
 paginate: 10
@@ -101,8 +101,6 @@ defaults:
       type: "posts"
     values:
       layout: post
-      categories: ["blog"]
-      tags: ["garden"]
       lang: en-US
       comments: true
   - scope:

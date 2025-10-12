@@ -5,7 +5,7 @@ date: 2025-10-11 10:00:00 +0800
 last_modified_at: 2025-10-11 10:00:00 +0800
 categories: [tech]
 tags: [data-centers, grid-strategy, energy-markets, ai-infrastructure]
-author: Jackmeson
+author: Jiajun Liang
 description: Quantifies how hyperscale AI demand rewires electricity markets, highlighting grid upgrades, merchant power plays, and resilient energy hedges.
 image: /assets/images/posts/ai-power-demand.svg
 lang: en

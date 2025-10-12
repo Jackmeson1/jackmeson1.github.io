@@ -3,9 +3,9 @@ layout: post
 title: "Powering the AI Era: Investing in the 'Water Sellers' Behind Data Centers"
 date: 2025-10-11 14:00:00 +0800
 last_modified_at: 2025-10-11 14:00:00 +0800
-categories: [tech, systems]
+categories: [tech]
 tags: [power-market, infrastructure, nuclear, ai-demand]
-author: Jackmeson
+author: Jiajun Liang
 description: Breaks down the electricity suppliers powering AI expansion, from merchant generators to nuclear developers, and shows how to underwrite durable returns.
 image: /assets/images/posts/ai-power-supply.svg
 lang: en

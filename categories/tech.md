@@ -1,9 +1,11 @@
 ---
 layout: category
 category: tech
-permalink: /tech/
-title: Tech Intelligence
+permalink: /blog/tech/
+title: Tech & QA Craft
 hero_kicker: "Category"
-description: "Stories from the builders' frontier—chips, energy, and infrastructure insights for operators shipping the future."
-intro: "Explore deep dives on emerging platforms, power grids, and the tooling stacks that keep modern technology humming."
+description: "Notes from building test platforms, debugging infrastructure, and learning new tools on sabbatical."
+intro: "Expect practical write-ups on QA automation, DevOps experiments, and the tooling that keeps software teams honest."
+redirect_from:
+  - /tech/
 ---
