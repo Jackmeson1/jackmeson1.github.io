@@ -3,7 +3,7 @@ layout: default
 ---
 
 {%- comment -%}
-Resolve hero / featured / quick links / ctas / updates
+Resolve hero, featured content, quick links, and spotlight cards
 {%- endcomment -%}
 {% assign hero = page.hero | default: site.hero %}
 {% assign featured_identifiers = page.featured_posts | default: site.featured_posts %}
@@ -27,10 +27,6 @@ Resolve hero / featured / quick links / ctas / updates
 {% endif %}
 {% assign quick_links = page.quick_links | default: site.quick_links %}
 {% assign spotlight_cards = page.spotlight_cards | default: site.spotlight_cards %}
-{% assign updates = site.data.updates | default: empty %}
-{% if updates and updates.size > 0 %}
-  {% assign updates = updates | sort: 'date' | reverse %}
-{% endif %}
 {% assign now = page.now | default: site.now %}
 
 {%- comment -%}
@@ -147,31 +143,12 @@ Compute recent posts for “Latest publications”
   </section>
   {%- endif -%}
 
-  <!-- TIMELINE: 优先 page.timeline，否则用 data.updates -->
+  <!-- TIMELINE: 优先 page.timeline -->
   {% if page.timeline %}
     <section class="ds-section u-bg-page">
       <div class="ds-container ds-container--narrow u-stack-lg">
         <h2 class="ds-section__title">Trajectory</h2>
         {% include timeline.html events=page.timeline %}
-      </div>
-    </section>
-  {% elsif updates and updates.size > 0 %}
-    <section class="ds-section u-bg-surface">
-      <div class="ds-container ds-container--narrow u-stack-lg">
-        <header class="ds-section__header u-stack-xxs">
-          <p class="ds-kicker">Field notes</p>
-          <h2 class="ds-section__title">Latest updates</h2>
-          <p class="ds-section__subtitle">Snapshots from recent projects, research sprints, and community work.</p>
-        </header>
-        <ol class="timeline u-stack-md">
-          {% for entry in updates %}
-            <li class="timeline__item u-stack-xxs">
-              <div class="timeline__meta">{{ entry.date | date: "%b %d, %Y" }}</div>
-              <h3 class="timeline__title">{{ entry.title }}</h3>
-              <p class="timeline__body">{{ entry.description }}</p>
-            </li>
-          {% endfor %}
-        </ol>
       </div>
     </section>
   {% endif %}
