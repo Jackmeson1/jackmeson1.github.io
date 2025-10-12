@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <defs>
+    <linearGradient id="header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="500" y="35" font-family="Arial, sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    Five Paradigms Decision Checklist
+  </text>
+  <text x="500" y="60" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748b">
+    Essential questions to ask before any major decision
+  </text>
+
+  <!-- Checklist Container -->
+  <rect x="50" y="90" width="900" height="580" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Paradigm 1 -->
+  <g transform="translate(0, 110)">
+    <rect x="80" y="0" width="840" height="100" rx="8" fill="#fef2f2"/>
+
+    <!-- Checkbox -->
+    <rect x="100" y="15" width="30" height="30" rx="4" fill="white" stroke="#f5576c" stroke-width="2"/>
+    <text x="115" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#f5576c">✓</text>
+
+    <!-- Label -->
+    <rect x="150" y="10" width="170" height="40" rx="20" fill="#f5576c"/>
+    <text x="235" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      P1: MINMAX
+    </text>
+
+    <!-- Question -->
+    <text x="340" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#b91c1c">
+      Can I survive the worst-case scenario?
+    </text>
+    <text x="340" y="48" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → If I lose everything invested, can I still meet basic needs?
+    </text>
+    <text x="340" y="68" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Do I have emergency reserves separate from this decision?
+    </text>
+  </g>
+
+  <!-- Paradigm 2 -->
+  <g transform="translate(0, 230)">
+    <rect x="80" y="0" width="840" height="100" rx="8" fill="#eff6ff"/>
+
+    <!-- Checkbox -->
+    <rect x="100" y="15" width="30" height="30" rx="4" fill="white" stroke="#00f2fe" stroke-width="2"/>
+    <text x="115" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#00f2fe">✓</text>
+
+    <!-- Label -->
+    <rect x="150" y="10" width="170" height="40" rx="20" fill="#00f2fe"/>
+    <text x="235" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      P2: KELLY
+    </text>
+
+    <!-- Question -->
+    <text x="340" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#1d4ed8">
+      What's the mathematically optimal bet size?
+    </text>
+    <text x="340" y="48" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Am I sizing based on expected value and probability?
+    </text>
+    <text x="340" y="68" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Am I avoiding both over-betting (risk ruin) and under-betting (missing growth)?
+    </text>
+  </g>
+
+  <!-- Paradigm 3 -->
+  <g transform="translate(0, 350)">
+    <rect x="80" y="0" width="840" height="100" rx="8" fill="#f0fdf4"/>
+
+    <!-- Checkbox -->
+    <rect x="100" y="15" width="30" height="30" rx="4" fill="white" stroke="#38f9d7" stroke-width="2"/>
+    <text x="115" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#38f9d7">✓</text>
+
+    <!-- Label -->
+    <rect x="150" y="10" width="170" height="40" rx="20" fill="#38f9d7"/>
+    <text x="235" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      P3: MEAN MAX
+    </text>
+
+    <!-- Question -->
+    <text x="340" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#047857">
+      Will this create unnecessary volatility or chaos?
+    </text>
+    <text x="340" y="48" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Does this decision destabilize my current systems?
+    </text>
+    <text x="340" y="68" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Can I maintain smooth, predictable operations?
+    </text>
+  </g>
+
+  <!-- Paradigm 4 -->
+  <g transform="translate(0, 470)">
+    <rect x="80" y="0" width="840" height="100" rx="8" fill="#faf5ff"/>
+
+    <!-- Checkbox -->
+    <rect x="100" y="15" width="30" height="30" rx="4" fill="white" stroke="#764ba2" stroke-width="2"/>
+    <text x="115" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#764ba2">✓</text>
+
+    <!-- Label -->
+    <rect x="150" y="10" width="170" height="40" rx="20" fill="#764ba2"/>
+    <text x="235" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      P4: CONVEXITY
+    </text>
+
+    <!-- Question -->
+    <text x="340" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#5b21b6">
+      Does this have asymmetric payoffs?
+    </text>
+    <text x="340" y="48" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Is downside limited but upside potentially unlimited?
+    </text>
+    <text x="340" y="68" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Am I getting optionality and non-linear returns?
+    </text>
+  </g>
+
+  <!-- Paradigm 5 -->
+  <g transform="translate(0, 590)">
+    <rect x="80" y="0" width="840" height="100" rx="8" fill="#fffbeb"/>
+
+    <!-- Checkbox -->
+    <rect x="100" y="15" width="30" height="30" rx="4" fill="white" stroke="#fee140" stroke-width="2"/>
+    <text x="115" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#f59e0b">✓</text>
+
+    <!-- Label -->
+    <rect x="150" y="10" width="170" height="40" rx="20" fill="url(#header-grad)"/>
+    <text x="235" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">
+      P5: META-GAME
+    </text>
+
+    <!-- Question -->
+    <text x="340" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#92400e">
+      Can I change the rules or game itself?
+    </text>
+    <text x="340" y="48" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Does this position me to set standards or influence frameworks?
+    </text>
+    <text x="340" y="68" font-family="Arial, sans-serif" font-size="12" fill="#475569">
+      → Am I playing the game, or designing new games?
+    </text>
+  </g>
+
+  <!-- Bottom Note -->
+  <text x="500" y="695" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748b" font-style="italic">
+    All five must be considered for optimal strategic decisions
+  </text>
+</svg>

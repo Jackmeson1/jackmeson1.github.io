@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1e293b">
+    The Five Paradigms Framework
+  </text>
+  <text x="600" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">
+    A Unified Operating System for Strategic Decision-Making
+  </text>
+
+  <!-- Central Circle -->
+  <circle cx="600" cy="400" r="180" fill="url(#grad1)" opacity="0.15"/>
+  <circle cx="600" cy="400" r="160" fill="none" stroke="url(#grad1)" stroke-width="3"/>
+
+  <text x="600" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#667eea">
+    DECISION
+  </text>
+  <text x="600" y="415" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#667eea">
+    FRAMEWORK
+  </text>
+
+  <!-- Paradigm 5: Meta-Game (Top) -->
+  <g transform="translate(600, 120)">
+    <rect x="-140" y="-50" width="280" height="90" rx="15" fill="url(#grad5)" opacity="0.9"/>
+    <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PARADIGM 5: META-GAME
+    </text>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+      Rule-Setting &amp; Game Design
+    </text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white" opacity="0.9">
+      "Am I writing the rules?"
+    </text>
+  </g>
+
+  <!-- Paradigm 1: MinMax (Left) -->
+  <g transform="translate(200, 400)">
+    <rect x="-120" y="-45" width="240" height="90" rx="15" fill="url(#grad2)" opacity="0.9"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PARADIGM 1: MINMAX
+    </text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+      Survival &amp; Risk Floor
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white" opacity="0.9">
+      "Can I survive the worst case?"
+    </text>
+  </g>
+
+  <!-- Paradigm 2: Kelly (Top Right) -->
+  <g transform="translate(900, 250)">
+    <rect x="-120" y="-45" width="240" height="90" rx="15" fill="url(#grad3)" opacity="0.9"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PARADIGM 2: KELLY
+    </text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+      Compound Growth
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white" opacity="0.9">
+      "Optimal bet size for CAGR?"
+    </text>
+  </g>
+
+  <!-- Paradigm 3: Mean Max (Bottom Right) -->
+  <g transform="translate(900, 550)">
+    <rect x="-120" y="-45" width="240" height="90" rx="15" fill="url(#grad4)" opacity="0.9"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PARADIGM 3: MEAN MAX
+    </text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+      Stability &amp; Smoothness
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white" opacity="0.9">
+      "Will this cause volatility?"
+    </text>
+  </g>
+
+  <!-- Paradigm 4: Convexity (Bottom Left) -->
+  <g transform="translate(300, 600)">
+    <rect x="-140" y="-45" width="280" height="90" rx="15" fill="url(#grad1)" opacity="0.9"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PARADIGM 4: CONVEXITY
+    </text>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+      Asymmetric Payoffs
+    </text>
+    <text x="0" y="30" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white" opacity="0.9">
+      "Unlimited upside, limited downside?"
+    </text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <line x1="600" y1="170" x2="600" y2="240" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="280" y1="400" x2="440" y2="400" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="720" y1="310" x2="780" y2="280" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="720" y1="490" x2="780" y2="520" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="440" y1="540" x2="480" y2="560" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <!-- Icons -->
+  <!-- Meta-Game Crown -->
+  <path d="M 600 90 L 590 100 L 595 110 L 600 105 L 605 110 L 610 100 Z" fill="#fee140"/>
+
+  <!-- MinMax Shield -->
+  <path d="M 200 370 L 185 380 L 185 400 L 200 410 L 215 400 L 215 380 Z" fill="#f5576c"/>
+
+  <!-- Kelly Graph -->
+  <path d="M 890 215 L 895 230 L 905 225 L 910 215" stroke="#00f2fe" stroke-width="2" fill="none"/>
+
+  <!-- Mean Max Wave -->
+  <path d="M 890 515 Q 900 510, 910 515 Q 920 520, 930 515" stroke="#38f9d7" stroke-width="2" fill="none"/>
+
+  <!-- Convexity Curve -->
+  <path d="M 280 570 Q 290 560, 300 550 Q 310 530, 320 510" stroke="#667eea" stroke-width="2" fill="none"/>
+
+  <!-- Bottom Legend -->
+  <text x="600" y="760" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748b" font-style="italic">
+    All paradigms operate simultaneously - mastery requires conducting the full symphony
+  </text>
+</svg>
