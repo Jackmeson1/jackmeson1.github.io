@@ -1,4 +1,4 @@
-title: "Jiajun Liang"
+title: "Jiajun Liang's Digital Garden"
 description: "Former QA engineer writing about code, markets, travel, and systems."
 url: "https://jackmeson1.github.io"
 baseurl: ""
@@ -25,7 +25,24 @@ author:
   picture: "/assets/images/avatar.jpg"
   bio: "Former QA engineer writing about code, markets, travel, and systems."
   location: "Vancouver, BC"
+  email: "jli785330@gmail.com"
+  links:
+    - title: GitHub
+      url: https://github.com/jackmeson1
+      icon: fab fa-github-square
+    - title: LinkedIn
+      url: https://www.linkedin.com/in/jiajun-liang-qa/
+      icon: fab fa-linkedin
 
+# Footer
+footer_links:
+  - title: Privacy Policy
+    url: /privacy/
+  - title: RSS Feed
+    url: /feed.xml
+
+# Copyright
+copyright: "© 2025 Jiajun Liang's Digital Garden. Powered by Jekyll & So Simple."
 
 exclude:
   - Gemfile
