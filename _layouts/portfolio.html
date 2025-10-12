@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+  {% include head.html %}
+  <body class="layout-portfolio">
+    {% include header.html %}
+    {%- if page.hero -%}
+      {% include hero.html title=page.hero.title subtitle=page.hero.subtitle eyebrow=page.hero.eyebrow cta=page.hero.cta secondary_cta=page.hero.secondary_cta media=page.hero.media %}
+    {%- endif -%}
+    <main class="site-main">
+      <section class="site-main-section container">
+        <header class="stack gap-1">
+          <h1>{{ page.title }}</h1>
+          {%- if page.subtitle -%}
+            <p class="text-muted">{{ page.subtitle }}</p>
+          {%- endif -%}
+        </header>
+        {%- if page.filters -%}
+          <div class="tag-cloud mt-2">
+            {%- for filter in page.filters -%}
+              {% include chip.html label=filter.label variant=filter.variant %}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </section>
+
+      {%- if page.projects -%}
+        <section class="site-main-section container card-grid auto-fit">
+          {%- for project in page.projects -%}
+            <article class="surface-card stack gap-1">
+              <h3>{{ project.title }}</h3>
+              <div class="text-muted stack gap-1">
+                {{ project.description | markdownify }}
+              </div>
+              {%- if project.metrics -%}
+                <ul class="stack gap-1 text-sm">
+                  {%- for metric in project.metrics -%}
+                    <li><strong>{{ metric.label }}:</strong> {{ metric.value }}</li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+              {%- if project.tags -%}
+                <div class="flex gap-1 wrap">
+                  {%- for tag in project.tags -%}
+                    {% include chip.html label=tag %}
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+              {%- if project.link -%}
+                <a class="btn btn-ghost" href="{{ project.link.url }}">{{ project.link.label | default: 'View case study' }}</a>
+              {%- endif -%}
+            </article>
+          {%- endfor -%}
+        </section>
+      {%- endif -%}
+
+      {%- if page.map -%}
+        <section class="site-main-section container">
+          <h2>{{ page.map.title | default: 'Global presence' }}</h2>
+          <div class="surface-card" style="height: 26rem; overflow: hidden;">
+            <div data-map data-lat="{{ page.map.lat }}" data-lng="{{ page.map.lng }}" data-zoom="{{ page.map.zoom | default: 2 }}" data-marker="{{ page.map.marker | escape }}" style="height: 100%;"></div>
+          </div>
+        </section>
+      {%- endif -%}
+    </main>
+    {% include footer.html %}
+    {%- if page.map -%}
+      <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
+    {%- endif -%}
+  </body>
+</html>

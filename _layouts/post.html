@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+  {% include head.html %}
+  <body class="layout-post">
+    {% include header.html %}
+    <main class="site-main">
+      <article class="container surface-card stack gap-2" itemscope itemtype="https://schema.org/BlogPosting">
+        <header class="stack gap-1">
+          <p class="chip chip-muted">{{ page.categories | join: ', ' }}</p>
+          <h1 itemprop="headline">{{ page.title }}</h1>
+          {%- if page.subtitle -%}
+            <p class="text-muted">{{ page.subtitle }}</p>
+          {%- endif -%}
+          <div class="flex gap-1 text-xs text-muted align-center">
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%B %d, %Y' }}</time>
+            {%- if page.author -%}
+              <span>by {{ page.author }}</span>
+            {%- elsif site.author.name -%}
+              <span>by {{ site.author.name }}</span>
+            {%- endif -%}
+            {%- if page.reading_time -%}
+              <span>· {{ page.reading_time }} min read</span>
+            {%- endif -%}
+          </div>
+        </header>
+        <div class="prose" itemprop="articleBody">
+          {{ content }}
+        </div>
+        {%- if page.tags -%}
+          <div class="tag-cloud">
+            {%- for tag in page.tags -%}
+              {% include chip.html label=tag %}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </article>
+      {%- if page.map -%}
+        <section class="site-main-section container">
+          <h2>{{ page.map.title | default: 'In context' }}</h2>
+          <div class="surface-card" style="height: 24rem; overflow: hidden;">
+            <div data-map data-lat="{{ page.map.lat }}" data-lng="{{ page.map.lng }}" data-zoom="{{ page.map.zoom | default: 11 }}" data-marker="{{ page.map.marker | escape }}" style="height: 100%;"></div>
+          </div>
+        </section>
+      {%- endif -%}
+      {%- if page.related_posts -%}
+        <section class="site-main-section container">
+          <h2>Related</h2>
+          <div class="card-grid auto-fit">
+            {%- for post in page.related_posts -%}
+              {% include post-card.html post=post %}
+            {%- endfor -%}
+          </div>
+        </section>
+      {%- endif -%}
+    </main>
+    {% include footer.html %}
+    {%- if page.map -%}
+      <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
+    {%- endif -%}
+  </body>
+</html>

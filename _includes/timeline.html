@@ -1,0 +1,17 @@
+{%- assign events = include.events | default: page.timeline -%}
+{%- if events and events.size > 0 -%}
+<ol class="timeline">
+  {%- for event in events -%}
+    <li class="timeline__item surface-card">
+      <div class="timeline__marker"></div>
+      <div class="timeline__content stack gap-1">
+        <div class="flex justify-between align-center">
+          <h3 class="timeline__title">{{ event.title }}</h3>
+          <span class="chip chip-muted">{{ event.period }}</span>
+        </div>
+        <p class="text-muted">{{ event.description }}</p>
+      </div>
+    </li>
+  {%- endfor -%}
+</ol>
+{%- endif -%}
