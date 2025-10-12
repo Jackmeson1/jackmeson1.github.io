@@ -4,7 +4,7 @@ url: "https://jackmeson1.github.io"
 baseurl: ""
 
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
-skin: "/assets/css/skins/default.css"
+# Skin defaults to the theme's default skin
 
 locale: "en"
 timezone: "America/Vancouver"
