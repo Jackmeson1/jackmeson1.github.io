@@ -63,13 +63,6 @@ defaults:
       categories: ["about"]
       tags: ["profile"]
   - scope:
-      path: "pages/portfolio"
-      type: "pages"
-    values:
-      layout: portfolio
-      categories: ["portfolio"]
-      tags: ["case-study"]
-  - scope:
       path: "pages/blog.md"
     values:
       categories: ["blog"]
@@ -89,13 +82,6 @@ defaults:
     values:
       categories: ["contact"]
       tags: ["connect"]
-  - scope:
-      path: "portfolio"
-      type: "pages"
-    values:
-      layout: portfolio
-      categories: ["portfolio"]
-      tags: ["case-study"]
   - scope:
       path: ""
       type: "posts"
