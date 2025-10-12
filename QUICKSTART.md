@@ -101,7 +101,7 @@ author: Jackmeson
 title: 金融分析研究室        # ← 改成你想要的名字
 description: 你的博客描述     # ← 改成你的描述
 author: Jackmeson             # ← 改成你的名字
-email: your-email@example.com # ← 改成你的邮箱
+email: jli785330@gmail.com # ← 改成你的邮箱
 ```
 
 ### 修改关于页面

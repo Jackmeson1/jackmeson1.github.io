@@ -88,7 +88,7 @@ jackmeson1.github.io/
 title: 你的博客名称
 description: 博客描述
 author: 你的名字
-email: your-email@example.com
+email: jli785330@gmail.com
 ```
 
 ### 修改样式

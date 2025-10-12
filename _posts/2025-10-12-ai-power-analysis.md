@@ -2,9 +2,14 @@
 layout: post
 title: "Powering the AI Era: Investing in the 'Water Sellers' Behind Data Centers"
 date: 2025-10-11 14:00:00 +0800
-categories: [Industry Research, AI Industry]
+last_modified_at: 2025-10-11 14:00:00 +0800
+categories: [industry-research, ai-industry]
 tags: [AI, Power, Data Centers, Nuclear]
 author: Jackmeson
+description: How power producers, transmission specialists, and nuclear developers become critical suppliers for AI data centers
+redirect_from:
+  - /industry%20research/ai%20industry/2025/10/11/ai-power-analysis.html
+  - /Industry%20Research/AI%20Industry/2025/10/11/ai-power-analysis.html
 toc: true
 ---
 
