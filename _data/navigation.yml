@@ -1,0 +1,15 @@
+main:
+  - title: "Latest"
+    url: /blog/
+  - title: "Now"
+    url: /now/
+  - title: "About"
+    url: /about/
+  - title: "Portfolio"
+    url: /portfolio/
+
+footer:
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
