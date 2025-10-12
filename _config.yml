@@ -32,19 +32,6 @@ plugins:
 
 permalink: /:categories/:year/:month/:day/:slug/
 
-# Navigation menu
-header_pages:
-  - index.md
-- pages/about.md
-- pages/portfolio.md
-- pages/blog.md
-- pages/travel.md
-- pages/library.md
-- pages/garden.md
-- pages/contact.md
-- archive.md
-
-
 # Pagination settings
 paginate: 10
 paginate_path: "/page:num/"

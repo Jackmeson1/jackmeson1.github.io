@@ -35,8 +35,7 @@ Resolve hero / featured / quick links / ctas / updates
 {%- comment -%}
 Compute recent posts for “Latest publications”
 {%- endcomment -%}
-{% assign recent_posts_source = page.featured_posts | default: site.posts %}
-{% assign recent_posts = recent_posts_source | sort: 'date' | reverse %}
+{% assign recent_posts = site.posts | sort: 'date' | reverse %}
 
 <main class="ds-main u-bg-surface">
   <!-- HERO -->
@@ -122,7 +121,7 @@ Compute recent posts for “Latest publications”
     <div class="ds-container u-stack-md">
       <div class="u-flex u-items-center u-justify-between u-wrap u-gap-sm u-mb-sm">
         <h2 class="ds-section__title">Latest publications</h2>
-        <a class="ds-button ds-button--ghost" href="{{ '/archive' | relative_url }}">View all</a>
+        <a class="ds-button ds-button--ghost" href="{{ '/archive/' | relative_url }}">View all</a>
       </div>
       <div class="ds-grid ds-grid--cards">
         {%- for post in recent_posts limit:6 -%}

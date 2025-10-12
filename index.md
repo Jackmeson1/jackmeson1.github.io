@@ -3,7 +3,7 @@ layout: personal-home
 title: Home
 hero:
   name: "Jackmeson Liang"
-  tagline: "Financial Analysis Lab"
+  tagline: "Strategic Research & Systems Design"
   subtitle: "Deep Financial Research · AI & Industry Studies · Data-Driven Insights"
   socials:
     - label: GitHub

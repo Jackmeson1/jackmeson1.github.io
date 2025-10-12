@@ -25,12 +25,9 @@ layout: default
       <div class="post-categories">
         {% for cat in page.categories %}
           {% assign cat_data = site.data.categories[cat] %}
-          {% if cat_data and cat_data.permalink %}
-            {% assign cat_url = cat_data.permalink %}
-          {% else %}
-            {% assign cat_url = '/' | append: cat | append: '/' %}
-          {% endif %}
-          <a class="chip" href="{{ cat_url | relative_url }}">{{ cat_data.name | default: cat | replace: '-', ' ' | capitalize }}</a>
+          {% assign cat_label = cat_data.name | default: cat | replace: '-', ' ' | capitalize %}
+          {% assign cat_slug = cat | slugify %}
+          <a class="chip" href="{{ '/archive/#' | append: cat_slug }}">{{ cat_label }}</a>{% unless forloop.last %}<span class="chip-separator" aria-hidden="true">·</span>{% endunless %}
         {% endfor %}
       </div>
     {% endif %}
@@ -125,6 +122,7 @@ layout: default
   .post-categories { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
   .chip { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 999px; background: #eef2ff; color: #4338ca; text-decoration: none; font-size: 0.85em; }
   .chip:hover { background: #c7d2fe; }
+  .chip-separator { margin: 0 4px; color: #9ca3af; }
   .post-hero { margin: 32px auto 0; max-width: 720px; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px rgba(79,70,229,.18); }
   .post-hero img { width: 100%; display: block; }
   .post-summary, .post-takeaways, .post-faqs { margin-bottom: 40px; padding: 24px; border: 1px solid #e5e7eb; border-radius: 16px; background: #f9fafb; }
