@@ -1,0 +1,32 @@
+<!-- Custom CSS and Visual Enhancements -->
+<link rel="stylesheet" href="{{ '/assets/css/visual-enhancements.css' | relative_url }}">
+
+<!-- Additional Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Favicon and Theme Color -->
+<meta name="theme-color" content="#2563eb">
+
+<!-- Smooth Scroll -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<!-- Add scrolled class to header on scroll -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.site-header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  });
+</script>
