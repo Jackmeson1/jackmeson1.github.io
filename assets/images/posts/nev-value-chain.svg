@@ -1,0 +1,28 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">New Energy Vehicle Value Chain</title>
+  <desc id="desc">Abstract illustration of the electric vehicle supply chain.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="36"/>
+  <g fill="none" stroke="#4338ca" stroke-width="6" opacity="0.6">
+    <path d="M160 450 C300 260 520 260 660 450"/>
+    <path d="M360 450 C500 260 720 260 860 450"/>
+  </g>
+  <g fill="#1e3a8a">
+    <circle cx="220" cy="460" r="24"/>
+    <circle cx="420" cy="460" r="24"/>
+    <circle cx="620" cy="460" r="24"/>
+    <circle cx="820" cy="460" r="24"/>
+    <circle cx="1020" cy="460" r="24"/>
+  </g>
+  <text x="600" y="180" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="56" font-weight="700" fill="#1f2937">
+    NEV Supply Chain
+  </text>
+  <text x="600" y="240" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="24" fill="#4338ca">
+    Lithium → Cells → Packs → OEMs → Customers
+  </text>
+</svg>

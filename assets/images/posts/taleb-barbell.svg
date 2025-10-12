@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Taleb Barbell Strategy</title>
+  <desc id="desc">Iconic barbell showing safety and convexity.</desc>
+  <defs>
+    <linearGradient id="barbellGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="#fefce8"/>
+  <rect x="200" y="280" width="800" height="70" rx="35" fill="url(#barbellGradient)"/>
+  <circle cx="220" cy="315" r="110" fill="#1e293b"/>
+  <circle cx="980" cy="315" r="80" fill="#047857"/>
+  <text x="220" y="320" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="28" font-weight="700" fill="#fef08a">Safety Anchor</text>
+  <text x="980" y="320" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#ecfdf5">Convex Upside</text>
+  <text x="600" y="140" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#92400e">Taleb's Barbell</text>
+  <text x="600" y="190" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" fill="#b45309">Protect the downside · Hunt convexity</text>
+</svg>

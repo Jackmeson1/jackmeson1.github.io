@@ -10,10 +10,14 @@ layout: default
 
 <div class="category-page">
   <header class="category-hero">
-    <p class="category-kicker">Category</p>
-    <h1>{{ category_data.name | default: page.title | default: category_key | replace: '-', ' ' | capitalize }}</h1>
-    {% if page.description or category_data.description %}
-      <p class="category-description">{{ page.description | default: category_data.description }}</p>
+    <p class="category-kicker">{{ page.hero_kicker | default: "Category Spotlight" }}</p>
+    <h1>{{ page.title | default: category_data.name | default: category_key | replace: '-', ' ' | capitalize }}</h1>
+    {% assign supporting_copy = page.description | default: category_data.description %}
+    {% if supporting_copy %}
+      <p class="category-description">{{ supporting_copy }}</p>
+    {% endif %}
+    {% if page.intro %}
+      <p class="category-intro">{{ page.intro }}</p>
     {% endif %}
   </header>
 
@@ -21,19 +25,23 @@ layout: default
     <div class="category-list">
       {% for post in category_posts %}
         <article class="category-item">
-          <p class="category-item-meta">
+          <div class="category-item-meta">
             <span class="category-item-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-            {% if post.last_modified_at %}
-              <span class="category-item-updated">Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}</span>
+            {% if post.categories %}
+              <span class="category-item-chips">
+                {% for cat in post.categories %}
+                  <span class="category-chip">{{ site.data.categories[cat].name | default: cat | replace: '-', ' ' | capitalize }}</span>
+                {% endfor %}
+              </span>
             {% endif %}
-          </p>
+          </div>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           {% if post.description %}
             <p class="category-item-excerpt">{{ post.description }}</p>
           {% else %}
             <p class="category-item-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
           {% endif %}
-          <a class="category-read-more" href="{{ post.url | relative_url }}">Read the full analysis →</a>
+          <a class="category-read-more" href="{{ post.url | relative_url }}">Continue reading →</a>
         </article>
       {% endfor %}
     </div>
@@ -44,85 +52,101 @@ layout: default
 
 <style>
   .category-page {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 40px 20px 60px;
+    padding: 40px 20px 80px;
   }
 
   .category-hero {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 48px;
   }
 
   .category-kicker {
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-size: 0.75em;
-    color: #667eea;
-    margin-bottom: 10px;
-  }
-
-  .category-hero h1 {
-    margin-bottom: 16px;
+    color: #5b6cea;
+    margin-bottom: 12px;
   }
 
   .category-description {
-    color: #555;
+    color: #4a4a4a;
+    max-width: 640px;
+    margin: 0 auto 16px;
+    line-height: 1.7;
+  }
+
+  .category-intro {
+    color: #6b7280;
     max-width: 640px;
     margin: 0 auto;
+    line-height: 1.6;
   }
 
   .category-list {
     display: grid;
-    gap: 30px;
+    gap: 32px;
   }
 
   .category-item {
-    padding: 24px;
-    border: 1px solid #e1e8ed;
-    border-radius: 8px;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
+    background: #ffffff;
   }
 
   .category-item:hover {
-    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
-    transform: translateY(-4px);
+    box-shadow: 0 18px 32px rgba(76, 108, 255, 0.12);
+    transform: translateY(-6px);
   }
 
   .category-item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
     font-size: 0.85em;
-    color: #657786;
+    color: #6b7280;
     margin-bottom: 12px;
   }
 
-  .category-item-meta span + span {
-    margin-left: 12px;
+  .category-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4c51bf;
+    font-size: 0.75em;
+    margin-right: 6px;
   }
 
   .category-item h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
+    font-size: 1.5em;
   }
 
   .category-item h2 a {
-    color: #1a1a1a;
+    color: #1f2937;
     text-decoration: none;
   }
 
   .category-item h2 a:hover {
-    color: #667eea;
+    color: #4c51bf;
   }
 
   .category-item-excerpt {
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 16px;
+    color: #374151;
+    line-height: 1.7;
+    margin-bottom: 20px;
   }
 
   .category-read-more {
-    color: #667eea;
-    text-decoration: none;
+    color: #4c51bf;
     font-weight: 500;
+    text-decoration: none;
   }
 
   .category-read-more:hover {

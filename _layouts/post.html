@@ -1,0 +1,217 @@
+---
+layout: default
+---
+<article class="post" lang="{{ page.lang | default: site.lang }}">
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      {% if page.last_modified_at and page.last_modified_at != page.date %}
+        <span class="post-updated">Updated {{ page.last_modified_at | date: "%B %d, %Y" }}</span>
+      {% endif %}
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.categories %}
+      <div class="post-categories">
+        {% for cat in page.categories %}
+          {% assign cat_data = site.data.categories[cat] %}
+          {% if cat_data and cat_data.permalink %}
+            {% assign cat_url = cat_data.permalink %}
+          {% else %}
+            {% assign cat_url = '/' | append: cat | append: '/' %}
+          {% endif %}
+          <a class="chip" href="{{ cat_url | relative_url }}">{{ cat_data.name | default: cat | replace: '-', ' ' | capitalize }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if page.image %}
+      <figure class="post-hero">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.hero_alt | default: page.title }} illustration" loading="lazy">
+      </figure>
+    {% endif %}
+  </header>
+
+  {% if page.tldr %}
+    <section class="post-summary">
+      <h2>TL;DR</h2>
+      <ul>
+        {% for bullet in page.tldr %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  {% if page.key_takeaways %}
+    <section class="post-takeaways">
+      <h2>Key Takeaways</h2>
+      <ul>
+        {% for takeaway in page.key_takeaways %}
+          <li>{{ takeaway }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.faqs %}
+    <section class="post-faqs">
+      <h2>FAQs</h2>
+      <div class="faq-grid">
+        {% for item in page.faqs %}
+          <details>
+            <summary>{{ item.question }}</summary>
+            <div class="faq-answer">{{ item.answer | markdownify }}</div>
+          </details>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</article>
+
+<style>
+  .post {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .post-header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .post-meta {
+    color: #6b7280;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .post-title {
+    margin-bottom: 16px;
+  }
+
+  .post-description {
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .post-categories {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #4338ca;
+    text-decoration: none;
+    font-size: 0.85em;
+  }
+
+  .chip:hover {
+    background: #c7d2fe;
+  }
+
+  .post-hero {
+    margin: 32px auto 0;
+    max-width: 720px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(79, 70, 229, 0.18);
+  }
+
+  .post-hero img {
+    width: 100%;
+    display: block;
+  }
+
+  .post-summary,
+  .post-takeaways,
+  .post-faqs {
+    margin-bottom: 40px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #f9fafb;
+  }
+
+  .post-summary h2,
+  .post-takeaways h2,
+  .post-faqs h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .post-summary ul,
+  .post-takeaways ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #1f2937;
+    line-height: 1.7;
+  }
+
+  .post-content {
+    color: #1f2937;
+    line-height: 1.8;
+  }
+
+  .post-content h2,
+  .post-content h3 {
+    margin-top: 32px;
+  }
+
+  .post-faqs .faq-grid {
+    display: grid;
+    gap: 16px;
+  }
+
+  .post-faqs details {
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    padding: 16px 20px;
+  }
+
+  .post-faqs summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .faq-answer {
+    margin-top: 12px;
+    color: #374151;
+  }
+
+  .post-faqs details[open] {
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.08);
+  }
+
+  @media (max-width: 640px) {
+    .post {
+      padding: 32px 16px 60px;
+    }
+
+    .post-summary,
+    .post-takeaways,
+    .post-faqs {
+      padding: 20px;
+    }
+  }
+</style>

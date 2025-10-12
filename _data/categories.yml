@@ -1,28 +1,20 @@
-industry-research:
-  name: Industry Research
-  description: Deep dives into sector dynamics, policy shifts, and value chains shaping global markets.
-  permalink: /industry-research/
-ai-industry:
-  name: AI Industry
-  description: Analysis of the companies and infrastructure powering the AI compute boom.
-  permalink: /ai-industry/
-new-energy:
-  name: New Energy
-  description: Research on EVs, batteries, and the clean power ecosystem.
-  permalink: /new-energy/
-strategy:
-  name: Strategy
-  description: Frameworks for decision-making under uncertainty and complexity.
-  permalink: /strategy/
-decision-making:
-  name: Decision-Making
-  description: Mental models and playbooks for better choices in finance and operations.
-  permalink: /decision-making/
-investment-philosophy:
-  name: Investment Philosophy
-  description: Long-term investing principles, risk disciplines, and worldview design.
-  permalink: /investment-philosophy/
-risk-management:
-  name: Risk Management
-  description: Approaches to protect portfolios, manage tail risks, and stay antifragile.
-  permalink: /risk-management/
+tech:
+  name: Tech
+  description: Frontier engineering, digital infrastructure, and product breakthroughs reshaping how we build and live.
+  permalink: /tech/
+finance:
+  name: Finance
+  description: Capital allocation playbooks, risk disciplines, and market intelligence for resilient portfolios.
+  permalink: /finance/
+travel:
+  name: Travel
+  description: Immersive field notes and mobility experiments that translate journeys into actionable cultural fluency.
+  permalink: /travel/
+mindfulness:
+  name: Mindfulness
+  description: Practices, reflections, and rituals that ground high-performance operators in clarity and presence.
+  permalink: /mindfulness/
+systems:
+  name: Systems
+  description: Frameworks and second-order thinking for designing adaptive organizations and complex strategies.
+  permalink: /systems/

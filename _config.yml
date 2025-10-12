@@ -27,7 +27,7 @@ permalink: /:categories/:year/:month/:day/:slug/
 header_pages:
   - index.md
   - about.md
-  - archive.md
+  - pages/blog.md
 
 # Pagination settings
 paginate: 10
