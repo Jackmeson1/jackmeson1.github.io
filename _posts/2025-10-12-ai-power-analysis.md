@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI时代的电力投资：数据中心的「卖水人」逻辑"
-date: 2025-10-12 14:00:00 +0800
+date: 2025-10-11 14:00:00 +0800
 categories: [行业研究, AI产业]
 tags: [AI, 电力, 数据中心, 核电]
 author: Jackmeson
