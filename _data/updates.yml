@@ -1,12 +1,51 @@
+# === 2025 Q4 Updates ===
 - date: 2025-10-15
   title: Published the AI power infrastructure model
   description: Released an updated demand stack for hyperscale campuses and stress-tested grid upgrade timelines with new load growth scenarios.
+  category: Research
+  tags: ["ai-infrastructure", "energy"]
 - date: 2025-10-08
   title: Clean energy storage field interviews
   description: Conducted 12 expert calls across battery integrators and EPCs to benchmark project IRRs under different policy regimes.
+  category: Research
+  tags: ["energy-transition", "fieldwork"]
 - date: 2025-10-01
   title: Barbell allocation primer workshop
   description: Led a session with family office analysts on constructing risk-seeking vs. risk-free buckets using Taleb-inspired frameworks.
+  category: Advisory
+  tags: ["barbell-strategy", "family-office"]
 - date: 2025-09-18
   title: Portfolio analytics tooling refresh
   description: Shipped a lightweight Python dashboard that visualizes factor exposures and rolling drawdowns across thematic baskets.
+  category: Product
+  tags: ["quant-tools", "python"]
+
+# === 2025 Early Updates ===
+- date: 2025-02-15
+  title: Convexity Radar memo release
+  description: Released the Convexity Radar memo on reinforcement learning for macro positioning.
+  category: Research
+  url: /posts/ai-power-analysis
+  tags: ["quant", "reinforcement-learning"]
+- date: 2025-02-02
+  title: APAC energy scenario sprint
+  description: Facilitated a scenario sprint for an APAC energy fund deploying battery storage.
+  category: Advisory
+  tags: ["energy-transition", "strategy"]
+- date: 2025-01-20
+  title: Systems Salon #07 — AI governance
+  description: Hosted Systems Salon #07 on AI governance with founders from Singapore and Hong Kong.
+  category: Community
+  url: /garden/systems-salons
+  tags: ["community", "ai-governance"]
+- date: 2025-01-05
+  title: Venture intelligence graph launch
+  description: Shipped a cross-border venture intelligence graph for early-stage deal teams.
+  category: Product
+  tags: ["venture", "knowledge-graph"]
+- date: 2024-12-18
+  title: Signal Transmission briefing published
+  description: Published the Signal Transmission briefing on antifragile capital allocation.
+  category: Writing
+  url: https://jackmeson1.substack.com/
+  tags: ["writing", "antifragility"]

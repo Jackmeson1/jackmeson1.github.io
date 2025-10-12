@@ -40,7 +40,9 @@ header_pages:
 - pages/blog.md
 - pages/travel.md
 - pages/library.md
+- pages/garden.md
 - pages/contact.md
+- archive.md
 
 
 # Pagination settings
@@ -116,6 +118,18 @@ defaults:
       tags: ["garden"]
       lang: en-US
       comments: true
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "page"
+      links: []
+      tags: []
+
+collections:
+  notes:
+    output: true
+    permalink: /garden/:name/
 
 # Locale settings
 timezone: Asia/Shanghai

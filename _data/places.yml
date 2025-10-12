@@ -1,0 +1,48 @@
+- name: Venture Residency
+  city: Singapore
+  country: Singapore
+  lat: 1.3521
+  lng: 103.8198
+  years: 2024 — Present
+  summary: "Running deep-tech diligence sprints with founders and institutional LPs."
+  highlights:
+    - "Bootstrapped a regional data co-op with 15 venture partners."
+    - "Piloted real-time compliance monitors with MAS sandboxes."
+  tags: ["venture", "ai", "community"]
+  sequence: 1
+- name: Climate Finance Field Lab
+  city: Hong Kong
+  country: China (SAR)
+  lat: 22.3193
+  lng: 114.1694
+  years: 2023 — Present
+  summary: "Designing cross-border capital stacks for energy transition projects."
+  highlights:
+    - "Structured blended finance for offshore wind deployments."
+    - "Mapped regulatory arbitrage opportunities with policy teams."
+  tags: ["climate", "finance", "policy"]
+  sequence: 2
+- name: Systems Innovation Hub
+  city: San Francisco
+  country: United States
+  lat: 37.7749
+  lng: -122.4194
+  years: 2022 — Present
+  summary: "Partnering with researchers on human-in-the-loop AI for decision support."
+  highlights:
+    - "Co-designed reinforcement learning experiments for macro strategy."
+    - "Published open-source toolkits for explainable risk analytics."
+  tags: ["ai", "research", "product"]
+  sequence: 3
+- name: Energy Transition Expedition
+  city: Sydney
+  country: Australia
+  lat: -33.8688
+  lng: 151.2093
+  years: 2024
+  summary: "Embedded with utilities to test grid-resilience playbooks and community batteries."
+  highlights:
+    - "Ran stress-tests against extreme weather scenarios with local operators."
+    - "Trained civic teams on open-source monitoring dashboards."
+  tags: ["energy", "resilience", "community"]
+  sequence: 4

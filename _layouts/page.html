@@ -1,41 +1,107 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang }}">
-  {% include head.html %}
-  <body class="layout-page">
-    {% include header.html %}
-    {%- if page.hero -%}
-      {% include hero.html title=page.hero.title subtitle=page.hero.subtitle eyebrow=page.hero.eyebrow cta=page.hero.cta secondary_cta=page.hero.secondary_cta media=page.hero.media %}
-    {%- endif -%}
-    <main class="site-main">
-      <section class="container surface-card stack gap-2">
-        <header class="stack gap-1">
-          <h1>{{ page.title }}</h1>
-          {%- if page.subtitle -%}
-            <p class="text-muted">{{ page.subtitle }}</p>
-          {%- endif -%}
-        </header>
-        <div class="prose">
-          {{ content }}
-        </div>
-      </section>
-      {%- if page.timeline -%}
-        <section class="site-main-section container">
-          <h2>{{ page.timeline_title | default: 'Experience' }}</h2>
-          {% include timeline.html events=page.timeline %}
-        </section>
+---
+layout: default
+---
+
+{%- comment -%}
+Page template: combines hero / timeline / map (from main)
+with subtitle / lede / updates (from codex).
+Assumes updates data unified as: date, title, description, category, url, tags.
+Falls back to 'summary' if older records exist.
+{%- endcomment -%}
+
+{%- if page.hero -%}
+  {% include hero.html
+     title=page.hero.title
+     subtitle=page.hero.subtitle
+     eyebrow=page.hero.eyebrow
+     cta=page.hero.cta
+     secondary_cta=page.hero.secondary_cta
+     media=page.hero.media %}
+{%- endif -%}
+
+<main class="site-main">
+  <section class="container surface-card stack gap-2">
+    <header class="stack gap-1">
+      <h1 class="page-title">{{ page.title | escape }}</h1>
+      {%- if page.subtitle -%}
+        <p class="text-muted page-subtitle">{{ page.subtitle }}</p>
       {%- endif -%}
-      {%- if page.map -%}
-        <section class="site-main-section container">
-          <h2>{{ page.map.title | default: 'Where to find us' }}</h2>
-          <div class="surface-card" style="height: 24rem; overflow: hidden;">
-            <div data-map data-lat="{{ page.map.lat }}" data-lng="{{ page.map.lng }}" data-zoom="{{ page.map.zoom | default: 11 }}" data-marker="{{ page.map.marker | escape }}" style="height: 100%;"></div>
-          </div>
-        </section>
+      {%- if page.lede -%}
+        <p class="text-muted page-lede">{{ page.lede }}</p>
       {%- endif -%}
-    </main>
-    {% include footer.html %}
-    {%- if page.map -%}
-      <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
-    {%- endif -%}
-  </body>
-</html>
+    </header>
+
+    <div class="prose page-content">
+      {{ content }}
+    </div>
+  </section>
+
+  {%- if page.show_updates -%}
+    {%- assign updates = site.data.updates -%}
+    {%- assign update_limit = page.update_limit | default: 6 -%}
+    <section class="site-main-section container">
+      <h2>Recent Signals</h2>
+      {%- if updates and updates != empty -%}
+        <ul class="updates-list card-grid auto-fit" style="list-style:none; padding:0; margin:0;">
+          {%- for item in updates limit:update_limit -%}
+            <li class="surface-card stack gap-0-5" style="padding:1rem; border-radius:0.75rem;">
+              <p class="update-meta text-xs text-muted" style="margin:0 0 .25rem 0;">
+                <span class="update-date">{{ item.date | date: "%b %d, %Y" }}</span>
+                {%- if item.category -%}
+                  <span>· {{ item.category }}</span>
+                {%- endif -%}
+              </p>
+              <p class="update-summary" style="margin:.25rem 0 0;">
+                {%- assign _title = item.title | default: item.summary -%}
+                {%- if item.url -%}
+                  <a href="{{ item.url }}">{{ _title }}</a>
+                {%- else -%}
+                  {{ _title }}
+                {%- endif -%}
+              </p>
+              {%- if item.description -%}
+                <p class="text-muted" style="margin:.25rem 0 0;">{{ item.description }}</p>
+              {%- endif -%}
+              {%- if item.tags and item.tags.size > 0 -%}
+                <p class="update-tags" style="margin:.5rem 0 0; display:flex; flex-wrap:wrap; gap:.5rem;">
+                  {%- for tag in item.tags -%}
+                    <span class="chip chip-muted">{{ tag }}</span>
+                  {%- endfor -%}
+                </p>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- else -%}
+        <p class="empty-state text-muted">No updates logged yet. Check back soon.</p>
+      {%- endif -%}
+    </section>
+  {%- endif -%}
+
+  {%- if page.timeline -%}
+    <section class="site-main-section container">
+      <h2>{{ page.timeline_title | default: 'Experience' }}</h2>
+      {% include timeline.html events=page.timeline %}
+    </section>
+  {%- endif -%}
+
+  {%- if page.map -%}
+    <section class="site-main-section container">
+      <h2>{{ page.map.title | default: 'Where to find us' }}</h2>
+      <div class="surface-card" style="height:24rem; overflow:hidden;">
+        <div
+          data-map
+          data-lat="{{ page.map.lat }}"
+          data-lng="{{ page.map.lng }}"
+          data-zoom="{{ page.map.zoom | default: 11 }}"
+          data-marker="{{ page.map.marker | escape }}"
+          style="height:100%;"></div>
+      </div>
+    </section>
+  {%- endif -%}
+</main>
+
+{%- if page.map -%}
+  <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
+{%- endif -%}
+
