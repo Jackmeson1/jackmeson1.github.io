@@ -33,13 +33,13 @@ The rest—furniture, cooking gear, winter coats—went to friends or Craigslist
 
 ## Designing a Portable Routine
 
-My checklist for the next destination (likely Taipei):
+My checklist for the next destination (likely 日本小樽):
 
 - Coworking spots with late hours
 - A nearby bouldering gym
-- Night markets for cheap, fresh meals
+- Seafood markets for fresh, simple meals
 - A Zen or mindfulness community within transit distance
 
 If those are in place, the rest of life tends to click. Vancouver taught me to design routines deliberately; now I’m ready to transplant them into new cities.
 
-**Next stop:** Taipei, then maybe Chiang Mai. If you have favorite neighborhoods or meditation centers, reply to say hi.
+**Next stop:** 日本小樽, then maybe Chiang Mai. If you have favorite neighborhoods or meditation centers, reply to say hi.
