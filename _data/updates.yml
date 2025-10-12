@@ -1,0 +1,23 @@
+- date: 2025-02-15
+  category: Research
+  summary: "Released the Convexity Radar memo on reinforcement learning for macro positioning."
+  url: /posts/ai-power-analysis
+  tags: ["quant", "reinforcement-learning"]
+- date: 2025-02-02
+  category: Advisory
+  summary: "Facilitated a scenario sprint for an APAC energy fund deploying battery storage."
+  tags: ["energy-transition", "strategy"]
+- date: 2025-01-20
+  category: Community
+  summary: "Hosted Systems Salon #07 on AI governance with founders from Singapore and Hong Kong."
+  url: /garden/systems-salons
+  tags: ["community", "ai-governance"]
+- date: 2025-01-05
+  category: Product
+  summary: "Shipped a cross-border venture intelligence graph for early-stage deal teams."
+  tags: ["venture", "knowledge-graph"]
+- date: 2024-12-18
+  category: Writing
+  summary: "Published the Signal Transmission briefing on antifragile capital allocation."
+  url: https://jackmeson1.substack.com/
+  tags: ["writing", "antifragility"]

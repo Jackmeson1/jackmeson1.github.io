@@ -1,0 +1,144 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    {% if page.lede %}
+      <p class="page-lede">{{ page.lede }}</p>
+    {% endif %}
+  </header>
+  <div class="page-content">
+    {{ content }}
+  </div>
+  {% if page.show_updates %}
+    {% assign updates = site.data.updates %}
+    {% assign update_limit = page.update_limit | default: 6 %}
+    <section class="page-updates" aria-labelledby="page-updates-heading">
+      <h2 id="page-updates-heading">Recent Signals</h2>
+      {% if updates and updates != empty %}
+        <ul class="updates-list">
+          {% for item in updates limit: update_limit %}
+            <li class="update-item">
+              <p class="update-meta">
+                <span class="update-date">{{ item.date | date: "%b %d, %Y" }}</span>
+                {% if item.category %}<span class="update-category">{{ item.category }}</span>{% endif %}
+              </p>
+              <p class="update-summary">
+                {% if item.url %}<a href="{{ item.url }}">{{ item.summary }}</a>{% else %}{{ item.summary }}{% endif %}
+              </p>
+              {% if item.tags and item.tags.size > 0 %}
+                <p class="update-tags">
+                  {% for tag in item.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="empty-state">No updates logged yet. Check back soon.</p>
+      {% endif %}
+    </section>
+  {% endif %}
+</article>
+
+<style>
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color-secondary, #555);
+  margin-bottom: 0.5rem;
+}
+
+.page-lede {
+  font-size: 1.1rem;
+  max-width: 60ch;
+  color: var(--text-color-secondary, #555);
+}
+
+.page-updates {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+}
+
+.updates-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.update-item {
+  padding: 1rem;
+  border: 1px solid var(--border-color, #e0e0e0);
+  border-radius: 0.75rem;
+  background: var(--card-bg, rgba(255, 255, 255, 0.6));
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.update-meta {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color-secondary, #666);
+}
+
+.update-summary {
+  margin: 0;
+  font-weight: 600;
+}
+
+.update-summary a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.update-summary a:hover,
+.update-summary a:focus {
+  border-bottom-color: currentColor;
+}
+
+.update-tags {
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.empty-state {
+  font-style: italic;
+  color: var(--text-color-secondary, #777);
+}
+
+@media (max-width: 640px) {
+  .update-item {
+    padding: 0.85rem;
+  }
+}
+</style>

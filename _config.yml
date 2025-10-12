@@ -26,7 +26,12 @@ permalink: /:categories/:year/:month/:day/:slug/
 # Navigation menu
 header_pages:
   - index.md
-  - about.md
+  - pages/about.md
+  - pages/portfolio.md
+  - pages/travel.md
+  - pages/library.md
+  - pages/garden.md
+  - pages/contact.md
   - archive.md
 
 # Pagination settings
@@ -46,6 +51,18 @@ defaults:
     values:
       layout: "post"
       comments: true
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "page"
+      links: []
+      tags: []
+
+collections:
+  notes:
+    output: true
+    permalink: /garden/:name/
 
 # Locale settings
 timezone: Asia/Shanghai
