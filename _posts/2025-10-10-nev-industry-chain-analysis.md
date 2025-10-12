@@ -2,9 +2,14 @@
 layout: post
 title: "The New Energy Vehicle Value Chain: From Lithium Mines to Showrooms"
 date: 2025-10-10 15:30:00 +0800
-categories: [Industry Research, New Energy]
+last_modified_at: 2025-10-10 15:30:00 +0800
+categories: [industry-research, new-energy]
 tags: [NEV, Batteries, Value Chain]
 author: Jackmeson
+description: Mapping upstream minerals, midstream batteries, and downstream OEMs to pinpoint investable leverage in the NEV boom
+redirect_from:
+  - /industry%20research/new%20energy/2025/10/10/nev-industry-chain-analysis.html
+  - /Industry%20Research/New%20Energy/2025/10/10/nev-industry-chain-analysis.html
 ---
 
 ## Research Summary

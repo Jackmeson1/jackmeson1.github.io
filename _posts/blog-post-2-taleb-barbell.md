@@ -2,14 +2,21 @@
 layout: post
 title: "Taleb's Barbell Strategy: Why the Middle Ground Is Where You Die"
 date: 2025-10-12 18:00:00 +0800
-categories: [Investment Philosophy, Risk Management]
+---
+last_modified_at: 2025-10-12 18:00:00 +0800
+categories: [investment-philosophy, risk-management]
 tags: [Taleb, antifragile, black-swan, convexity, portfolio-strategy, global-macro]
 author: Jackmeson
 description: "Operationalize Taleb's Barbell with regional stress tests, sovereign-safe anchors, and convex AI bets."
+redirect_from:
+  - /investment%20philosophy/risk%20management/2025/10/12/taleb-barbell-strategy.html
+  - /Investment%20Philosophy/Risk%20Management/2025/10/12/taleb-barbell-strategy.html
+seo_title: "Taleb's Barbell Strategy for Global Family Offices"
 keywords: [taleb barbell strategy, antifragile investing, global macro convexity, singapore family office, venture optionality]
 location: "Dubai | Singapore | New York"
 lang: en
-seo_title: "Taleb's Barbell Strategy for Global Family Offices"
+---
+
 ---
 
 > **Family offices from Dubai to Singapore are reallocating to Taleb-inspired barbells to weather Black Swans and climate shocks.** Use this playbook to build your own.

@@ -17,7 +17,14 @@ permalink: /archive/
           <span class="archive-date">{{ post.date | date: "%m-%d" }}</span>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
           {% if post.categories %}
-            <span class="archive-category">{{ post.categories | join: ', ' }}</span>
+            <span class="archive-categories">
+              {% for category in post.categories %}
+                {% assign category_data = site.data.categories[category] %}
+                {% assign category_label = category_data.name | default: category | replace: '-', ' ' | capitalize %}
+                {% assign category_url = category_data.permalink | default: '/' | append: category | append: '/' %}
+                <a class="archive-category" href="{{ category_url | relative_url }}">{{ category_label }}</a>{% unless forloop.last %}<span class="archive-separator">, </span>{% endunless %}
+              {% endfor %}
+            </span>
           {% endif %}
         </li>
       {% endfor %}
@@ -70,12 +77,28 @@ permalink: /archive/
     color: #667eea;
   }
 
+  .archive-categories {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+  }
+
   .archive-category {
     background: #f0f0f0;
     color: #555;
     padding: 2px 8px;
     border-radius: 3px;
     font-size: 0.85em;
-    margin-left: 10px;
+    text-decoration: none;
+  }
+
+  .archive-category:hover {
+    background: #d5d5d5;
+  }
+
+  .archive-separator {
+    color: #657786;
+    font-size: 0.85em;
   }
 </style>

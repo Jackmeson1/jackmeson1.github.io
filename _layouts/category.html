@@ -1,0 +1,131 @@
+---
+layout: default
+---
+{% assign category_key = page.category %}
+{% assign category_data = site.data.categories[category_key] %}
+{% assign category_posts = site.categories[category_key] %}
+{% if category_posts %}
+  {% assign category_posts = category_posts | sort: 'date' | reverse %}
+{% endif %}
+
+<div class="category-page">
+  <header class="category-hero">
+    <p class="category-kicker">Category</p>
+    <h1>{{ category_data.name | default: page.title | default: category_key | replace: '-', ' ' | capitalize }}</h1>
+    {% if page.description or category_data.description %}
+      <p class="category-description">{{ page.description | default: category_data.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if category_posts and category_posts.size > 0 %}
+    <div class="category-list">
+      {% for post in category_posts %}
+        <article class="category-item">
+          <p class="category-item-meta">
+            <span class="category-item-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            {% if post.last_modified_at %}
+              <span class="category-item-updated">Updated {{ post.last_modified_at | date: "%Y-%m-%d" }}</span>
+            {% endif %}
+          </p>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.description %}
+            <p class="category-item-excerpt">{{ post.description }}</p>
+          {% else %}
+            <p class="category-item-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+          {% endif %}
+          <a class="category-read-more" href="{{ post.url | relative_url }}">Read the full analysis →</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No posts found for this category yet. Check back soon!</p>
+  {% endif %}
+</div>
+
+<style>
+  .category-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  .category-hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .category-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.75em;
+    color: #667eea;
+    margin-bottom: 10px;
+  }
+
+  .category-hero h1 {
+    margin-bottom: 16px;
+  }
+
+  .category-description {
+    color: #555;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .category-list {
+    display: grid;
+    gap: 30px;
+  }
+
+  .category-item {
+    padding: 24px;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .category-item:hover {
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .category-item-meta {
+    font-size: 0.85em;
+    color: #657786;
+    margin-bottom: 12px;
+  }
+
+  .category-item-meta span + span {
+    margin-left: 12px;
+  }
+
+  .category-item h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .category-item h2 a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .category-item h2 a:hover {
+    color: #667eea;
+  }
+
+  .category-item-excerpt {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .category-read-more {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .category-read-more:hover {
+    text-decoration: underline;
+  }
+</style>

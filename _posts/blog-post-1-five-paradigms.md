@@ -2,14 +2,21 @@
 layout: post
 title: "The Five Paradigms: A Unified Framework for Strategic Decision-Making"
 date: 2025-10-12 16:00:00 +0800
-categories: [Strategy, Decision-Making]
+---
+last_modified_at: 2025-10-12 16:00:00 +0800
+categories: [strategy, decision-making]
 tags: [framework, risk-management, portfolio-theory, systems-thinking, asia-pacific]
 author: Jackmeson
 description: "Deploy a five-layer operating system for resilient strategy across Asia-Pacific, North America, and global innovation hubs."
+redirect_from:
+  - /strategy/decision-making/2025/10/12/five-paradigms.html
+  - /Strategy/Decision-Making/2025/10/12/five-paradigms.html
+seo_title: "Five Paradigms Framework for Global Strategy Leaders"
 keywords: [strategic decision-making, five paradigms framework, asia pacific strategy, risk governance, antifragility]
 location: "Singapore | Hong Kong | San Francisco"
 lang: en
-seo_title: "Five Paradigms Framework for Global Strategy Leaders"
+---
+
 ---
 
 > **Global leaders across Singapore, Hong Kong, and San Francisco are rebalancing playbooks to survive tail risks while compounding upside.** This article gives you a geographic-aware checklist to do the same.
