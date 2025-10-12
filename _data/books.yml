@@ -2,30 +2,30 @@ currently_reading:
   - title: "Thinking in Systems"
     author: Donella Meadows
     started: Jan 2025
-    summary: "系统思维入门经典，帮助我把金融、旅行、QA 等领域当作动态系统来拆解。"
+    summary: "Systems-thinking primer that helps me map finance, travel, and QA as living loops."
     notes: >-
-      为什么适合我：我反复提到系统思维、习惯把不同领域当成系统来分析，而这本书提供反馈循环、杠杆点、系统陷阱等实用框架。
-      亮点：语言简洁，案例跨生态、经济、组织，多领域迁移，与我的 Five Paradigms 思维框架呼应。
+      Why it fits: I keep returning to systemic framing, and this book lays out feedback loops, leverage points, and common system traps I can reuse everywhere.
+      Highlights: Crisp writing, cross-domain case studies, and a direct echo of my Five Paradigms mental model.
   - title: "Fortune's Formula"
     author: William Poundstone
     started: Jan 2025
-    summary: "Kelly 准则的历史与应用，从赌场到华尔街的故事线完全贴合我的量化兴趣。"
+    summary: "A narrative history of the Kelly Criterion that tracks perfectly with my quant investing experiments."
     notes: >-
-      为什么适合我：我常研究 Kelly Criterion，这本书讲述 Claude Shannon 与 Ed Thorp 如何把信息论带入投资。
-      亮点：结合数学、赌博、投资的真实案例，解释非遍历性视角下的长期增长，与我关注的凸性策略一致。
+      Why it fits: I reference Kelly constantly, and this book explains how Claude Shannon and Ed Thorp ported information theory into portfolio sizing.
+      Highlights: Blends math, casinos, and Wall Street with real stories that clarify path-dependent growth and convex strategies.
   - title: "The Most Important Thing"
     author: Howard Marks
     started: Jan 2025
-    summary: "橡树资本创始人关于风险管理的思考，是我 Barbell 策略的左端哲学基石。"
+    summary: "Risk philosophy from the cofounder of Oaktree—exactly what anchors the left side of my barbell playbook."
     notes: >-
-      为什么适合我：我重视风险控制胜过收益最大化，书中强调二阶思维、情绪与结构叠加的风险观。
-      亮点：每章聚焦一个概念，实战导向，和 Taleb 的观点互补，强化我的“稳健 + 凸性”框架。
+      Why it fits: I'm obsessed with risk control over raw returns, and Marks pushes second-level thinking plus the behavioral structure behind permanent loss.
+      Highlights: Short, focused chapters with applied insights that dovetail with Taleb's ideas and reinforce my "resilient + convex" thesis.
   - title: "Range"
     author: David Epstein
     started: Jan 2025
-    summary: "为跨界学习者写的理论说明书，支持我把系统思维迁移到多领域。"
+    summary: "A field guide for generalists that validates my habit of porting systems thinking across domains."
     notes: >-
-      为什么适合我：我从 QA 到金融再到旅行与灵修，书中用研究驳斥“一万小时定律”，证明通才优势。
-      亮点：案例覆盖运动员、音乐家、科学家，讨论 match vs. wicked 环境，让我的跨界探索更有理论支撑。
+      Why it fits: My path from QA to finance to travel and contemplative practice mirrors the book's case against the 10,000-hour myth.
+      Highlights: Stories of athletes, scientists, and artists paired with the match vs. wicked environment lens that justifies broad exploration.
 completed: []
 wishlist: []
