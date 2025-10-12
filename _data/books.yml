@@ -1,33 +1,31 @@
 currently_reading:
-  - title: "How Big Things Get Done"
-    author: Bent Flyvbjerg & Dan Gardner
+  - title: "Thinking in Systems"
+    author: Donella Meadows
     started: Jan 2025
-    summary: "Studying mega-project heuristics to adapt for climate infrastructure sprints."
-    notes: "Tracking the reference-class forecasting framework for integration into venture diligence."
-  - title: "Life 3.0"
-    author: Max Tegmark
-    started: Dec 2024
-    summary: "Revisiting AI governance scenarios to update salon prompts and risk dashboards."
-    notes: "Layering taxonomy of AI futures onto current policy debates across APAC."
-completed:
-  - title: "The Fifth Risk"
-    author: Michael Lewis
-    finished: Nov 2024
-    rating: 5
-    summary: "Reinforced the importance of institutional memory and stewardship in public systems."
-    notes: "Used as a case study in governance workshops to highlight hidden dependencies."
-  - title: "Antifragile"
-    author: Nassim Nicholas Taleb
-    finished: Oct 2024
-    rating: 4
-    summary: "Anchored my convexity radar and barbell deployment methodology."
-    notes: "Built a checklist translating optionality design into capital allocation rituals."
-wishlist:
-  - title: "Chip War"
-    author: Chris Miller
-    reason: "Mapping semiconductor geopolitics for supply-chain risk memos."
-    notes: "Will feed into the venture intelligence graph as a geopolitical layer."
-  - title: "Designing Climate Solutions"
-    author: Hal Harvey et al.
-    reason: "Expanding policy levers for the energy transition control tower."
-    notes: "Targets for future scenario simulations with municipal partners."
+    summary: "系统思维入门经典，帮助我把金融、旅行、QA 等领域当作动态系统来拆解。"
+    notes: >-
+      为什么适合我：我反复提到系统思维、习惯把不同领域当成系统来分析，而这本书提供反馈循环、杠杆点、系统陷阱等实用框架。
+      亮点：语言简洁，案例跨生态、经济、组织，多领域迁移，与我的 Five Paradigms 思维框架呼应。
+  - title: "Fortune's Formula"
+    author: William Poundstone
+    started: Jan 2025
+    summary: "Kelly 准则的历史与应用，从赌场到华尔街的故事线完全贴合我的量化兴趣。"
+    notes: >-
+      为什么适合我：我常研究 Kelly Criterion，这本书讲述 Claude Shannon 与 Ed Thorp 如何把信息论带入投资。
+      亮点：结合数学、赌博、投资的真实案例，解释非遍历性视角下的长期增长，与我关注的凸性策略一致。
+  - title: "The Most Important Thing"
+    author: Howard Marks
+    started: Jan 2025
+    summary: "橡树资本创始人关于风险管理的思考，是我 Barbell 策略的左端哲学基石。"
+    notes: >-
+      为什么适合我：我重视风险控制胜过收益最大化，书中强调二阶思维、情绪与结构叠加的风险观。
+      亮点：每章聚焦一个概念，实战导向，和 Taleb 的观点互补，强化我的“稳健 + 凸性”框架。
+  - title: "Range"
+    author: David Epstein
+    started: Jan 2025
+    summary: "为跨界学习者写的理论说明书，支持我把系统思维迁移到多领域。"
+    notes: >-
+      为什么适合我：我从 QA 到金融再到旅行与灵修，书中用研究驳斥“一万小时定律”，证明通才优势。
+      亮点：案例覆盖运动员、音乐家、科学家，讨论 match vs. wicked 环境，让我的跨界探索更有理论支撑。
+completed: []
+wishlist: []
