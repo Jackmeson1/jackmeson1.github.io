@@ -1,116 +1,42 @@
-# Site metadata
-title: "Jiajun Liang’s Digital Garden"
-tagline: "Cultivating explorations across finance, travel, and lifelong learning."
-description: "Ideas, research notes, and travel logs from Jiajun Liang’s evolving digital garden."
-author:
-  name: "Jiajun Liang"
-  url: https://jackmeson1.github.io/pages/about/
-  email: jli785330@gmail.com
-  same_as:
-    - https://github.com/jackmeson1
-    - https://www.linkedin.com/in/jiajun-liang-qa/
-contact:
-  email: jli785330@gmail.com
-  linkedin: https://www.linkedin.com/in/jiajun-liang-qa/
-  github: https://github.com/jackmeson1
-social:
-  github: https://github.com/jackmeson1
-  linkedin: https://www.linkedin.com/in/jiajun-liang-qa/
-  rss: https://jackmeson1.github.io/feed.xml
-email: jli785330@gmail.com
-baseurl: ""
+title: "Jiajun Liang"
+description: "Former QA engineer writing about code, markets, travel, and systems."
 url: "https://jackmeson1.github.io"
+baseurl: ""
 
-# Build settings
-markdown: kramdown
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+minimal_mistakes_skin: "default"
+
+locale: "en"
+timezone: "America/Vancouver"
+permalink: /:categories/:year/:month/:day/:title/
+paginate: 10
+search: false
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-redirect-from
+  - jekyll-include-cache
+  - jekyll-archives
 
-permalink: /blog/:categories/:year/:month/:day/:slug/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
-# Pagination settings
-paginate: 10
-paginate_path: "/page:num/"
+author:
+  name: "Jiajun Liang"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Former QA engineer writing about code, markets, travel, and systems."
+  location: "Vancouver, BC"
 
-# Social profiles (optional)
-github_username: jackmeson1
-# twitter_username: your_username
-# linkedin_username: your_username
 
-# Default post settings
-defaults:
-  - scope:
-      path: "index.md"
-    values:
-      layout: personal-home
-      categories: ["home"]
-      tags: ["garden"]
-  - scope:
-      path: "pages"
-      type: "pages"
-    values:
-      layout: page
-      lang: en-US
-      categories: ["garden"]
-      tags: []
-  - scope:
-      path: "pages/about.md"
-    values:
-      categories: ["about"]
-      tags: ["profile"]
-  - scope:
-      path: "pages/blog.md"
-    values:
-      categories: ["blog"]
-      tags: ["index"]
-  - scope:
-      path: "pages/travel.md"
-    values:
-      categories: ["travel"]
-      tags: ["itinerary"]
-  - scope:
-      path: "pages/library.md"
-    values:
-      categories: ["library"]
-      tags: ["reading-list"]
-  - scope:
-      path: "pages/contact.md"
-    values:
-      categories: ["contact"]
-      tags: ["connect"]
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      lang: en-US
-      comments: true
-  - scope:
-      path: ""
-      type: "notes"
-    values:
-      layout: "page"
-      links: []
-      tags: []
-
-collections:
-  notes:
-    output: true
-    permalink: /garden/:name/
-
-# Locale settings
-timezone: Asia/Shanghai
-lang: en-US
-future: false
-
-# Syntax highlighting
-highlighter: rouge
-
-# Excluded files
 exclude:
   - Gemfile
   - Gemfile.lock

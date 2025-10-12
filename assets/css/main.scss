@@ -1,0 +1,33 @@
+---
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+.now-cta {
+  margin: 3rem 0;
+}
+
+.now-card {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 60%, #ec4899 100%);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.now-card .btn {
+  background: #fff;
+  color: #111 !important;
+  border-radius: 0.6rem;
+}
+
+.now-page .page {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 60%, #ec4899 100%) !important;
+  color: #fff;
+}
+
+.now-page a {
+  color: #fff;
+  text-decoration: underline;
+}
