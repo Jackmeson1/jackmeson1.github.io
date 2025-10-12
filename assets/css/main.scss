@@ -1,8 +1,8 @@
 ---
 ---
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
+/* Import So Simple theme (remote theme handles base styles) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 .now-cta {
   margin: 3rem 0;
