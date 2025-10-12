@@ -1,244 +1,243 @@
 ---
 layout: post
-title: "新能源汽车产业链投资地图：从锂矿到终端的全景分析"
+title: "The New Energy Vehicle Value Chain: From Lithium Mines to Showrooms"
 date: 2025-10-10 15:30:00 +0800
-categories: [行业研究, 新能源]
-tags: [新能源汽车, 锂电池, 产业链]
+categories: [Industry Research, New Energy]
+tags: [NEV, Batteries, Value Chain]
 author: Jackmeson
 ---
 
-## 研究摘要
+## Research Summary
 
-本文系统梳理新能源汽车全产业链，从上游矿产资源到中游电池制造，再到下游整车销售，识别各环节的投资机会与风险点。
-
----
-
-## 一、行业概况
-
-### 1.1 市场规模
-
-**全球市场：**
-- 2024年新能源车销量：1,400万辆（+35% YoY）
-- 2025E销量：1,850万辆（+32% YoY）
-- 2030E销量：4,500万辆（渗透率50%）
-
-**中国市场：**
-- 2024年销量：950万辆（渗透率38%）
-- 2025E销量：1,200万辆（渗透率42%）
+This report maps the entire new energy vehicle (NEV) ecosystem—from upstream mineral resources to midstream battery manufacturing and downstream vehicle sales—to surface the most actionable investment opportunities and risk factors.
 
 ---
 
-## 二、产业链拆解
+## 1. Industry Overview
 
-### 2.1 上游：资源矿产
+### 1.1 Market Size
 
-#### 锂资源
-- **全球储量**：2,800万吨（碳酸锂当量）
-- **主要产区**：澳大利亚（46%）、智利（25%）、中国（17%）
-- **价格走势**：
+**Global market**
+- 2024 NEV sales: 14 million units (+35% YoY).  
+- 2025E sales: 18.5 million units (+32% YoY).  
+- 2030E sales: 45 million units (50% penetration).
 
-| 时间 | 电池级碳酸锂价格 | 同比变化 |
-|------|----------------|---------|
-| 2023Q1 | 50万元/吨 | +180% |
-| 2024Q1 | 10万元/吨 | -80% |
-| 2025Q3 | 8.5万元/吨 | -15% |
-
-**投资观点：**
-- 短期供过于求，价格底部徘徊
-- 2026年后供需重新平衡
-- 关注一体化布局的锂盐厂
-
-#### 其他关键矿产
-- **钴**：3C需求减弱，车用占比提升至65%
-- **镍**：高镍三元电池仍是主流技术路线
-- **锰**：磷酸锰铁锂电池崛起，需求增长
+**China market**
+- 2024 sales: 9.5 million units (38% penetration).  
+- 2025E sales: 12 million units (42% penetration).
 
 ---
 
-### 2.2 中游：电池制造
+## 2. Value Chain Breakdown
 
-#### 技术路线对比
+### 2.1 Upstream: Raw Materials
 
-| 技术 | 能量密度 | 成本 | 安全性 | 市场份额 |
-|------|---------|-----|--------|---------|
-| 磷酸铁锂(LFP) | 160-180 Wh/kg | ★★★★★ | ★★★★★ | 60% |
-| 三元(NCM) | 230-280 Wh/kg | ★★★☆☆ | ★★★☆☆ | 35% |
-| 固态电池 | 400+ Wh/kg | ★☆☆☆☆ | ★★★★☆ | <1% |
+#### Lithium
+- **Global reserves**: 28 million tons LCE.  
+- **Key regions**: Australia (46%), Chile (25%), China (17%).  
+- **Price trajectory**
 
-#### 产能分布
+| Period | Battery-grade lithium carbonate | YoY change |
+|--------|----------------------------------|------------|
+| 2023 Q1 | RMB 500,000/ton | +180% |
+| 2024 Q1 | RMB 100,000/ton | -80% |
+| 2025 Q3 | RMB 85,000/ton | -15% |
 
-**全球TOP5动力电池厂商（2024）：**
+**Investment view**
+- Near-term oversupply keeps prices anchored at the bottom.  
+- Supply-demand balance likely returns after 2026.  
+- Favor integrated producers with both resource and refining capacity.
 
-1. **宁德时代**（CATL）- 37% 市场份额
-2. **比亚迪** - 16%
-3. **LG新能源** - 13%
-4. **松下** - 7%
-5. **中创新航** - 5%
-
-**中国产能：**
-- 2024年产能：1,200 GWh
-- 2024年需求：850 GWh
-- **产能利用率：71%** ⚠️（过剩明显）
-
----
-
-### 2.3 下游：整车制造
-
-#### 竞争格局
-
-**中国TOP5（2024年1-9月销量）：**
-
-| 排名 | 车企 | 销量（万辆）| 同比增长 | 均价（万元）|
-|-----|------|-----------|---------|-----------|
-| 1 | 比亚迪 | 285 | +42% | 15.8 |
-| 2 | 特斯拉中国 | 52 | -3% | 26.5 |
-| 3 | 理想汽车 | 38 | +35% | 32.8 |
-| 4 | 吉利汽车 | 36 | +55% | 12.3 |
-| 5 | 蔚来汽车 | 18 | +31% | 35.6 |
-
-#### 价格战影响
-
-**降价幅度（2024年）：**
-- 10-15万价位：平均降价8,000元
-- 15-25万价位：平均降价15,000元
-- 25万以上：相对稳定
-
-**对行业的影响：**
-- ✅ 加速燃油车替代
-- ✅ 提升市场渗透率
-- ⚠️ 压缩整车利润空间
-- ⚠️ 弱势品牌出清
+#### Other critical minerals
+- **Cobalt**: Consumer electronics demand softens while automotive share rises to 65%.  
+- **Nickel**: High-nickel ternary cathodes remain mainstream for premium segments.  
+- **Manganese**: LFP-Mn chemistries are emerging, driving incremental demand.
 
 ---
 
-## 三、财务对比分析
+### 2.2 Midstream: Battery Manufacturing
 
-### 3.1 主要公司业绩（2024H1）
+#### Technology comparison
 
-| 公司 | 营收（亿）| YoY | 净利润（亿）| 净利率 | ROE |
-|------|---------|-----|----------|--------|-----|
-| 宁德时代 | 2,049 | +28% | 251 | 12.3% | 18.5% |
-| 比亚迪 | 3,212 | +48% | 185 | 5.8% | 22.1% |
-| 理想汽车 | 678 | +36% | 82 | 12.1% | 28.3% |
-| 赣锋锂业 | 168 | -42% | -8 | -4.8% | -2.1% |
+| Chemistry | Energy density | Cost | Safety | Market share |
+|-----------|----------------|------|--------|--------------|
+| LFP | 160–180 Wh/kg | ★★★★★ | ★★★★★ | 60% |
+| NCM | 230–280 Wh/kg | ★★★☆☆ | ★★★☆☆ | 35% |
+| Solid-state | 400+ Wh/kg | ★☆☆☆☆ | ★★★★☆ | <1% |
 
-**观察：**
-- 电池厂商盈利能力最强
-- 整车毛利率承压
-- 上游矿产企业亏损
+#### Capacity landscape
+
+**Global top 5 cell makers (2024)**
+1. **CATL** – 37% share.  
+2. **BYD** – 16%.  
+3. **LG Energy Solution** – 13%.  
+4. **Panasonic** – 7%.  
+5. **CALB** – 5%.
+
+**China capacity snapshot**
+- Installed capacity 2024: 1,200 GWh.  
+- Demand 2024: 850 GWh.  
+- **Utilization: 71%** ⚠️ (clear oversupply).
 
 ---
 
-## 四、投资策略
+### 2.3 Downstream: Vehicle Manufacturing
 
-### 4.1 产业链价值分布
+#### Competitive landscape
+
+**China top 5 (Jan–Sep 2024 sales)**
+
+| Rank | OEM | Sales (10k units) | YoY | ASP (RMB 10k) |
+|------|-----|------------------|-----|---------------|
+| 1 | BYD | 285 | +42% | 15.8 |
+| 2 | Tesla China | 52 | -3% | 26.5 |
+| 3 | Li Auto | 38 | +35% | 32.8 |
+| 4 | Geely | 36 | +55% | 12.3 |
+| 5 | NIO | 18 | +31% | 35.6 |
+
+#### Impact of the price war
+
+**Average discounts in 2024**
+- RMB 100k–150k segment: -RMB 8,000.  
+- RMB 150k–250k segment: -RMB 15,000.  
+- Premium segment: relatively stable.
+
+**Implications**
+- ✅ Accelerates displacement of ICE vehicles.  
+- ✅ Boosts penetration across new buyer cohorts.  
+- ⚠️ Compresses OEM margins.  
+- ⚠️ Forces weaker brands to exit.
+
+---
+
+## 3. Comparative Financials
+
+### 3.1 Key players (1H 2024)
+
+| Company | Revenue (RMB bn) | YoY | Net profit (RMB bn) | Net margin | ROE |
+|---------|------------------|-----|---------------------|------------|-----|
+| CATL | 204.9 | +28% | 25.1 | 12.3% | 18.5% |
+| BYD | 321.2 | +48% | 18.5 | 5.8% | 22.1% |
+| Li Auto | 67.8 | +36% | 8.2 | 12.1% | 28.3% |
+| Ganfeng Lithium | 16.8 | -42% | -0.8 | -4.8% | -2.1% |
+
+**Observations**
+- Cell manufacturers enjoy the strongest profitability.  
+- OEM gross margins remain under pressure.  
+- Upstream miners are in the red.
+
+---
+
+## 4. Investment Strategy
+
+### 4.1 Value distribution across the chain
 
 ```
-价值分配（每辆车30万元）：
-├─ 上游矿产：5%（碳酸锂1.5万元）
-├─ 中游电池：35%（电池包10.5万元）
-├─ 下游整车：25%（组装制造7.5万元）
-└─ 销售服务：35%（经销商利润10.5万元）
+Value allocation for a RMB 300k NEV
+├─ Upstream resources: 5% (lithium carbonate RMB 15k)
+├─ Midstream battery: 35% (pack RMB 105k)
+├─ Downstream assembly: 25% (manufacturing RMB 75k)
+└─ Sales & services: 35% (dealer margin RMB 105k)
 ```
 
-**利润池分析：**
-- 🏆 **电池厂商**：技术壁垒+规模效应
-- 🥈 **高端车企**：品牌溢价+用户运营
-- 🥉 **核心零部件**：电机、电控、热管理
+**Profit pool highlights**
+- 🏆 **Cell makers**: high technical barriers and scale economics.  
+- 🥈 **Premium OEMs**: brand premiums plus lifecycle services.  
+- 🥉 **Critical components**: e-motors, power electronics, thermal management.
 
-### 4.2 细分领域机会
+### 4.2 Segment-level opportunities
 
-#### ⭐ 推荐关注
+#### ⭐ Top picks
 
-**1. 电池材料**
-- **隔膜**：技术壁垒高，格局稳定
-  - 恩捷股份、星源材质
-- **电解液**：六氟磷酸锂价格回升
-  - 天赐材料、新宙邦
+**1. Battery materials**  
+- **Separators**: high barriers, concentrated market.  
+  - ENJIE, Senior Tech.  
+- **Electrolytes**: LiPF₆ pricing rebounding.  
+  - Tianci Materials, CAPCHEM.
 
-**2. 智能化零部件**
-- **激光雷达**：L3级自动驾驶普及
-  - 禾赛科技、速腾聚创
-- **域控制器**：软件定义汽车
-  - 德赛西威、经纬恒润
+**2. Intelligent components**  
+- **LiDAR**: paving the way for L3 autonomy.  
+  - Hesai, RoboSense.  
+- **Domain controllers**: software-defined vehicles.  
+  - Desay SV, NavInfo.
 
-**3. 充电基础设施**
-- **超充桩**：800V平台配套
-  - 特锐德、盛弘股份
+**3. Charging infrastructure**  
+- **Ultra-fast chargers**: essential for 800 V platforms.  
+  - TGOOD, Shenghong.
 
-#### ⚠️ 谨慎对待
+#### ⚠️ Areas for caution
 
-- **上游锂矿**：价格底部未明确
-- **三元前驱体**：LFP挤占份额
-- **低端整车**：价格战受损
-
----
-
-## 五、估值与配置建议
-
-### 5.1 板块估值水平
-
-| 细分领域 | PE(TTM) | PEG | 估值评价 |
-|---------|---------|-----|---------|
-| 锂矿 | 亏损 | N/A | 底部区域 |
-| 电池制造 | 25x | 1.2 | 合理偏高 |
-| 电池材料 | 20x | 0.9 | 合理 |
-| 整车-高端 | 30x | 1.5 | 偏高 |
-| 整车-大众 | 15x | 0.8 | 低估 |
-
-### 5.2 配置策略
-
-**积极配置（30%）：**
-- 电池隔膜：20%
-- 电解液：10%
-
-**标准配置（50%）：**
-- 宁德时代：25%
-- 智能零部件：15%
-- 充电桩：10%
-
-**观察等待（20%）：**
-- 锂矿企业：等待价格企稳
+- **Lithium miners**: wait for price stabilization.  
+- **High-nickel precursors**: facing share loss to LFP-based chemistries.  
+- **Low-end OEMs**: hurt most in price wars.
 
 ---
 
-## 六、风险提示
+## 5. Valuation & Allocation Guidance
 
-### 6.1 行业风险
-- 补贴退坡影响需求
-- 产能过剩加剧竞争
-- 技术迭代导致资产减值
+### 5.1 Current multiples
 
-### 6.2 公司风险
-- 应收账款坏账风险
-- 库存减值风险
-- 汇率波动风险
+| Segment | PE (TTM) | PEG | View |
+|---------|---------|-----|------|
+| Lithium | Negative | N/A | Bottoming |
+| Cell manufacturing | 25× | 1.2 | Slightly rich |
+| Battery materials | 20× | 0.9 | Reasonable |
+| Premium OEMs | 30× | 1.5 | Expensive |
+| Mass-market OEMs | 15× | 0.8 | Undervalued |
 
-### 6.3 宏观风险
-- 原材料价格大幅波动
-- 贸易摩擦影响出口
-- 宏观经济下行
+### 5.2 Allocation playbook
 
----
+**Overweight (30%)**  
+- Battery separators: 20%.  
+- Electrolytes: 10%.
 
-## 七、投资检查清单
+**Core holdings (50%)**  
+- CATL: 25%.  
+- Intelligent components: 15%.  
+- Charging infrastructure: 10%.
 
-**买入前问自己：**
-- [ ] 公司在产业链哪个环节？有何竞争优势？
-- [ ] 当前估值是否合理？对应什么增速假设？
-- [ ] 行业格局是集中还是分散？公司能否持续份额？
-- [ ] 技术路线是否稳定？被替代的风险有多大？
-- [ ] 产能利用率如何？是否面临过剩压力？
+**Watchlist (20%)**  
+- Lithium miners: wait for price stabilization.
 
 ---
 
-## 参考文献
+## 6. Risk Factors
 
-1. 中汽协《新能源汽车产销数据月报》
-2. SNE Research 《全球动力电池市场报告》
-3. 国信证券《新能源汽车行业深度报告》
-4. 各公司定期报告及投资者交流纪要
+### 6.1 Industry-level
+- Subsidy cuts soften demand.  
+- Excess capacity intensifies competition.  
+- Rapid tech shifts could strand assets.
+
+### 6.2 Company-level
+- Rising bad-debt risk on receivables.  
+- Inventory write-downs.  
+- FX volatility for exporters.
+
+### 6.3 Macro
+- Wild swings in raw material prices.  
+- Trade tensions hampering exports.  
+- Global economic slowdown.
 
 ---
 
-*本文数据截至2025年10月，部分预测数据基于公开信息整理，仅供参考。投资需谨慎，请独立判断。*
+## 7. Investment Checklist
+
+**Before you buy, confirm:**
+- [ ] Where does the company sit in the value chain and what is its moat?  
+- [ ] Is the current valuation justified by growth assumptions?  
+- [ ] Is the industry structure concentrated or fragmented, and can the firm sustain share?  
+- [ ] How stable is the chosen technology roadmap? What is the displacement risk?  
+- [ ] What is utilization today, and is the company exposed to overcapacity?
+
+---
+
+## References
+
+1. China Association of Automobile Manufacturers, *Monthly NEV Sales Report*.  
+2. SNE Research, *Global EV Battery Market Report*.  
+3. Guosen Securities, *NEV Industry Deep Dive*.  
+4. Corporate filings and investor briefings.
+
+---
+
+*Data updated through October 2025. Forecasts are based on public sources and for reference only. Please conduct independent due diligence before investing.*

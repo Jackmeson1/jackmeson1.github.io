@@ -1,12 +1,12 @@
-# 网站基本信息
-title: 金融分析研究室
-description: 深度金融分析 | AI与产业研究 | 数据驱动洞察
+# Site metadata
+title: Financial Analysis Lab
+description: Deep Financial Research | AI & Industry Insights | Data-Driven Perspectives
 author: Jackmeson
 email: your-email@example.com
 baseurl: ""
 url: "https://jackmeson1.github.io"
 
-# 构建设置
+# Build settings
 markdown: kramdown
 theme: minima
 plugins:
@@ -14,22 +14,22 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# 导航菜单
+# Navigation menu
 header_pages:
   - index.md
   - about.md
   - archive.md
 
-# 分页设置
+# Pagination settings
 paginate: 10
 paginate_path: "/page:num/"
 
-# 社交媒体链接（可选）
+# Social profiles (optional)
 github_username: jackmeson1
 # twitter_username: your_username
 # linkedin_username: your_username
 
-# 文章默认设置
+# Default post settings
 defaults:
   - scope:
       path: ""
@@ -38,14 +38,14 @@ defaults:
       layout: "post"
       comments: true
 
-# 时区和语言
+# Locale settings
 timezone: Asia/Shanghai
-lang: zh-CN
+lang: en
 
-# 代码高亮
+# Syntax highlighting
 highlighter: rouge
 
-# 排除文件
+# Excluded files
 exclude:
   - Gemfile
   - Gemfile.lock
