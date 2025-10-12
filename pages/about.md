@@ -11,7 +11,6 @@ lede: "I’m building a digital garden to document how code, capital, travel, an
 - 🔧 Former QA Engineer at Fortinet (3 years)
 - 📊 Quant-curious researcher exploring AI, energy, and market structure
 - ✈️ Slow traveler designing routines that work across cities
-- 🧘 Mindfulness practitioner experimenting with attention and presence
 
 ## 🎓 Roots
 
@@ -30,7 +29,7 @@ I left my QA role to create space for cross-disciplinary learning. This site is 
 
 ## 📍 Now
 
-- Location: Vancouver → planning Taipei
+- Location: Vancouver, Canada (curious about 日本小樽)
 - Reading: *Antifragile* by Nassim Nicholas Taleb
 - Learning: Docker, Kubernetes, Playwright
 - Thinking about: how systems thinking applies to everyday choices
