@@ -39,7 +39,14 @@ title: Home
         <div class="post-meta">
           <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
           {% if post.categories %}
-            <span class="post-category">{{ post.categories | join: ', ' }}</span>
+            <span class="post-categories">
+              {% for category in post.categories %}
+                {% assign category_data = site.data.categories[category] %}
+                {% assign category_label = category_data.name | default: category | replace: '-', ' ' | capitalize %}
+                {% assign category_url = category_data.permalink | default: '/' | append: category | append: '/' %}
+                <a class="post-category" href="{{ category_url | relative_url }}">{{ category_label }}</a>{% unless forloop.last %}<span class="category-separator">, </span>{% endunless %}
+              {% endfor %}
+            </span>
           {% endif %}
         </div>
         <h3>
@@ -126,11 +133,29 @@ title: Home
     margin-right: 15px;
   }
 
+  .post-categories {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+
   .post-category {
+    display: inline-block;
     background: #667eea;
     color: white;
     padding: 2px 10px;
     border-radius: 3px;
+    font-size: 0.85em;
+    text-decoration: none;
+  }
+
+  .post-category:hover {
+    background: #4a60c5;
+  }
+
+  .category-separator {
+    color: #657786;
     font-size: 0.85em;
   }
 

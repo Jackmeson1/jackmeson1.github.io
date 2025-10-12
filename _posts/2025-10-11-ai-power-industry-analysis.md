@@ -2,9 +2,14 @@
 layout: post
 title: "AI Power Demand: A Deep Dive into the Data Center Supercycle"
 date: 2025-10-11 10:00:00 +0800
-categories: [Industry Research, AI Industry]
+last_modified_at: 2025-10-11 10:00:00 +0800
+categories: [industry-research, ai-industry]
 tags: [AI, Power, Data Centers, Energy]
 author: Jackmeson
+description: Why hyperscale AI workloads are transforming electricity demand forecasts and power infrastructure investment cases
+redirect_from:
+  - /industry%20research/ai%20industry/2025/10/11/ai-power-industry-analysis.html
+  - /Industry%20Research/AI%20Industry/2025/10/11/ai-power-industry-analysis.html
 ---
 
 ## Key Takeaways

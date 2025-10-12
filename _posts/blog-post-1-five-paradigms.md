@@ -2,9 +2,14 @@
 layout: post
 title: "The Five Paradigms: A Unified Framework for Strategic Decision-Making"
 date: 2025-10-12 16:00:00 +0800
-categories: [Strategy, Decision-Making]
+last_modified_at: 2025-10-12 16:00:00 +0800
+categories: [strategy, decision-making]
 tags: [framework, risk-management, portfolio-theory, systems-thinking]
 author: Jackmeson
+description: A synthesis of five dominant paradigms that govern strategic decisions and portfolio positioning
+redirect_from:
+  - /strategy/decision-making/2025/10/12/five-paradigms.html
+  - /Strategy/Decision-Making/2025/10/12/five-paradigms.html
 ---
 
 ## Core Thesis

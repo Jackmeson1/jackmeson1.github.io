@@ -2,9 +2,14 @@
 layout: post
 title: "Taleb's Barbell Strategy: Why the Middle Ground Is Where You Die"
 date: 2025-10-12 18:00:00 +0800
-categories: [Investment Philosophy, Risk Management]
+last_modified_at: 2025-10-12 18:00:00 +0800
+categories: [investment-philosophy, risk-management]
 tags: [Taleb, antifragile, black-swan, convexity, portfolio-strategy]
 author: Jackmeson
+description: Breaking down Taleb's barbell as a risk philosophy for surviving fat-tail regimes and volatility clusters
+redirect_from:
+  - /investment%20philosophy/risk%20management/2025/10/12/taleb-barbell-strategy.html
+  - /Investment%20Philosophy/Risk%20Management/2025/10/12/taleb-barbell-strategy.html
 ---
 
 ## Core Thesis

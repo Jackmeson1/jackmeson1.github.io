@@ -41,7 +41,7 @@ I believe in the power of data. In an age of information overload, my goal is to
 ### 📫 Contact
 
 - GitHub: [@jackmeson1](https://github.com/jackmeson1)
-- Email: your-email@example.com
+- Email: [jli785330@gmail.com](mailto:jli785330@gmail.com)
 
 ### ⚠️ Disclaimer
 
