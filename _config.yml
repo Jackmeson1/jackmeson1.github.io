@@ -35,12 +35,13 @@ permalink: /:categories/:year/:month/:day/:slug/
 # Navigation menu
 header_pages:
   - index.md
-  - pages/about.md
-  - pages/portfolio.md
-  - pages/blog.md
-  - pages/travel.md
-  - pages/library.md
-  - pages/contact.md
+- pages/about.md
+- pages/portfolio.md
+- pages/blog.md
+- pages/travel.md
+- pages/library.md
+- pages/contact.md
+
 
 # Pagination settings
 paginate: 10
