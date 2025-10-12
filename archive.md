@@ -7,28 +7,24 @@ permalink: /archive/
 <div class="archive">
   <p class="archive-intro">{{ site.posts | size }} posts in total</p>
 
-  {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+  {% assign category_names = site.categories | map: "first" | sort_natural %}
 
-  {% for year in postsByYear %}
-    <h2 class="year-header">{{ year.name }}</h2>
-    <ul class="archive-list">
-      {% for post in year.items %}
-        <li class="archive-item">
-          <span class="archive-date">{{ post.date | date: "%m-%d" }}</span>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          {% if post.categories %}
-            <span class="archive-categories">
-              {% for category in post.categories %}
-                {% assign category_data = site.data.categories[category] %}
-                {% assign category_label = category_data.name | default: category | replace: '-', ' ' | capitalize %}
-                {% assign category_url = category_data.permalink | default: '/' | append: category | append: '/' %}
-                <a class="archive-category" href="{{ category_url | relative_url }}">{{ category_label }}</a>{% unless forloop.last %}<span class="archive-separator">, </span>{% endunless %}
-              {% endfor %}
-            </span>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+  {% for category_name in category_names %}
+    {% assign category_posts = site.categories[category_name] | sort: "date" | reverse %}
+    {% assign category_data = site.data.categories[category_name] %}
+    {% assign category_label = category_data.name | default: category_name | replace: '-', ' ' | capitalize %}
+
+    <section class="archive-category-group">
+      <h2 id="{{ category_name | slugify }}" class="category-header">{{ category_label }}</h2>
+      <ul class="archive-list">
+        {% for post in category_posts %}
+          <li class="archive-item">
+            <span class="archive-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
   {% endfor %}
 </div>
 
@@ -39,12 +35,16 @@ permalink: /archive/
     font-style: italic;
   }
 
-  .year-header {
+  .category-header {
     color: #667eea;
     border-bottom: 2px solid #667eea;
     padding-bottom: 10px;
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+
+  .archive-category-group + .archive-category-group {
+    margin-top: 40px;
   }
 
   .archive-list {
@@ -76,29 +76,4 @@ permalink: /archive/
   .archive-item a:hover {
     color: #667eea;
   }
-
-  .archive-categories {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-left: 10px;
-  }
-
-  .archive-category {
-    background: #f0f0f0;
-    color: #555;
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 0.85em;
-    text-decoration: none;
-  }
-
-  .archive-category:hover {
-    background: #d5d5d5;
-  }
-
-  .archive-separator {
-    color: #657786;
-    font-size: 0.85em;
-  }
-</style>
+  </style>

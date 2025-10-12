@@ -43,7 +43,8 @@ title: Home
               {% for category in post.categories %}
                 {% assign category_data = site.data.categories[category] %}
                 {% assign category_label = category_data.name | default: category | replace: '-', ' ' | capitalize %}
-                {% assign category_url = category_data.permalink | default: '/' | append: category | append: '/' %}
+                {% assign category_slug = category | slugify %}
+                {% assign category_url = '/archive/#' | append: category_slug %}
                 <a class="post-category" href="{{ category_url | relative_url }}">{{ category_label }}</a>{% unless forloop.last %}<span class="category-separator">, </span>{% endunless %}
               {% endfor %}
             </span>
