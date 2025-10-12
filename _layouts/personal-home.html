@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+
+{%- comment -%}
+Resolve hero / featured / quick links / ctas / updates
+{%- endcomment -%}
 {% assign hero = page.hero | default: site.hero %}
 {% assign featured_identifiers = page.featured_posts | default: site.featured_posts %}
 {% assign featured_posts = '' | split: '' %}
@@ -28,21 +32,24 @@ layout: default
   {% assign updates = updates | sort: 'date' | reverse %}
 {% endif %}
 
+{%- comment -%}
+Compute recent posts for “Latest publications”
+{%- endcomment -%}
+{% assign recent_posts_source = page.featured_posts | default: site.posts %}
+{% assign recent_posts = recent_posts_source | sort: 'date' | reverse %}
+
 <main class="ds-main u-bg-surface">
+  <!-- HERO -->
   <section class="ds-section hero u-bg-gradient">
     <div class="ds-container u-stack-xl">
       <div class="hero__content u-stack-md">
-        {% if hero.tagline %}
-          <p class="hero__kicker">{{ hero.tagline }}</p>
-        {% endif %}
+        {% if hero.tagline %}<p class="hero__kicker">{{ hero.tagline }}</p>{% endif %}
         {% if hero.name %}
           <h1 class="hero__title">{{ hero.name }}</h1>
         {% else %}
           <h1 class="hero__title">{{ site.title }}</h1>
         {% endif %}
-        {% if hero.subtitle %}
-          <p class="hero__subtitle">{{ hero.subtitle }}</p>
-        {% endif %}
+        {% if hero.subtitle %}<p class="hero__subtitle">{{ hero.subtitle }}</p>{% endif %}
         {% if hero.socials %}
           <div class="hero__actions u-flex u-flex-wrap u-gap-sm">
             {% for social in hero.socials %}
@@ -51,6 +58,7 @@ layout: default
           </div>
         {% endif %}
       </div>
+
       {% if ctas and ctas.size > 0 %}
         <div class="hero__ctas u-grid u-gap-md">
           {% for block in ctas %}
@@ -67,6 +75,21 @@ layout: default
     </div>
   </section>
 
+  <!-- SEARCH (from codex) -->
+  <section class="ds-section u-bg-page">
+    <div class="ds-container">
+      <div class="search-box surface-card u-flex u-items-center u-gap-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="20" height="20" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197M15.803 15.803A7.5 7.5 0 1 0 5 5a7.5 7.5 0 0 0 10.803 10.803Z" />
+        </svg>
+        <label class="sr-only" for="site-search">Search the knowledge base</label>
+        <input id="site-search" type="search" class="input" placeholder="Search insights, models, and case studies" data-search-input>
+      </div>
+      <div class="search-results" data-search-results></div>
+    </div>
+  </section>
+
+  <!-- FEATURED (from main) -->
   <section class="ds-section u-bg-page">
     <div class="ds-container u-stack-lg">
       <header class="ds-section__header u-stack-xxs">
@@ -94,7 +117,44 @@ layout: default
     </div>
   </section>
 
-  {% if updates and updates.size > 0 %}
+  <!-- LATEST (codex idea,用设计系统样式) -->
+  <section class="ds-section u-bg-surface">
+    <div class="ds-container u-stack-md">
+      <div class="u-flex u-items-center u-justify-between u-wrap u-gap-sm u-mb-sm">
+        <h2 class="ds-section__title">Latest publications</h2>
+        <a class="ds-button ds-button--ghost" href="{{ '/archive' | relative_url }}">View all</a>
+      </div>
+      <div class="ds-grid ds-grid--cards">
+        {%- for post in recent_posts limit:6 -%}
+          <article class="ds-card u-stack-sm">
+            <p class="ds-card__meta">{{ post.date | date: "%b %d, %Y" }}</p>
+            <h3 class="ds-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="ds-card__body">{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+            <a class="ds-button ds-button--link" href="{{ post.url | relative_url }}">Read →</a>
+          </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS (optional, from codex) -->
+  {%- if page.tabs -%}
+  <section class="ds-section u-bg-surface">
+    <div class="ds-container">
+      {% include tabs.html tabs=page.tabs %}
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- TIMELINE: 优先 page.timeline，否则用 data.updates -->
+  {% if page.timeline %}
+    <section class="ds-section u-bg-page">
+      <div class="ds-container u-stack-lg">
+        <h2 class="ds-section__title">Trajectory</h2>
+        {% include timeline.html events=page.timeline %}
+      </div>
+    </section>
+  {% elsif updates and updates.size > 0 %}
     <section class="ds-section u-bg-surface">
       <div class="ds-container u-stack-lg">
         <header class="ds-section__header u-stack-xxs">
@@ -115,22 +175,50 @@ layout: default
     </section>
   {% endif %}
 
-  {% if quick_links and quick_links.size > 0 %}
-    <section class="ds-section u-bg-page">
-      <div class="ds-container u-stack-md">
-        <header class="ds-section__header u-stack-xxs u-text-center">
-          <p class="ds-kicker">Navigate</p>
-          <h2 class="ds-section__title">Quick links</h2>
-        </header>
-        <div class="ds-grid ds-grid--quick-links">
-          {% for item in quick_links %}
-            <a class="ds-card ds-card--compact" href="{{ item.url }}">
-              <span>{{ item.label }}</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-    </section>
-  {% endif %}
+  <!-- CALLOUTS (optional, from codex) -->
+  {%- if page.callouts -%}
+  <section class="ds-section u-bg-page">
+    <div class="ds-container ds-grid ds-grid--cards">
+      {%- for callout in page.callouts -%}
+        <article class="ds-card ds-card--inverse u-stack-sm">
+          <h3 class="ds-card__title">{{ callout.title }}</h3>
+          <div class="u-stack-xs u-text-muted">
+            {{ callout.body | markdownify }}
+          </div>
+          {%- if callout.link -%}
+            <a class="ds-button ds-button--ghost" href="{{ callout.link.url }}">{{ callout.link.label | default: 'Learn more' }}</a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
 </main>
+
+<!-- Scripts (from codex) -->
+<script defer src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
+{%- if page.tabs -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab-target');
+        tabs.forEach((btn) => {
+          const isActive = btn === tab;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          btn.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+        panels.forEach((panel) => {
+          const show = panel.id === target;
+          panel.classList.toggle('is-active', show);
+        });
+      });
+    });
+  });
+</script>
+{%- endif -%}
+

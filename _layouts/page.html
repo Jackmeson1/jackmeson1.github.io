@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+  {% include head.html %}
+  <body class="layout-page">
+    {% include header.html %}
+    {%- if page.hero -%}
+      {% include hero.html title=page.hero.title subtitle=page.hero.subtitle eyebrow=page.hero.eyebrow cta=page.hero.cta secondary_cta=page.hero.secondary_cta media=page.hero.media %}
+    {%- endif -%}
+    <main class="site-main">
+      <section class="container surface-card stack gap-2">
+        <header class="stack gap-1">
+          <h1>{{ page.title }}</h1>
+          {%- if page.subtitle -%}
+            <p class="text-muted">{{ page.subtitle }}</p>
+          {%- endif -%}
+        </header>
+        <div class="prose">
+          {{ content }}
+        </div>
+      </section>
+      {%- if page.timeline -%}
+        <section class="site-main-section container">
+          <h2>{{ page.timeline_title | default: 'Experience' }}</h2>
+          {% include timeline.html events=page.timeline %}
+        </section>
+      {%- endif -%}
+      {%- if page.map -%}
+        <section class="site-main-section container">
+          <h2>{{ page.map.title | default: 'Where to find us' }}</h2>
+          <div class="surface-card" style="height: 24rem; overflow: hidden;">
+            <div data-map data-lat="{{ page.map.lat }}" data-lng="{{ page.map.lng }}" data-zoom="{{ page.map.zoom | default: 11 }}" data-marker="{{ page.map.marker | escape }}" style="height: 100%;"></div>
+          </div>
+        </section>
+      {%- endif -%}
+    </main>
+    {% include footer.html %}
+    {%- if page.map -%}
+      <script defer src="{{ '/assets/js/map.js' | relative_url }}"></script>
+    {%- endif -%}
+  </body>
+</html>

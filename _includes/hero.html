@@ -1,0 +1,22 @@
+<section class="hero surface-hero" role="region">
+  <div class="container grid cols-1 md:cols-2 gap-3 align-center">
+    <div class="stack gap-2">
+      <p class="chip chip-accent" aria-hidden="true">{{ include.eyebrow | default: 'Welcome' }}</p>
+      <h1 class="hero__title">{{ include.title | default: page.title }}</h1>
+      {%- if include.subtitle or page.subtitle -%}
+        <p class="hero__subtitle text-muted">{{ include.subtitle | default: page.subtitle }}</p>
+      {%- endif -%}
+      {%- if include.cta -%}
+        <div class="flex gap-1">
+          <a class="btn btn-primary" href="{{ include.cta.url }}">{{ include.cta.label }}</a>
+          {%- if include.secondary_cta -%}
+            <a class="btn btn-ghost" href="{{ include.secondary_cta.url }}">{{ include.secondary_cta.label }}</a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- if include.media -%}
+      <div class="hero__media">{{ include.media | markdownify }}</div>
+    {%- endif -%}
+  </div>
+</section>
