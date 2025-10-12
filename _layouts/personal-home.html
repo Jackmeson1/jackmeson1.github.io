@@ -118,6 +118,8 @@ Compute recent posts for “Latest publications”
       </div>
       <div class="latest-list">
         {%- for post in recent_posts limit:5 -%}
+          {%- assign latest_title = post.title | default: '(Untitled post)' -%}
+          {%- assign latest_excerpt = post.description | default: post.excerpt | strip_html | truncatewords: 24 -%}
           <article class="latest-item">
             <div class="latest-item__meta">
               <span>{{ post.date | date: "%b %d, %Y" }}</span>
@@ -125,8 +127,10 @@ Compute recent posts for “Latest publications”
                 <span class="latest-item__tag latest-item__tag--{{ post.categories[0] | slugify }}">{{ post.categories[0] | replace: '-', ' ' | capitalize }}</span>
               {% endif %}
             </div>
-            <h3 class="latest-item__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-            <p class="latest-item__excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+            <h3 class="latest-item__title"><a href="{{ post.url | relative_url }}">{{ latest_title }}</a></h3>
+            {% unless latest_excerpt == '' %}
+              <p class="latest-item__excerpt">{{ latest_excerpt }}</p>
+            {% endunless %}
             <a class="spotlight-card__link" href="{{ post.url | relative_url }}">Read →</a>
           </article>
         {%- endfor -%}

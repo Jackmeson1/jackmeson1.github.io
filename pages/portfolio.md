@@ -19,8 +19,8 @@ tabs:
           - "Delivered executive dashboards with latency-aware alerting for policy changes."
         stack: ["dbt", "DuckDB", "Neo4j", "LangChain", "Next.js"]
         links:
-          - label: "Architecture memo"
-            url: "/posts/venture-intelligence-graph"
+          - label: "Request the architecture memo"
+            url: "mailto:jli785330@gmail.com?subject=Venture%20Intelligence%20Graph%20Memo"
           - label: "Request a walkthrough"
             url: "mailto:jli785330@gmail.com?subject=Venture%20Intelligence%20Graph%20Walkthrough"
       - title: "Energy Transition Control Tower"
@@ -33,8 +33,8 @@ tabs:
           - "Automated compliance packets mapped to each jurisdiction."
         stack: ["Fivetran", "Snowflake", "Hex", "Power BI", "Great Expectations"]
         links:
-          - label: "Case study"
-            url: "/posts/energy-transition-control-tower"
+          - label: "Request the case study"
+            url: "mailto:jli785330@gmail.com?subject=Energy%20Transition%20Control%20Tower%20Case%20Study"
   - id: quant
     label: "Quant Research"
     intro: "Research programs turning cutting-edge math and machine intelligence into resilient trading playbooks."
@@ -49,8 +49,8 @@ tabs:
           - "Codified risk handrails to keep convex bets within governance."
         stack: ["Python", "Ray RLlib", "Pandas", "AWS Step Functions"]
         links:
-          - label: "Research abstract"
-            url: "/posts/convexity-radar-overview"
+          - label: "Request the research abstract"
+            url: "mailto:jli785330@gmail.com?subject=Convexity%20Radar%20Research%20Abstract"
       - title: "Market Microstructure Probe"
         role: "Quant Advisor"
         timeframe: "2021 — 2023"
@@ -61,8 +61,8 @@ tabs:
           - "Reduced round-trip execution cost by 23 bps for flagship strategy."
         stack: ["Rust", "Kafka", "Arrow", "Grafana"]
         links:
-          - label: "Technical debrief"
-            url: "/posts/microstructure-probe"
+          - label: "Request the technical debrief"
+            url: "mailto:jli785330@gmail.com?subject=Market%20Microstructure%20Probe%20Debrief"
   - id: side
     label: "Side Experiments"
     intro: "Community and storytelling experiments that keep creativity sharp and cross-pollinate ideas."
