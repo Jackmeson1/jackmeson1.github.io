@@ -364,6 +364,35 @@ a {
   box-shadow: var(--ds-shadow-card);
 }
 
+.now-highlight {
+  background: linear-gradient(135deg, #5b21b6 0%, #7c3aed 45%, #c084fc 100%);
+  color: #fff;
+}
+
+.now-highlight .ds-kicker {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.now-highlight .ds-section__title,
+.now-highlight .ds-section__subtitle {
+  color: #fff;
+}
+
+.now-highlight .now-section {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 45px -20px rgba(76, 29, 149, 0.6);
+}
+
+.now-highlight .now-grid dt {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.now-highlight .now-grid dd,
+.now-highlight .now-updated {
+  color: #fff;
+}
+
 .now-grid {
   display: grid;
   gap: var(--ds-space-md);
