@@ -1,0 +1,193 @@
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nuclearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="msftGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="metaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="smbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#0a0e27"/>
+
+  <!-- Title -->
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Constellation Energy Nuclear PPA Economics Analysis
+  </text>
+  <text x="700" y="70" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0" text-anchor="middle">
+    Microsoft TMI Deal ($8.67B NPV) vs Meta Clinton Deal ($10.56B NPV) vs Replication Potential (20.1 GW Fleet)
+  </text>
+
+  <!-- Deal Comparison Cards -->
+
+  <!-- Microsoft TMI Deal -->
+  <rect x="50" y="110" width="420" height="350" rx="12" fill="url(#msftGrad)" opacity="0.9" stroke="#4facfe" stroke-width="3"/>
+  <text x="260" y="145" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Microsoft TMI Deal (Sep 2024)
+  </text>
+
+  <!-- Deal Structure -->
+  <text x="70" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Deal Structure:</text>
+  <text x="70" y="202" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• PPA Price: $110/MWh (estimated)</text>
+  <text x="70" y="222" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• Capacity: 835 MW (Unit 1 restart)</text>
+  <text x="70" y="242" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• Term: 20 years (2028-2048)</text>
+  <text x="70" y="262" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• Availability: 93% (7,313 hours/year)</text>
+
+  <!-- Economics -->
+  <text x="70" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Annual Economics:</text>
+  <text x="70" y="317" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• Revenue: $721M/year</text>
+  <text x="70" y="337" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• O&M Cost: $287M/year ($47/MWh)</text>
+  <text x="70" y="357" font-family="Arial, sans-serif" font-size="13" fill="#e0f7ff">• Net Cash Flow: <tspan font-weight="bold" fill="#fbbf24">$434M/year</tspan></text>
+
+  <!-- NPV -->
+  <rect x="70" y="375" width="380" height="70" rx="8" fill="#1a1f3a" opacity="0.95"/>
+  <text x="260" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20-Year NPV (8% discount):</text>
+  <text x="260" y="430" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fbbf24" text-anchor="middle">$8.67 Billion</text>
+
+  <!-- Meta Clinton Deal -->
+  <rect x="500" y="110" width="420" height="350" rx="12" fill="url(#metaGrad)" opacity="0.9" stroke="#f093fb" stroke-width="3"/>
+  <text x="710" y="145" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Meta Clinton Deal (Dec 2024)
+  </text>
+
+  <!-- Deal Structure -->
+  <text x="520" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Deal Structure:</text>
+  <text x="520" y="202" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• PPA Price: $70-100/MWh (estimated)</text>
+  <text x="520" y="222" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• Capacity: 1,121 MW (Units 1&2)</text>
+  <text x="520" y="242" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• Term: 20 years (2026-2046)</text>
+  <text x="520" y="262" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• Availability: 93% (already operating)</text>
+
+  <!-- Economics -->
+  <text x="520" y="295" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Annual Economics (Base Case $85/MWh):</text>
+  <text x="520" y="317" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• Revenue: $783M/year</text>
+  <text x="520" y="337" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• O&M Cost: $431M/year ($47/MWh)</text>
+  <text x="520" y="357" font-family="Arial, sans-serif" font-size="13" fill="#fce7f3">• Net Cash Flow: <tspan font-weight="bold" fill="#fbbf24">$352M/year</tspan></text>
+
+  <!-- NPV Range -->
+  <rect x="520" y="375" width="380" height="70" rx="8" fill="#1a1f3a" opacity="0.95"/>
+  <text x="710" y="400" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">20-Year NPV Range:</text>
+  <text x="710" y="430" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fbbf24" text-anchor="middle">$7.04 - $10.56B</text>
+
+  <!-- CEG Fleet Replication Potential -->
+  <rect x="950" y="110" width="420" height="350" rx="12" fill="url(#nuclearGrad)" opacity="0.9" stroke="#667eea" stroke-width="3"/>
+  <text x="1160" y="145" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Replication Potential
+  </text>
+
+  <!-- Fleet Breakdown -->
+  <text x="970" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">CEG Nuclear Fleet:</text>
+  <text x="970" y="202" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• Total Capacity: 22.1 GW (21 reactors)</text>
+  <text x="970" y="222" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• Already Committed: 2.0 GW</text>
+  <text x="970" y="240" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">  - TMI: 0.835 GW (MSFT)</text>
+  <text x="970" y="258" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">  - Clinton: 1.121 GW (META)</text>
+  <text x="970" y="280" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• <tspan font-weight="bold" fill="#fbbf24">Available: 20.1 GW (91%)</tspan></text>
+
+  <!-- Replication Math -->
+  <text x="970" y="315" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Replication Economics:</text>
+  <text x="970" y="337" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• Avg PPA: $90/MWh (blended)</text>
+  <text x="970" y="357" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• Annual CF per GW: $733M</text>
+  <text x="970" y="377" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• O&M per GW: $384M</text>
+  <text x="970" y="397" font-family="Arial, sans-serif" font-size="13" fill="#e0e7ff">• Net CF per GW: <tspan font-weight="bold" fill="#fbbf24">$349M/year</tspan></text>
+
+  <!-- Total Potential -->
+  <rect x="970" y="410" width="380" height="35" rx="6" fill="#1a1f3a" opacity="0.95"/>
+  <text x="1160" y="433" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+    20.1 GW × $349M = $7.0B annual CF potential
+  </text>
+
+  <!-- Moat Analysis -->
+  <rect x="50" y="490" width="1320" height="180" rx="12" fill="#1a1f3a" opacity="0.95" stroke="#fbbf24" stroke-width="3"/>
+  <text x="700" y="525" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+    Why CEG Has Irreplicable Moat: NRC Approvals Take Decades
+  </text>
+
+  <text x="70" y="560" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    <tspan font-weight="bold">1. New Nuclear Construction:</tspan> Last US reactor completed 2023 (Vogtle Unit 4) after <tspan font-weight="bold" fill="#ff6b6b">14-year</tspan> construction, $35B total cost ($8,750/kW).
+  </text>
+  <text x="70" y="585" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    <tspan font-weight="bold">2. SMR Timeline:</tspan> NuScale targeting 2029 first deployment (from 2020 design cert = <tspan font-weight="bold" fill="#ff6b6b">9 years</tspan>). X-energy/Kairos 2030-2032.
+  </text>
+  <text x="70" y="610" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    <tspan font-weight="bold">3. CEG Advantage:</tspan> Existing reactors already NRC-licensed. Restart approvals take <tspan font-weight="bold" fill="#00ff00">2-3 years</tspan> vs 9-14 years for new builds.
+  </text>
+  <text x="70" y="635" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">
+    <tspan font-weight="bold">4. AI Training Timeline Mismatch:</tspan> Microsoft needs TMI power by 2028. SMRs won't deploy until 2029-2032. CEG is the <tspan font-weight="bold" fill="#fbbf24">ONLY near-term option</tspan>.
+  </text>
+
+  <!-- Valuation Framework -->
+  <rect x="50" y="700" width="650" height="260" rx="12" fill="#1a1f3a" opacity="0.95" stroke="#4a5568" stroke-width="2"/>
+  <text x="375" y="735" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    CEG Sum-of-Parts Valuation
+  </text>
+
+  <!-- Valuation Table -->
+  <text x="70" y="770" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4facfe">Component</text>
+  <text x="400" y="770" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4facfe" text-anchor="end">Value</text>
+  <text x="550" y="770" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4facfe">Rationale</text>
+
+  <line x1="70" y1="778" x2="660" y2="778" stroke="#4a5568" stroke-width="1"/>
+
+  <!-- Base Fleet -->
+  <text x="70" y="800" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Base Fleet (20.1 GW)</text>
+  <text x="400" y="800" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="end">$80-90B</text>
+  <text x="420" y="800" font-family="Arial, sans-serif" font-size="11" fill="#718096">Regulated utility (9-11% ROE)</text>
+
+  <!-- MSFT TMI Deal -->
+  <text x="70" y="825" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">MSFT TMI PPA NPV</text>
+  <text x="400" y="825" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="end">$8.67B</text>
+  <text x="420" y="825" font-family="Arial, sans-serif" font-size="11" fill="#718096">20-yr NPV @ 8% discount</text>
+
+  <!-- META Clinton Deal -->
+  <text x="70" y="850" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">META Clinton PPA NPV</text>
+  <text x="400" y="850" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="end">$7-10.6B</text>
+  <text x="420" y="850" font-family="Arial, sans-serif" font-size="11" fill="#718096">Range based on $70-100/MWh</text>
+
+  <!-- Future PPAs -->
+  <text x="70" y="875" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Future PPA Optionality</text>
+  <text x="400" y="875" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="end">$8-18B</text>
+  <text x="420" y="875" font-family="Arial, sans-serif" font-size="11" fill="#718096">10-25% of 20.1 GW fleet</text>
+
+  <line x1="70" y1="885" x2="660" y2="885" stroke="#4a5568" stroke-width="1"/>
+
+  <!-- Total Valuation -->
+  <text x="70" y="910" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">Fair Value Range</text>
+  <text x="400" y="910" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24" text-anchor="end">$104-128B</text>
+
+  <text x="70" y="935" font-family="Arial, sans-serif" font-size="13" fill="#a0aec0">Current Market Cap (Oct 2024):</text>
+  <text x="400" y="935" font-family="Arial, sans-serif" font-size="13" fill="#a0aec0" text-anchor="end">~$115-120B</text>
+
+  <!-- Conclusion -->
+  <rect x="720" y="700" width="650" height="260" rx="12" fill="#1a1f3a" opacity="0.95" stroke="#4a5568" stroke-width="2"/>
+  <text x="1045" y="735" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Investment Thesis Summary
+  </text>
+
+  <!-- Key Points -->
+  <text x="740" y="770" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4facfe">✓ Scarcity Value:</text>
+  <text x="740" y="790" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">20.1 GW nuclear capacity cannot be replicated</text>
+  <text x="740" y="808" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">(NRC approvals: 9-14 years, AI needs power NOW)</text>
+
+  <text x="740" y="838" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4facfe">✓ Pricing Power:</text>
+  <text x="740" y="858" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">$70-110/MWh PPAs lock in 20-year economics</text>
+  <text x="740" y="876" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">(vs merchant power volatility $30-150/MWh)</text>
+
+  <text x="740" y="906" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4facfe">✓ Replication Runway:</text>
+  <text x="740" y="926" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">91% of fleet (20.1 GW) still available for deals</text>
+  <text x="740" y="944" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">(10-15 more MSFT/META-sized deals possible)</text>
+
+  <!-- Footer -->
+  <text x="700" y="985" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="middle">
+    Position: CEG is 35-50% of AI power portfolio (Conservative/Balanced/Aggressive). Highest certainty, lowest execution risk.
+  </text>
+</svg>
