@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "AI Power Infrastructure Investment Series (5/5): Portfolio Construction & Risk Management"
-date: 2025-10-16 09:00:00 +0800
+date: 2025-10-12 09:00:00 +0800
+last_modified_at: 2025-10-12 09:00:00 +0800
 categories: [finance]
 tags: [AI, infrastructure, portfolio, risk-management, asset-allocation]
 author: Jiajun Liang

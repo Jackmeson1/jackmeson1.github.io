@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Liquid Cooling Revolution: The $23B Equipment Supercycle Powering AI"
-date: 2025-10-13 09:00:00 +0800
-last_modified_at: 2025-10-13 09:00:00 +0800
+date: 2025-10-12 09:00:00 +0800
+last_modified_at: 2025-10-12 09:00:00 +0800
 categories: [tech]
 tags: [liquid-cooling, thermal-management, vertiv, data-center-equipment, ai-infrastructure]
 author: Jiajun Liang
