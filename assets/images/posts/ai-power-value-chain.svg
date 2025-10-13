@@ -1,0 +1,194 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="powerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="coolingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="onsiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0a0e27"/>
+
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    AI Datacenter Power Value Chain Analysis
+  </text>
+  <text x="600" y="70" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0" text-anchor="middle">
+    Four Investment Plays: Nuclear Baseload → Liquid Cooling → Grid Infrastructure → On-Site Generation
+  </text>
+
+  <!-- Value Chain Layers -->
+
+  <!-- Layer 1: Nuclear Power (CEG) -->
+  <rect x="50" y="120" width="280" height="140" rx="12" fill="url(#powerGrad)" opacity="0.9"/>
+  <text x="190" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Nuclear Baseload
+  </text>
+  <text x="190" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Constellation Energy (CEG)
+  </text>
+  <text x="190" y="200" font-family="Arial, sans-serif" font-size="12" fill="#e0e7ff" text-anchor="middle">
+    20.1 GW nuclear capacity
+  </text>
+  <text x="190" y="218" font-family="Arial, sans-serif" font-size="12" fill="#e0e7ff" text-anchor="middle">
+    $70-110/MWh PPAs (MSFT, META)
+  </text>
+  <text x="190" y="236" font-family="Arial, sans-serif" font-size="12" fill="#e0e7ff" text-anchor="middle">
+    Moat: NRC approvals (decades)
+  </text>
+  <rect x="60" y="245" width="120" height="8" rx="4" fill="#fbbf24"/>
+  <text x="190" y="252" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Scarcity: 9/10
+  </text>
+
+  <!-- Layer 2: Liquid Cooling (Vertiv) -->
+  <rect x="370" y="120" width="280" height="140" rx="12" fill="url(#coolingGrad)" opacity="0.9"/>
+  <text x="510" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Liquid Cooling
+  </text>
+  <text x="510" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Vertiv (VRT)
+  </text>
+  <text x="510" y="200" font-family="Arial, sans-serif" font-size="12" fill="#fce7f3" text-anchor="middle">
+    GB200: 120-132 kW/rack
+  </text>
+  <text x="510" y="218" font-family="Arial, sans-serif" font-size="12" fill="#fce7f3" text-anchor="middle">
+    $8.5B backlog (+17% YoY)
+  </text>
+  <text x="510" y="236" font-family="Arial, sans-serif" font-size="12" fill="#fce7f3" text-anchor="middle">
+    Moat: NVIDIA partnership
+  </text>
+  <rect x="380" y="245" width="140" height="8" rx="4" fill="#fbbf24"/>
+  <text x="510" y="252" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Pricing Power: 8/10
+  </text>
+
+  <!-- Layer 3: Grid Infrastructure (Eaton) -->
+  <rect x="690" y="120" width="280" height="140" rx="12" fill="url(#gridGrad)" opacity="0.9"/>
+  <text x="830" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Grid Infrastructure
+  </text>
+  <text x="830" y="175" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Eaton (ETN)
+  </text>
+  <text x="830" y="200" font-family="Arial, sans-serif" font-size="12" fill="#dbeafe" text-anchor="middle">
+    $11.4B backlog (+17% YoY)
+  </text>
+  <text x="830" y="218" font-family="Arial, sans-serif" font-size="12" fill="#dbeafe" text-anchor="middle">
+    Datacenter segment +50% YoY
+  </text>
+  <text x="830" y="236" font-family="Arial, sans-serif" font-size="12" fill="#dbeafe" text-anchor="middle">
+    Moat: Diversified revenue
+  </text>
+  <rect x="700" y="245" width="110" height="8" rx="4" fill="#fbbf24"/>
+  <text x="830" y="252" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Stability: 7/10
+  </text>
+
+  <!-- Layer 4: On-Site Generation (Bloom) -->
+  <rect x="50" y="300" width="280" height="140" rx="12" fill="url(#onsiteGrad)" opacity="0.9"/>
+  <text x="190" y="330" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    On-Site Generation
+  </text>
+  <text x="190" y="355" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">
+    Bloom Energy (BE)
+  </text>
+  <text x="190" y="380" font-family="Arial, sans-serif" font-size="12" fill="#d1fae5" text-anchor="middle">
+    SOFC: 90-day deployment
+  </text>
+  <text x="190" y="398" font-family="Arial, sans-serif" font-size="12" fill="#d1fae5" text-anchor="middle">
+    Bypasses 9-year grid queue
+  </text>
+  <text x="190" y="416" font-family="Arial, sans-serif" font-size="12" fill="#d1fae5" text-anchor="middle">
+    1% (2024) → 27% (2030) share
+  </text>
+  <rect x="60" y="425" width="160" height="8" rx="4" fill="#fbbf24"/>
+  <text x="190" y="432" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Asymmetry: 10/10
+  </text>
+
+  <!-- Value Chain Flow Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#fbbf24" />
+    </marker>
+  </defs>
+
+  <line x1="330" y1="190" x2="370" y2="190" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <text x="350" y="180" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle">Power</text>
+
+  <line x1="650" y1="190" x2="690" y2="190" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <text x="670" y="180" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle">Equipment</text>
+
+  <line x1="830" y1="260" x2="830" y2="300" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.8"/>
+  <text x="870" y="285" font-family="Arial, sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle">Alternative Path</text>
+
+  <!-- Six-Dimension Scorecard -->
+  <rect x="370" y="300" width="600" height="440" rx="12" fill="#1a1f3a" opacity="0.95" stroke="#4a5568" stroke-width="2"/>
+  <text x="670" y="335" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Six-Dimension Investment Scorecard
+  </text>
+
+  <!-- Dimension 1: Scarcity -->
+  <text x="390" y="370" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">1. Scarcity</text>
+  <text x="390" y="390" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 9/10 (91% fleet replicable)</text>
+  <text x="390" y="408" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 7/10 (NVIDIA partnership)</text>
+  <text x="390" y="426" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 5/10 (competitive market)</text>
+  <text x="390" y="444" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 8/10 (SOFC tech lead)</text>
+
+  <!-- Dimension 2: Pricing Power -->
+  <text x="390" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">2. Pricing Power</text>
+  <text x="390" y="495" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 10/10 (20-yr PPAs locked)</text>
+  <text x="390" y="513" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 8/10 ($5-10M switching cost)</text>
+  <text x="390" y="531" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 6/10 (competitive bidding)</text>
+  <text x="390" y="549" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 7/10 (time value premium)</text>
+
+  <!-- Dimension 3: Growth Certainty -->
+  <text x="390" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">3. Growth Certainty</text>
+  <text x="390" y="600" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 9/10 (MSFT/META signed)</text>
+  <text x="390" y="618" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 8/10 ($8.5B backlog)</text>
+  <text x="390" y="636" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 7/10 ($11.4B backlog)</text>
+  <text x="390" y="654" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 5/10 (unproven at scale)</text>
+
+  <!-- Dimension 4-6 (Right Column) -->
+  <text x="720" y="370" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">4. Entry Barriers</text>
+  <text x="720" y="390" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 10/10 (NRC decades)</text>
+  <text x="720" y="408" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 7/10 (IP, partnerships)</text>
+  <text x="720" y="426" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 5/10 (capital intensive)</text>
+  <text x="720" y="444" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 8/10 (SOFC patents)</text>
+
+  <text x="720" y="475" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">5. ROIC</text>
+  <text x="720" y="495" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 12-15% (regulated base)</text>
+  <text x="720" y="513" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 18-22% (equipment)</text>
+  <text x="720" y="531" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 15-18% (diversified)</text>
+  <text x="720" y="549" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 8-12% (scaling phase)</text>
+
+  <text x="720" y="580" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fbbf24">6. AI Correlation</text>
+  <text x="720" y="600" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">CEG: 9/10 (AI PPA driven)</text>
+  <text x="720" y="618" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Vertiv: 10/10 (GB200 direct)</text>
+  <text x="720" y="636" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Eaton: 7/10 (datacenter 40%)</text>
+  <text x="720" y="654" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0">Bloom: 9/10 (AI queue bypass)</text>
+
+  <!-- Overall Scores -->
+  <rect x="390" y="680" width="570" height="50" rx="8" fill="#667eea" opacity="0.3"/>
+  <text x="675" y="708" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Overall Scores: CEG (55/60) | Vertiv (50/60) | Eaton (45/60) | Bloom (47/60)
+  </text>
+
+  <!-- Footer -->
+  <text x="600" y="770" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="middle">
+    Recommendation: Conservative 50% CEG, Balanced 40% CEG, Aggressive 35% CEG (highest certainty)
+  </text>
+</svg>
