@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "The Nuclear Renaissance: Why Microsoft Pays 83% Premiums for AI Power"
-date: 2025-10-14 09:00:00 +0800
-last_modified_at: 2025-10-14 09:00:00 +0800
+date: 2025-10-12 09:00:00 +0800
+last_modified_at: 2025-10-12 09:00:00 +0800
 categories: [tech]
 tags: [nuclear-power, constellation-energy, SMR, ai-infrastructure, power-purchase-agreements]
 author: Jiajun Liang

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Grid Gridlock: Why Eaton's 12-Month Backlog and On-Site Power Are Reshaping AI Infrastructure"
-date: 2025-10-15 09:00:00 +0800
-last_modified_at: 2025-10-15 09:00:00 +0800
+date: 2025-10-12 09:00:00 +0800
+last_modified_at: 2025-10-12 09:00:00 +0800
 categories: [tech]
 tags: [grid-infrastructure, eaton, bloom-energy, onsite-generation, ai-datacenters]
 author: Jiajun Liang
