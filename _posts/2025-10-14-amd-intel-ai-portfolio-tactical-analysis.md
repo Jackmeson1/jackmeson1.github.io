@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AMD vs Intel in AI Portfolios: Tactical Value Analysis for NVIDIA-Heavy Investors"
-date: 2025-10-14 09:00:00 -0700
+date: 2025-10-13 09:00:00 -0700
 last_modified_at: 2025-10-14 09:00:00 -0700
 categories: [finance]
 tags: [amd, intel, nvidia, ai-infrastructure, portfolio-strategy, semiconductor-analysis, tactical-allocation]
