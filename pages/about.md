@@ -2,32 +2,49 @@
 layout: page
 permalink: /about/
 title: "About Jiajun"
-subtitle: "Engineer, market researcher, traveler, meditator"
-lede: "I’m building a digital garden to document how code, capital, travel, and inner work feed each other."
+excerpt: "Engineer and researcher documenting how code, markets, travel, and inner work reinforce each other."
 ---
 
-## 👤 Who I Am
+{% include page-author.html %}
 
-- 🔧 Former QA Engineer @ Fortinet (**Mar 2022 – Sep 2025**)
-- 📊 Quant-curious on AI, energy, market structure
-- ✈️ Slow traveler optimizing cross-city routines
+<p class="lead">I design repeatable systems that compound across software, capital allocation, slow travel, and inner work.</p>
 
-## 🎓 Background
+## 30-second snapshot
 
-- M.Eng., Peking University · M.Sc., University of Victoria
+- Former QA engineer translating reliability instincts into product, infra, and research workflows.
+- Building market models that blend automation, narrative tracking, and long-form writing.
+- Slow-traveling out of Vancouver and capturing routines that make each city feel like home.
 
-## 💡 Why This Site
+## What I'm exploring right now
 
-To create space for cross-disciplinary learning—technical craft, finance frameworks, travel systems, and mind practices—captured in public.
+### Systems & code
 
-## 📍 Now
+- Leveling up containerization, observability, and end-to-end testing with Docker, Kubernetes, and Playwright.
+- Turning QA rigor into tooling that shortens feedback loops for small teams.
 
-- **Location**: Vancouver · **Learning**: Docker, Kubernetes, Playwright
+### Markets & energy
 
-*Last updated: {{ site.time | date: "%b %d, %Y" }}*
+- Mapping AI datacenter power builds and the capital stack behind them.
+- Stress-testing theses with scenario planning, risk limits, and journaled reviews.
 
-## 📬 Connect
+### Travel & learning
 
-Email: [jli785330@gmail.com](mailto:jli785330@gmail.com) · GitHub: [jackmeson1](https://github.com/jackmeson1) · LinkedIn: [jiajun-liang](https://www.linkedin.com/in/jiajun-liang-qa/)
+- Designing travel operating systems that protect deep work while moving between cities.
+- Noting how meditation and breathwork influence focus, decision speed, and writing cadence.
 
-**Want my full resume?** View on LinkedIn or download the CV.
+## Why this garden exists
+
+To publish working notes on how engineering discipline, market structure, and travel habits reinforce each other—and to invite conversations with people navigating similar intersections.
+
+## Now
+
+- **Location:** Vancouver, BC  
+- **Active projects:** Digital garden overhaul, automation of market memos, and sourcing power-grid data.  
+- **Practices:** Daily writing sprints, interval training, and Vipassana sits.
+
+<div class="notice notice--primary" markdown="1">
+#### Let's connect
+- Email: [jli785330@gmail.com](mailto:jli785330@gmail.com)
+- GitHub: [jackmeson1](https://github.com/jackmeson1)
+- LinkedIn: [jiajun-liang-qa](https://www.linkedin.com/in/jiajun-liang-qa/)
+</div>
