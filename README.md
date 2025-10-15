@@ -112,7 +112,7 @@ jackmeson1.github.io/
 ├── assets/
 │   ├── css/                 # Stylesheets
 │   │   ├── main.scss        # Theme overrides
-│   │   ├── visual-enhancements.css  # Glass morphism, animations
+│   │   ├── custom.css       # Site-wide tokens and utilities
 │   │   └── design-system.css        # Design tokens
 │   │
 │   └── images/posts/        # Article visuals (SVG)
@@ -127,11 +127,14 @@ jackmeson1.github.io/
 │   └── timeline.html        # Timeline visualization
 │
 ├── pages/                   # Static pages
-│   ├── about.md             # About page
 │   ├── blog.md              # Blog index
+│   ├── contact.md           # Contact form
+│   ├── garden.md            # Evergreen notes hub
 │   ├── library.md           # Reading list
+│   ├── privacy.md           # Privacy policy
 │   └── travel.md            # Travel notes
 │
+├── about.md                 # About page (root-level for theme)
 ├── _config.yml              # Jekyll configuration
 ├── Gemfile                  # Ruby dependencies
 ├── CLAUDE.md                # AI assistant instructions
