@@ -1,0 +1,179 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+    LEAPS Automation Architecture
+  </text>
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">
+    n8n Orchestration + OpenAI Agent Decision Layer
+  </text>
+
+  <!-- Schedule Trigger -->
+  <rect x="50" y="100" width="160" height="70" rx="8" fill="url(#grad1)" filter="url(#shadow)"/>
+  <text x="130" y="125" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    Schedule Trigger
+  </text>
+  <text x="130" y="145" font-family="Arial, sans-serif" font-size="11" fill="#e0e7ff" text-anchor="middle">
+    Daily 8:00 AM PT
+  </text>
+  <text x="130" y="160" font-family="Arial, sans-serif" font-size="10" fill="#c7d2fe" text-anchor="middle">
+    (n8n Cron Node)
+  </text>
+
+  <!-- Arrow 1 -->
+  <path d="M 210 135 L 260 135" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Data Pull Layer -->
+  <g>
+    <rect x="260" y="80" width="280" height="110" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="400" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      Data Collection Layer
+    </text>
+
+    <!-- Market Data Box -->
+    <rect x="275" y="115" width="120" height="65" rx="6" fill="url(#grad3)" filter="url(#shadow)"/>
+    <text x="335" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+      Market Data
+    </text>
+    <text x="335" y="152" font-family="Arial, sans-serif" font-size="9" fill="#dbeafe" text-anchor="middle">
+      Polygon API
+    </text>
+    <text x="335" y="165" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe" text-anchor="middle">
+      QQQ Price, IV, Greeks
+    </text>
+
+    <!-- Broker Data Box -->
+    <rect x="405" y="115" width="120" height="65" rx="6" fill="url(#grad3)" filter="url(#shadow)"/>
+    <text x="465" y="135" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">
+      Portfolio Data
+    </text>
+    <text x="465" y="152" font-family="Arial, sans-serif" font-size="9" fill="#dbeafe" text-anchor="middle">
+      IBKR Web API
+    </text>
+    <text x="465" y="165" font-family="Arial, sans-serif" font-size="9" fill="#bfdbfe" text-anchor="middle">
+      Holdings, Delta, Cash
+    </text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 400 190 L 400 230" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- AI Agent Decision -->
+  <rect x="260" y="230" width="280" height="90" rx="8" fill="url(#grad2)" filter="url(#shadow)"/>
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">
+    OpenAI Agent (Decision Layer)
+  </text>
+  <text x="400" y="275" font-family="Arial, sans-serif" font-size="11" fill="#fce7f3" text-anchor="middle">
+    Rule Engine: Δ Drift | DTE &lt;365 | IV Gate | Spread Check
+  </text>
+  <text x="400" y="295" font-family="Arial, sans-serif" font-size="10" fill="#fbcfe8" text-anchor="middle">
+    Output: ROLL / HOLD / ADJUST + Target Contract
+  </text>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="9" fill="#f9a8d4" text-anchor="middle">
+    (GPT-4 with strategy-specific system prompt)
+  </text>
+
+  <!-- Arrow 3 -->
+  <path d="M 400 320 L 400 360" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Alert/Log Layer -->
+  <g>
+    <rect x="260" y="360" width="280" height="90" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="400" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9" text-anchor="middle">
+      Alert &amp; Logging Layer
+    </text>
+
+    <!-- Slack Box -->
+    <rect x="275" y="395" width="110" height="45" rx="6" fill="#10b981" filter="url(#shadow)"/>
+    <text x="330" y="413" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+      Slack Alert
+    </text>
+    <text x="330" y="428" font-family="Arial, sans-serif" font-size="9" fill="#d1fae5" text-anchor="middle">
+      If action != HOLD
+    </text>
+
+    <!-- Google Sheet Box -->
+    <rect x="395" y="395" width="135" height="45" rx="6" fill="#3b82f6" filter="url(#shadow)"/>
+    <text x="462.5" y="413" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">
+      Google Sheet Log
+    </text>
+    <text x="462.5" y="428" font-family="Arial, sans-serif" font-size="9" fill="#dbeafe" text-anchor="middle">
+      Audit Trail (CRA Safe)
+    </text>
+  </g>
+
+  <!-- Cost Box -->
+  <rect x="590" y="100" width="160" height="90" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="670" y="125" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fbbf24" text-anchor="middle">
+    Monthly Cost
+  </text>
+  <text x="670" y="145" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    n8n: $0 (self-hosted)
+  </text>
+  <text x="670" y="162" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    Polygon: $29/mo
+  </text>
+  <text x="670" y="179" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    OpenAI: $10-20/mo
+  </text>
+
+  <!-- Result Box -->
+  <rect x="590" y="230" width="160" height="90" rx="8" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="670" y="255" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#10b981" text-anchor="middle">
+    Result
+  </text>
+  <text x="670" y="275" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    ✓ Daily health checks
+  </text>
+  <text x="670" y="292" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    ✓ Zero missed triggers
+  </text>
+  <text x="670" y="309" font-family="Arial, sans-serif" font-size="11" fill="#cbd5e1" text-anchor="middle">
+    ✓ You only act 1-3×/year
+  </text>
+
+  <!-- Human Approval Box -->
+  <rect x="590" y="360" width="160" height="90" rx="8" fill="#dc2626" opacity="0.9" filter="url(#shadow)"/>
+  <text x="670" y="385" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">
+    ⚠️ Critical
+  </text>
+  <text x="670" y="405" font-family="Arial, sans-serif" font-size="11" fill="#fecaca" text-anchor="middle">
+    Agent SUGGESTS
+  </text>
+  <text x="670" y="422" font-family="Arial, sans-serif" font-size="11" fill="#fecaca" text-anchor="middle">
+    You APPROVE via broker
+  </text>
+  <text x="670" y="439" font-family="Arial, sans-serif" font-size="10" fill="#fee2e2" text-anchor="middle">
+    (No auto-execution)
+  </text>
+
+  <!-- Frequency Note -->
+  <text x="400" y="485" font-family="Arial, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    TFSA Compliant: 1-3 trades/year (not day trading) | Read-only API keys | Self-hosted orchestration
+  </text>
+</svg>
