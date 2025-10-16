@@ -59,7 +59,27 @@ This is educational content exploring portfolio construction mechanics. Options 
 
 ---
 
-## Part 1: The TFSA Foundation
+## 🧭 Quick Navigator
+
+**New to this strategy?** Start here:
+- [Part 1: TFSA Foundation](#part-1-the-tfsa-foundation) → Understand why TFSA enables this strategy
+- [Part 2: Deep ITM LEAPS Explained](#part-2-deep-itm-leapsthe-alternative-leverage-mechanism) → Learn the leverage mechanism
+- [Part 4: How to Implement](#part-4-the-leaps-2δ-strategyoperational-framework) → See exact parameters and formulas
+
+**Ready to execute?** Jump to implementation:
+- [Part 7: Step-by-Step Guide](#part-7-step-by-step-implementation-guide) → Pre-flight checklist, position sizing, rolling procedure
+- [Part 6: Risk Management](#part-6-risk-management--practical-considerations) → Understand downside scenarios first
+- [Part 9: FAQs](#-part-9-essential-faqs) → Quick answers to common questions
+
+**Evaluating alternatives?**
+- [Part 5: LEAPS vs QLD/TQQQ/Margin](#part-5-leaps-vs-alternativesdetailed-comparison) → Side-by-side comparisons with data
+
+**Advanced optimization:**
+- [Part 8: Automation (Optional)](#-part-8-optionalautomating-portfolio-monitoring) → Delegate monitoring to AI agent workflow
+
+---
+
+## 🎯 Part 1: The TFSA Foundation
 
 ### 1.1 What Is TFSA? (Ultra-Brief Primer)
 
@@ -122,7 +142,7 @@ The ½L²σ² term is the **path-dependent drag**—the "noise tax" you pay for 
 
 ---
 
-## Part 2: Deep ITM LEAPS—The Alternative Leverage Mechanism
+## 🎯 Part 2: Deep ITM LEAPS—The Alternative Leverage Mechanism
 
 ### 2.1 What Are LEAPS?
 
@@ -207,7 +227,7 @@ In favorable conditions (high μ, moderate σ), LEAPS upper bound exceeds QLD. I
 
 ---
 
-## Part 3: TFSA × LEAPS Synergy—Why Tax Shelter Matters
+## 🎯 Part 3: TFSA × LEAPS Synergy—Why Tax Shelter Matters
 
 ### 3.1 The Taxation Problem in Regular Accounts
 
@@ -284,7 +304,7 @@ Compare to buying QQQ directly: $50k TFSA → $50k exposure (1× only).
 
 ---
 
-## Part 4: The LEAPS 2×Δ Strategy—Operational Framework
+## 🎯 Part 4: The LEAPS 2×Δ Strategy—Operational Framework
 
 ### 4.1 Strategy Parameters (Beginner-Friendly)
 
@@ -440,7 +460,7 @@ Difference: $10 per contract (7.5% more expensive)
 
 ---
 
-## Part 5: LEAPS vs Alternatives—Detailed Comparison
+## 📊 Part 5: LEAPS vs Alternatives—Detailed Comparison
 
 ### 5.1 LEAPS vs Leveraged ETFs (QLD, TQQQ)
 
@@ -518,7 +538,7 @@ Some investors use TFSA for:
 
 ---
 
-## Part 6: Risk Management & Practical Considerations
+## ⚠️ Part 6: Risk Management & Practical Considerations
 
 ### 6.1 Downside Scenarios
 
@@ -658,7 +678,7 @@ Always trade:
 
 ---
 
-## Part 7: Step-by-Step Implementation Guide
+## 🎯 Part 7: Step-by-Step Implementation Guide
 
 ### 7.1 Pre-Flight Checklist
 
@@ -768,210 +788,116 @@ Step 5: Tax Non-Event (in TFSA)
 - Pure internal rebalancing
 ```
 
----
+**What You've Learned So Far:**
 
-## Part 8: Advanced Considerations
+You now have the complete manual workflow—from selecting your first contract to executing annual rolls. This operational guide was designed for **maximum transparency and control**: you see every decision, you approve every trade, you maintain full ownership of the strategy.
 
-### 8.1 Hybrid Strategies (LEAPS + Shares)
+**But here's the reality check:**
 
-**Alternative Construction:**
+Even though this strategy only requires **1-3 actions per year**, the mental overhead can creep in:
+- "Did I check IV before rolling?"
+- "When exactly does my contract hit the 12-month mark?"
+- "Has Delta drifted outside my target band?"
 
-Instead of 100% LEAPS, combine:
+These aren't difficult questions—they're just **calendar friction**. You're capable of answering them manually (you just learned how), but repetitive monitoring tasks are exactly what modern tooling excels at eliminating.
 
-```
-Hybrid Allocation:
-- 60% QQQ shares ($60k → 1.0× Delta on $60k)
-- 40% Deep ITM LEAPS ($40k → ~1.8× Delta on $40k)
+**The next section explores an optional dimension**: how to delegate monitoring (not execution) to an AI agent workflow while staying 100% TFSA-compliant. Think of it as upgrading from "calendar reminders + manual checks" to "continuous monitoring + intelligent alerts"—you still approve all trades, but the system handles the vigilance.
 
-Total Delta: $60k + ($40k × 1.8) = $132k exposure on $100k
-Effective Leverage: 1.32× (more conservative)
-
-Advantages:
-- Lower time decay (shares have θ=0)
-- Smoother returns (less volatility than pure LEAPS)
-- Partial exposure if options go wrong
-
-Disadvantages:
-- Lower upside (only 1.32× vs 2.0×)
-- Less capital efficiency
-```
-
-### 8.2 Strike Laddering
-
-**Risk Diversification via Multiple Strikes:**
-
-```
-Instead of:
-- 5× Jan 2027 $280 calls (all same strike)
-
-Use:
-- 2× Jan 2027 $260 calls (Δ≈0.93)
-- 2× Jan 2027 $280 calls (Δ≈0.90)
-- 1× Jan 2027 $300 calls (Δ≈0.87)
-
-Benefit: If QQQ drops to $290, the $300 strike survives better
-Tradeoff: Slightly more complex to manage
-```
-
-### 8.3 Selling Covered Calls Against LEAPS (PMCC)
-
-**Poor Man's Covered Call:**
-
-```
-Strategy:
-- Buy Deep ITM LEAPS as "synthetic stock"
-- Sell short-term OTM calls (30-45 days) against it
-
-Example:
-Long: 1× Jan 2027 $280 call (Δ=0.90, cost $13,500)
-Short: 1× Nov 2025 $420 call (Δ=0.30, collect $800)
-
-If QQQ stays below $420:
-- Keep $800 premium (annualized +7% yield on LEAPS)
-- Repeat monthly
-
-Risk: If QQQ rallies above $420, short call loses money
-      → May need to roll or accept capped gains
-```
-
-**When to Use:**
-- You expect sideways/slow grind (not explosive rally)
-- Want to reduce time decay cost of LEAPS
-- Willing to cap upside at short strike
-
-**Not Recommended for Pure Long-Term Bulls:**
-Defeats the purpose of 2×Δ if you keep capping upside.
-
-### 8.4 Delta Hedging with Put LEAPS
-
-**Downside Protection (Advanced):**
-
-```
-Core Position: 5× Jan 2027 $280 calls (Net Δ=+1.80×)
-Hedge: 1× Jan 2027 $350 put (Δ≈-0.40)
-
-Net Delta: +1.80 - 0.40 = +1.40× (reduced leverage)
-Benefit: Put gains value if QQQ crashes
-Cost: -$5-10k for put premium (reduces upside)
-
-When to Use:
-- Macro risk elevated (recession fears, Fed tightening)
-- You want to stay invested but protect downside
-- Temporary hedge (6-12 months), then let expire
-```
-
-**Tradeoff:**
-Buying puts is expensive (high time decay). Only use if truly concerned about near-term crash.
+If you prefer hands-on control, skip to Part 9 (FAQ). If you're curious about reducing mental overhead, read on.
 
 ---
 
-## Part 9: Frequently Asked Questions (Extended)
+## 💡 Part 8: Optional—Automating Portfolio Monitoring
+
+**TLDR:** This strategy needs just **1-3 actions/year**. Automation is optional—skip if you prefer hands-on control or have <$50k TFSA.
+
+### Why Consider Automation?
+
+Even with quarterly manual reviews, you still need to track:
+- **Time triggers** (when DTE <365 days)
+- **Delta drift** (when net Δ exits 1.4-2.1× band)
+- **IV windows** (optimal roll timing when IVRank <40%)
+
+**The Automation Path** delegates monitoring (not execution) to an AI agent + workflow orchestrator:
+
+![LEAPS Automation Architecture](/assets/images/posts/leaps-automation-architecture.svg)
+
+### Simple 4-Layer Stack
+
+| Layer | Tool | Purpose | Cost |
+|-------|------|---------|------|
+| **Schedule** | n8n (self-hosted) | Daily 8 AM trigger | $0 |
+| **Data** | Polygon + IBKR APIs | QQQ Greeks, your positions | $29/mo |
+| **Decision** | OpenAI Agent | Evaluates rules → "ROLL/HOLD/ADJUST" | $10-20/mo |
+| **Alert** | Slack/Email | Pings you only if action needed | $0 |
+
+**Agent Logic (Rule-Based):**
+1. If DTE <365 days → "Consider roll to 24-36mo contract"
+2. If Net Δ >2.1× → "Reduce 1 contract"
+3. If Net Δ <1.4× → "Add 1 contract (check IV first)"
+4. If IVRank >70% → "Postpone optional rolls"
+
+**Critical:** Agent **suggests only**—you approve all trades via broker. No auto-execution.
+
+### Cost-Benefit
+
+| Approach | Time/Year | Cost/Year | Risk | Best For |
+|----------|-----------|-----------|------|----------|
+| **Manual** | 2 hours | $0 | Miss roll window | <$50k TFSA, enjoy hands-on |
+| **Automated** | 0.5 hours | $470-590 | Zero misses | >$100k TFSA, value time |
+
+**Break-even:** If avoiding one mistimed roll saves 5-10% in IV costs (= $1,500-3,000 on $100k TFSA), automation pays for itself in year 1.
+
+### When to Skip Automation
+
+- TFSA <$50k (manual tracking is 10 min/quarter)
+- You enjoy active portfolio management
+- Uncomfortable with APIs/code setup
+- Calendar reminders already work for you
+
+**Bottom Line:** This strategy is designed to be **low-maintenance**. Automation is a luxury, not a requirement.
+
+---
+
+**📋 Implementation Paths Summary:**
+
+| Dimension | Manual Path | Automated Path |
+|-----------|-------------|----------------|
+| **Setup Time** | 0 hours | 2-3 hours (one-time) |
+| **Ongoing** | 30 min/quarter | Slack pings 1-3×/year |
+| **Control** | 100% hands-on | 100% approval-based |
+| **Cost** | $0 | $40-50/month |
+| **Documentation** | Part 7 | Full automation guide: [Link TBD] |
+
+Both paths achieve the same outcome: disciplined, tax-efficient LEAPS execution. Choose based on your time preference and portfolio size.
+
+---
+
+## ❓ Part 9: Essential FAQs
 
 **Q1: Can I do this in a RRSP instead of TFSA?**
 
-**A:** Yes, RRSP (Registered Retirement Savings Plan) also allows options (broker-dependent) and provides tax-deferred growth. Key differences:
-
-| Account | TFSA | RRSP |
-|---------|------|------|
-| **Contributions** | After-tax money | Pre-tax (deductible) |
-| **Withdrawals** | Tax-free anytime | Taxable as income |
-| **Rollovers** | Tax-free | Tax-deferred |
-| **Best For** | Long-term wealth (access anytime) | Retirement (locked until 65) |
-
-For LEAPS strategy, **TFSA preferred** if you have room (more flexibility on withdrawals).
+Yes. RRSP allows options (broker-dependent) with tax-deferred growth. Key trade-off: TFSA = tax-free withdrawals anytime | RRSP = taxable withdrawals at retirement. **TFSA preferred** if you have room (more flexibility).
 
 **Q2: What if my broker doesn't allow options in TFSA?**
 
-**A:** Options:
-1. **Transfer TFSA** to broker that supports (IBKR, Questrade, TD)
-2. **Use RRSP** instead (if broker allows options there)
-3. **Open non-registered account** (accept tax drag on rollovers)
-4. **Stick to QLD/TQQQ** (accept path-dependent drag)
+Three paths: (1) Transfer TFSA to IBKR/Questrade/TD, (2) Use RRSP if broker supports options there, or (3) Accept tax drag in non-registered account. See Part 6.3 for broker comparison.
 
-**Q3: How do I calculate exact Delta in real-time?**
+**Q3: What happens if QQQ crashes -40%? Won't I lose everything?**
 
-**A:** Most broker platforms show Delta in options chain. If not:
+No. Deep ITM LEAPS behave like **2× leveraged stock**—not binary bets. A -40% QQQ drop → approximately **-60-70% portfolio loss** (not -100%). Your strike has intrinsic value remaining, unlike OTM options. See Part 6.1 for detailed crash scenarios and mitigation strategies.
 
-```
-Approximate Deep ITM Delta:
-Δ ≈ 1 - (K/S)² for deep ITM calls
+**Q4: What's the minimum TFSA balance to make this worthwhile?**
 
-Example: K=$280, S=$400
-Δ ≈ 1 - (280/400)² = 1 - 0.49 = 0.51... (WRONG—too rough)
-
-Better: Use Black-Scholes calculator (free online) or broker's Greeks display
-```
-
-**Q4: Should I use SPY LEAPS instead of QQQ?**
-
-**A:**
-
-| Index | SPY (S&P 500) | QQQ (Nasdaq-100) |
-|-------|---------------|------------------|
-| **Volatility** | Lower (~16-18%) | Higher (~20-24%) |
-| **Growth** | Moderate (~10% CAGR) | Higher (~15%+ CAGR historical) |
-| **Leverage Suitability** | Better for lower-risk | Better for growth-focused |
-| **Options Liquidity** | Excellent | Excellent |
-
-**Recommendation:**
-- **Conservative → SPY LEAPS** (lower volatility, less drawdown)
-- **Aggressive → QQQ LEAPS** (higher growth, more volatility)
-
-**Q5: What's the minimum TFSA balance to make this worthwhile?**
-
-**A:**
-
-```
-Minimum Practical Size: $30,000
-
-Reasoning:
-- Need to buy at least 2 contracts (for some diversification)
-- 2 contracts × $13,500 = $27,000
-- Leave $3,000 cash buffer (10%)
-Total: $30k minimum
-
-Below $30k:
-- Consider saving until you reach threshold
-- OR use QQQ shares + 1 LEAPS contract hybrid
-```
-
-**Q6: How do I handle assignment risk?**
-
-**A:** **Long calls have ZERO assignment risk.** Only short options (sold calls/puts) can be assigned. This strategy only uses long calls, so assignment is not a concern.
-
-**Q7: What if LEAPS prices are "too expensive" right now?**
-
-**A:** Expensive means high IV. Check IVRank:
-
-```
-IF IVRank > 70%:
-→ WAIT 2-4 weeks for IV to drop
-→ OR buy fewer contracts, add more later
-→ OR use shares temporarily, swap to LEAPS when IV drops
-
-IF IVRank < 40%:
-→ Proceed with plan (favorable entry)
-```
-
-**Q8: Can I do this with individual stocks (AAPL, MSFT)?**
-
-**A:** Yes, but:
-
-**Risks:**
-- Single-stock volatility much higher (σ=30-40% vs QQQ 20%)
-- Earnings events cause 5-10% overnight moves (Delta changes rapidly)
-- Less liquidity (wider spreads, lower OI)
-
-**When It Makes Sense:**
-- You have high conviction in specific stock
-- You accept higher volatility
-- You monitor more actively (monthly vs quarterly)
-
-**Better for Beginners:** Stick to QQQ/SPY (diversified, lower volatility).
+**$30,000 minimum.** You need at least 2 contracts for basic diversification (2 × $13,500 = $27k) + $3k cash buffer. Below $30k: save until threshold or use hybrid (QQQ shares + 1 LEAPS contract).
 
 ---
 
-## Part 10: Conclusion & Action Plan
+**More Questions?** See full FAQ covering Delta calculations, SPY vs QQQ, IV timing, individual stocks, and advanced scenarios: [Extended FAQ - Link TBD]
+
+---
+
+## 🎯 Part 10: Conclusion & Action Plan
 
 ### 10.1 Core Thesis Recap
 
