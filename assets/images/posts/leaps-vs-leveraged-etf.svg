@@ -1,0 +1,183 @@
+<svg viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="qld-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fc8181;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e53e3e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="leaps-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a202c">
+    LEAPS vs Leveraged ETF: Delta Profile Comparison
+  </text>
+  <text x="600" y="85" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5568">
+    Daily reset drag (QLD) versus stable Delta profile (LEAPS)
+  </text>
+
+  <!-- Left Side: QLD Daily Reset -->
+  <g transform="translate(100, 140)">
+    <rect x="0" y="0" width="480" height="500" rx="15" fill="#fff5f5" stroke="#fc8181" stroke-width="3"/>
+
+    <text x="240" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#742a2a">
+      QLD (2× Leveraged ETF)
+    </text>
+    <text x="240" y="65" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#c53030">
+      Daily Rebalancing Mechanism
+    </text>
+
+    <!-- Day-by-day example -->
+    <g transform="translate(30, 90)">
+      <rect x="0" y="0" width="420" height="180" rx="8" fill="white" stroke="#feb2b2" stroke-width="2"/>
+
+      <text x="210" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2d3748">
+        3-Day Volatility Example
+      </text>
+
+      <g transform="translate(20, 45)">
+        <text x="0" y="0" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 1: QQQ $100 → QLD targets $200 (2×)
+        </text>
+        <text x="0" y="25" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 2: QQQ -5% → QLD -9.75% ($180.50)
+        </text>
+        <text x="0" y="45" font-family="Courier, monospace" font-size="13" fill="#c53030">
+          ↳ Rebalances to maintain 2× exposure
+        </text>
+        <text x="0" y="70" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 3: QQQ +5.26% → QLD +5.26% ($190)
+        </text>
+        <text x="0" y="95" font-family="Courier, monospace" font-size="13" font-weight="bold" fill="#c53030">
+          Pure 2×: $200 → $210 expected
+        </text>
+        <text x="0" y="115" font-family="Courier, monospace" font-size="13" font-weight="bold" fill="#c53030">
+          QLD Reality: $200 → $190 (-$10 drag!)
+        </text>
+
+        <text x="0" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#742a2a">
+          Volatility "tax": -5% from resets
+        </text>
+      </g>
+    </g>
+
+    <!-- Drag Formula -->
+    <g transform="translate(30, 290)">
+      <rect x="0" y="0" width="420" height="90" rx="8" fill="#fed7d7" stroke="#fc8181" stroke-width="2"/>
+
+      <text x="210" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#742a2a">
+        Geometric Drag Formula
+      </text>
+
+      <text x="210" y="58" font-family="Courier, monospace" font-size="15" text-anchor="middle" fill="#2d3748">
+        g_QLD ≈ 2μ - ½(4)σ² = 2μ - 2σ²
+      </text>
+
+      <text x="210" y="80" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#c53030">
+        Loses 2× the variance annually
+      </text>
+    </g>
+
+    <!-- Key Problem -->
+    <g transform="translate(30, 400)">
+      <rect x="0" y="0" width="420" height="70" rx="8" fill="#742a2a" opacity="0.9"/>
+
+      <text x="210" y="28" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">
+        ⚠ Amplifies BOTH Trend (μ) AND Noise (σ²)
+      </text>
+
+      <text x="210" y="52" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+        Daily resets turn volatility into permanent drag
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Side: LEAPS Stable Delta -->
+  <g transform="translate(620, 140)">
+    <rect x="0" y="0" width="480" height="500" rx="15" fill="#f7fafc" stroke="#667eea" stroke-width="3"/>
+
+    <text x="240" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#2c5282">
+      Deep ITM LEAPS (2×Δ)
+    </text>
+    <text x="240" y="65" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#5a67d8">
+      Stable Delta Profile (No Daily Reset)
+    </text>
+
+    <!-- Same scenario with LEAPS -->
+    <g transform="translate(30, 90)">
+      <rect x="0" y="0" width="420" height="180" rx="8" fill="white" stroke="#c3dafe" stroke-width="2"/>
+
+      <text x="210" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2d3748">
+        Same 3-Day Scenario
+      </text>
+
+      <g transform="translate(20, 45)">
+        <text x="0" y="0" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 1: QQQ $100 → LEAPS Δ=0.90
+        </text>
+        <text x="0" y="25" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 2: QQQ -5% → LEAPS -4.5%
+        </text>
+        <text x="0" y="45" font-family="Courier, monospace" font-size="13" fill="#48bb78">
+          ↳ NO rebalancing (Delta stays ≈0.88)
+        </text>
+        <text x="0" y="70" font-family="Courier, monospace" font-size="13" fill="#4a5568">
+          Day 3: QQQ +5.26% → LEAPS +4.6%
+        </text>
+        <text x="0" y="95" font-family="Courier, monospace" font-size="13" font-weight="bold" fill="#48bb78">
+          Starting value: $200 (2× notional)
+        </text>
+        <text x="0" y="115" font-family="Courier, monospace" font-size="13" font-weight="bold" fill="#48bb78">
+          Ending value: ~$200 (minimal drag)
+        </text>
+
+        <text x="0" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c5282">
+          Volatility impact: Near-zero drag
+        </text>
+      </g>
+    </g>
+
+    <!-- LEAPS Return Formula -->
+    <g transform="translate(30, 290)">
+      <rect x="0" y="0" width="420" height="90" rx="8" fill="#e6fffa" stroke="#667eea" stroke-width="2"/>
+
+      <text x="210" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c5282">
+        LEAPS Return (Approximate)
+      </text>
+
+      <text x="210" y="58" font-family="Courier, monospace" font-size="14" text-anchor="middle" fill="#2d3748">
+        g_LEAPS ∈ [2μ - σ² - c,  2μ - c]
+      </text>
+
+      <text x="210" y="80" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#5a67d8">
+        Drag scales linearly (σ²), not quadratically
+      </text>
+    </g>
+
+    <!-- Key Advantage -->
+    <g transform="translate(30, 400)">
+      <rect x="0" y="0" width="420" height="70" rx="8" fill="#667eea" opacity="0.9"/>
+
+      <text x="210" y="28" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">
+        ✓ Amplifies Trend (μ), Minimizes Noise (σ²)
+      </text>
+
+      <text x="210" y="52" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="white">
+        Stable Delta for 24+ months = no daily reset costs
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Comparison Table -->
+  <g transform="translate(100, 670)">
+    <text x="500" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">
+      10-Year Base Case (μ=10%, σ=20%): QLD ≈12% CAGR vs LEAPS ≈14-18% CAGR
+    </text>
+
+    <text x="500" y="25" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#4a5568">
+      LEAPS upper bound beats QLD by reducing path-dependent drag by ~50%
+    </text>
+  </g>
+</svg>
