@@ -1,133 +1,94 @@
-<svg viewBox="0 0 1200 650" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Deep ITM Call Option Structure</title>
+  <desc id="desc">Breakdown of intrinsic versus time value, payoff diagram, and delta characteristics for a deep in-the-money QQQ LEAPS contract.</desc>
   <defs>
-    <linearGradient id="intrinsic-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#48bb78;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#38a169;stop-opacity:1" />
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e0f2fe" />
     </linearGradient>
-    <linearGradient id="time-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ed8936;stop-opacity:0.9" />
-      <stop offset="100%" style="stop-color:#dd6b20;stop-opacity:1" />
+    <linearGradient id="intrinsic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#16a34a" />
     </linearGradient>
-    <linearGradient id="delta-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="time" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    <linearGradient id="delta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0ea5e9" />
     </linearGradient>
   </defs>
 
-  <!-- Title -->
-  <text x="600" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a202c">
-    Deep ITM Call Option Anatomy
+  <rect x="0" y="0" width="1200" height="720" rx="28" fill="url(#panel)" />
+
+  <text x="600" y="60" font-family="'Inter', 'Arial', sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#0f172a">
+    Deep ITM Call Option Anatomy (QQQ Example)
   </text>
-  <text x="600" y="85" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5568">
-    High intrinsic value, low time value, Delta ≈ 1.0 — behaves like leveraged stock
+  <text x="600" y="98" font-family="'Inter', 'Arial', sans-serif" font-size="18" text-anchor="middle" fill="#334155">
+    Contract behaves like high-conviction equity exposure because most of the premium is intrinsic value.
   </text>
 
-  <!-- Example Parameters -->
-  <g transform="translate(100, 130)">
-    <rect x="0" y="0" width="1000" height="80" rx="12" fill="#edf2f7" stroke="#cbd5e0" stroke-width="2"/>
-
-    <text x="50" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2d3748">
-      Example:
-    </text>
-
-    <g transform="translate(50, 45)">
-      <text x="0" y="0" font-family="Arial, sans-serif" font-size="15" fill="#4a5568">
-        QQQ Price: <tspan font-weight="bold" fill="#2d3748">$400</tspan>
-      </text>
-      <text x="200" y="0" font-family="Arial, sans-serif" font-size="15" fill="#4a5568">
-        Strike: <tspan font-weight="bold" fill="#2d3748">$300</tspan>
-      </text>
-      <text x="350" y="0" font-family="Arial, sans-serif" font-size="15" fill="#4a5568">
-        Premium: <tspan font-weight="bold" fill="#2d3748">$110</tspan>
-      </text>
-      <text x="520" y="0" font-family="Arial, sans-serif" font-size="15" fill="#4a5568">
-        Delta: <tspan font-weight="bold" fill="#2d3748">0.92</tspan>
-      </text>
-      <text x="670" y="0" font-family="Arial, sans-serif" font-size="15" fill="#4a5568">
-        Expiry: <tspan font-weight="bold" fill="#2d3748">24 months</tspan>
-      </text>
+  <g transform="translate(90, 140)">
+    <rect x="0" y="0" width="1020" height="120" rx="18" fill="#fff" stroke="#bae6fd" stroke-width="2" />
+    <text x="30" y="48" font-family="'Inter', sans-serif" font-size="18" font-weight="600" fill="#0369a1">Trade Setup</text>
+    <g transform="translate(30, 70)" font-family="'Inter', sans-serif" font-size="16" fill="#0f172a">
+      <text x="0" y="0">Underlying: <tspan font-weight="700">QQQ $400</tspan></text>
+      <text x="220" y="0">Strike: <tspan font-weight="700">$300 (75% moneyness)</tspan></text>
+      <text x="470" y="0">Premium: <tspan font-weight="700">$110</tspan></text>
+      <text x="650" y="0">Delta: <tspan font-weight="700">0.92</tspan></text>
+      <text x="790" y="0">Time to expiry: <tspan font-weight="700">30 months</tspan></text>
     </g>
   </g>
 
-  <!-- Visual Breakdown -->
-  <g transform="translate(200, 260)">
-    <!-- Option Premium Bar -->
-    <rect x="0" y="0" width="600" height="100" rx="8" fill="url(#intrinsic-grad)"/>
-    <rect x="545" y="0" width="55" height="100" rx="8" fill="url(#time-grad)"/>
-
-    <text x="272" y="55" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
-      Intrinsic Value: $100 (91%)
+  <g transform="translate(150, 300)">
+    <rect x="0" y="0" width="480" height="320" rx="22" fill="#f0fdf4" stroke="#22c55e" stroke-width="2" />
+    <text x="240" y="46" font-family="'Inter', sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#14532d">
+      Premium Composition
     </text>
-
-    <text x="572" y="55" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
-      Time
-    </text>
-    <text x="572" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
-      $10
-    </text>
-
-    <!-- Total Premium Label -->
-    <text x="300" y="135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">
-      Total Premium: $110
-    </text>
-
-    <!-- Breakdown Arrows -->
-    <g transform="translate(0, 160)">
-      <!-- Intrinsic Calculation -->
-      <rect x="0" y="0" width="280" height="120" rx="10" fill="#f0fff4" stroke="#48bb78" stroke-width="2"/>
-      <text x="140" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#22543d">
-        Intrinsic Value
+    <g transform="translate(60, 90)">
+      <rect x="0" y="0" width="360" height="70" rx="12" fill="url(#intrinsic)" opacity="0.92" />
+      <text x="180" y="42" font-family="'Inter', sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ecfdf5">
+        Intrinsic Value = $100 (91%)
       </text>
-      <text x="140" y="55" font-family="Courier, monospace" font-size="14" text-anchor="middle" fill="#2d3748">
-        = max(0, S - K)
+    </g>
+    <g transform="translate(60, 190)">
+      <rect x="0" y="0" width="160" height="60" rx="12" fill="url(#time)" opacity="0.92" />
+      <text x="80" y="36" font-family="'Inter', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#fff7ed">
+        Time Value = $10 (9%)
       </text>
-      <text x="140" y="78" font-family="Courier, monospace" font-size="14" text-anchor="middle" fill="#2d3748">
-        = max(0, $400 - $300)
-      </text>
-      <text x="140" y="101" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#22543d">
-        = $100
-      </text>
-
-      <!-- Time Value Calculation -->
-      <rect x="320" y="0" width="280" height="120" rx="10" fill="#fffaf0" stroke="#ed8936" stroke-width="2"/>
-      <text x="460" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#7c2d12">
-        Time Value (Extrinsic)
-      </text>
-      <text x="460" y="55" font-family="Courier, monospace" font-size="14" text-anchor="middle" fill="#2d3748">
-        = Premium - Intrinsic
-      </text>
-      <text x="460" y="78" font-family="Courier, monospace" font-size="14" text-anchor="middle" fill="#2d3748">
-        = $110 - $100
-      </text>
-      <text x="460" y="101" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#7c2d12">
-        = $10 (9% only!)
-      </text>
+    </g>
+    <g transform="translate(40, 270)" font-family="'Inter', sans-serif" font-size="15" fill="#166534">
+      <text x="0" y="0">Intrinsic = max(0, S − K) = max(0, 400 − 300) = $100</text>
+      <text x="0" y="26">Time Value = Premium − Intrinsic = 110 − 100 = $10</text>
     </g>
   </g>
 
-  <!-- Delta Behavior Chart -->
-  <g transform="translate(100, 510)">
-    <rect x="0" y="0" width="1000" height="120" rx="12" fill="url(#delta-grad)" opacity="0.15" stroke="#667eea" stroke-width="2"/>
-
-    <text x="500" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#2d3748">
-      Why Delta ≈ 0.92 Matters
+  <g transform="translate(690, 300)">
+    <rect x="0" y="0" width="420" height="320" rx="22" fill="#fff7ed" stroke="#fb923c" stroke-width="2" />
+    <text x="210" y="46" font-family="'Inter', sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#7c2d12">
+      Payoff Profile &amp; Delta
     </text>
-
-    <g transform="translate(50, 55)">
-      <circle cx="10" cy="0" r="6" fill="#48bb78"/>
-      <text x="25" y="5" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-        <tspan font-weight="bold">Moves $0.92</tspan> for every $1 QQQ moves (almost 1:1 tracking)
-      </text>
-
-      <circle cx="10" cy="30" r="6" fill="#4299e1"/>
-      <text x="25" y="35" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-        <tspan font-weight="bold">Behaves like owning 92 shares</tspan> per contract (100 shares × 0.92)
-      </text>
-
-      <circle cx="10" cy="60" r="6" fill="#9f7aea"/>
-      <text x="25" y="65" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-        <tspan font-weight="bold">Capital efficiency:</tspan> Control $40,000 QQQ for $11,000 (27.5% of notional)
-      </text>
+    <g transform="translate(30, 90)">
+      <rect x="0" y="0" width="360" height="160" rx="18" fill="#fff" stroke="#fed7aa" stroke-width="2" />
+      <polyline points="20,130 120,70 340,30" fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round" />
+      <circle cx="120" cy="70" r="6" fill="#f97316" />
+      <text x="120" y="54" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle" fill="#9a3412">Breakeven ≈ $310</text>
+      <text x="340" y="26" font-family="'Inter', sans-serif" font-size="14" text-anchor="end" fill="#c2410c">Δ ≈ 0.92 → slope near 1</text>
+      <line x1="20" y1="130" x2="340" y2="130" stroke="#cbd5f5" stroke-width="1.5" stroke-dasharray="6 6" />
+      <text x="30" y="148" font-family="'Inter', sans-serif" font-size="13" fill="#64748b">Strike $300</text>
     </g>
+    <g transform="translate(30, 270)" font-family="'Inter', sans-serif" fill="#7c2d12" font-size="15">
+      <text x="0" y="0">• Contract moves ~$0.92 for each $1 move in QQQ</text>
+      <text x="0" y="24">• Economic exposure ≈ 92 shares while only 27.5% capital deployed</text>
+      <text x="0" y="48">• Theta bleed minimal because 91% of value is intrinsic</text>
+    </g>
+  </g>
+
+  <g transform="translate(120, 640)">
+    <rect x="0" y="0" width="960" height="60" rx="16" fill="url(#delta)" opacity="0.2" stroke="#0ea5e9" stroke-width="2" />
+    <text x="480" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#0f172a">
+      Deep ITM LEAPS ≈ owning the shares, but TFSA shelters the gains while capital outlay stays compact.
+    </text>
   </g>
 </svg>
