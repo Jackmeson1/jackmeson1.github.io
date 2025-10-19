@@ -8,13 +8,47 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" rx="36" fill="url(#systemsGradient)"/>
-  <g transform="translate(200,140)">
-    <rect x="0" y="360" width="800" height="60" rx="12" fill="#0f172a" opacity="0.8"/>
-    <rect x="40" y="280" width="720" height="60" rx="12" fill="#1e293b" opacity="0.8"/>
-    <rect x="80" y="200" width="640" height="60" rx="12" fill="#334155" opacity="0.85"/>
-    <rect x="120" y="120" width="560" height="60" rx="12" fill="#475569" opacity="0.9"/>
-    <rect x="160" y="40" width="480" height="60" rx="12" fill="#64748b" opacity="0.95"/>
+  <g transform="translate(200,140)" font-family="'Inter', 'Segoe UI', sans-serif" text-anchor="middle">
+    <g transform="translate(0,360)">
+      <rect x="0" y="0" width="800" height="60" rx="12" fill="#0f172a" opacity="0.85"/>
+      <text x="400" y="30" font-size="20" font-weight="600" fill="#f8fafc" dominant-baseline="middle">
+        <tspan x="400" dy="0">Survival</tspan>
+        <tspan x="400" dy="20" font-size="14" font-weight="500" fill="#cbd5f5">Paradigm 1 · MinMax</tspan>
+      </text>
+    </g>
+    <g transform="translate(40,280)">
+      <rect x="0" y="0" width="720" height="60" rx="12" fill="#1e293b" opacity="0.85"/>
+      <text x="360" y="30" font-size="20" font-weight="600" fill="#f8fafc" dominant-baseline="middle">
+        <tspan x="360" dy="0">Growth</tspan>
+        <tspan x="360" dy="20" font-size="14" font-weight="500" fill="#bfdbfe">Paradigm 2 · Kelly</tspan>
+      </text>
+    </g>
+    <g transform="translate(80,200)">
+      <rect x="0" y="0" width="640" height="60" rx="12" fill="#334155" opacity="0.9"/>
+      <text x="320" y="30" font-size="20" font-weight="600" fill="#f8fafc" dominant-baseline="middle">
+        <tspan x="320" dy="0">Stability</tspan>
+        <tspan x="320" dy="20" font-size="14" font-weight="500" fill="#cbd5f5">Paradigm 3 · Mean Max</tspan>
+      </text>
+    </g>
+    <g transform="translate(120,120)">
+      <rect x="0" y="0" width="560" height="60" rx="12" fill="#475569" opacity="0.92"/>
+      <text x="280" y="30" font-size="20" font-weight="600" fill="#f8fafc" dominant-baseline="middle">
+        <tspan x="280" dy="0">Optionality</tspan>
+        <tspan x="280" dy="20" font-size="14" font-weight="500" fill="#dbeafe">Paradigm 4 · Convexity</tspan>
+      </text>
+    </g>
+    <g transform="translate(160,40)">
+      <rect x="0" y="0" width="480" height="60" rx="12" fill="#64748b" opacity="0.95"/>
+      <text x="240" y="30" font-size="20" font-weight="600" fill="#f8fafc" dominant-baseline="middle">
+        <tspan x="240" dy="0">Governance</tspan>
+        <tspan x="240" dy="20" font-size="14" font-weight="500" fill="#e0f2fe">Paradigm 5 · Meta-Game</tspan>
+      </text>
+    </g>
   </g>
-  <text x="600" y="120" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#064e3b">Five Paradigms</text>
-  <text x="600" y="170" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" fill="#065f46">Survival · Growth · Stability · Optionality · Governance</text>
+  <text x="600" y="120" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#064e3b" dominant-baseline="middle">
+    <tspan x="600" dy="0">Five Paradigms</tspan>
+  </text>
+  <text x="600" y="175" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" fill="#065f46" dominant-baseline="middle">
+    <tspan x="600" dy="0">Survival · Growth · Stability · Optionality · Governance</tspan>
+  </text>
 </svg>
