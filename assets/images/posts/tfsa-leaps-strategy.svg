@@ -29,26 +29,34 @@
       TFSA Account
     </text>
 
-    <g transform="translate(20, 70)">
-      <circle cx="15" cy="0" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="5" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Tax-Free Growth
-      </text>
+    <g transform="translate(25, 75)">
+      <g transform="translate(0, 0)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Tax-Free Growth
+        </text>
+      </g>
 
-      <circle cx="15" cy="40" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="45" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Zero Tax on Rollovers
-      </text>
+      <g transform="translate(0, 42)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Zero Tax on Rollovers
+        </text>
+      </g>
 
-      <circle cx="15" cy="80" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="85" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Clean Compounding
-      </text>
+      <g transform="translate(0, 84)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Clean Compounding
+        </text>
+      </g>
 
-      <circle cx="15" cy="120" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="125" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Options Allowed (L2+)
-      </text>
+      <g transform="translate(0, 126)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Options Allowed (L2+)
+        </text>
+      </g>
     </g>
   </g>
 
@@ -59,26 +67,34 @@
       Deep ITM LEAPS
     </text>
 
-    <g transform="translate(20, 70)">
-      <circle cx="15" cy="0" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="5" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Delta ≈ 0.85-0.95
-      </text>
+    <g transform="translate(25, 75)">
+      <g transform="translate(0, 0)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Delta ≈ 0.85-0.95
+        </text>
+      </g>
 
-      <circle cx="15" cy="40" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="45" font-family="Arial, sans-serif" font-size="16" fill="white">
-        24-36 Month Expiry
-      </text>
+      <g transform="translate(0, 42)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          24-36 Month Expiry
+        </text>
+      </g>
 
-      <circle cx="15" cy="80" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="85" font-family="Arial, sans-serif" font-size="16" fill="white">
-        Low Time Decay (θ)
-      </text>
+      <g transform="translate(0, 84)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          Low Time Decay (θ)
+        </text>
+      </g>
 
-      <circle cx="15" cy="120" r="8" fill="white" opacity="0.9"/>
-      <text x="35" y="125" font-family="Arial, sans-serif" font-size="16" fill="white">
-        No Daily Rebalancing
-      </text>
+      <g transform="translate(0, 126)">
+        <circle cx="12" cy="0" r="8" fill="white" opacity="0.9"/>
+        <text x="36" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" dominant-baseline="middle">
+          No Daily Rebalancing
+        </text>
+      </g>
     </g>
   </g>
 
