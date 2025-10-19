@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="methodAGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="methodBGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="450" y="40" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">GEX Formula Wars</text>
+  <text x="450" y="65" fill="#9ca3af" font-size="14" text-anchor="middle">Why different platforms show different numbers</text>
+
+  <!-- Method A Box -->
+  <rect x="50" y="100" width="380" height="420" fill="url(#methodAGrad)" stroke="#3b82f6" stroke-width="2" rx="10"/>
+  <text x="240" y="135" fill="#3b82f6" font-size="18" font-weight="bold" text-anchor="middle">Method A: Dollar Gamma</text>
+  <text x="240" y="155" fill="#9ca3af" font-size="12" text-anchor="middle">(No 0.5 coefficient)</text>
+
+  <!-- Method A Formula -->
+  <rect x="80" y="180" width="320" height="60" fill="#1f2937" rx="5"/>
+  <text x="240" y="205" fill="#60a5fa" font-size="15" font-weight="bold" text-anchor="middle" font-family="monospace">GEX = Γ × OI × 100 × S</text>
+  <text x="240" y="225" fill="#9ca3af" font-size="11" text-anchor="middle">Dollar exposure per $1 move</text>
+
+  <!-- Method A Example -->
+  <text x="80" y="270" fill="#f3f4f6" font-size="13" font-weight="bold">Example (SPX $4,500):</text>
+  <text x="90" y="295" fill="#d1d5db" font-size="12" font-family="monospace">Γ = 0.001</text>
+  <text x="90" y="315" fill="#d1d5db" font-size="12" font-family="monospace">OI = 10,000 contracts</text>
+  <text x="90" y="335" fill="#d1d5db" font-size="12" font-family="monospace">Multiplier = 100</text>
+
+  <rect x="80" y="350" width="320" height="40" fill="#1e3a8a" opacity="0.3" rx="5"/>
+  <text x="240" y="365" fill="#60a5fa" font-size="13" font-family="monospace" text-anchor="middle">GEX = 0.001 × 10k × 100 × 4,500</text>
+  <text x="240" y="383" fill="#3b82f6" font-size="16" font-weight="bold" text-anchor="middle">= $4.5M</text>
+
+  <!-- Method A Used by -->
+  <text x="80" y="420" fill="#9ca3af" font-size="11">Used by: Some platforms,</text>
+  <text x="80" y="435" fill="#9ca3af" font-size="11">academic papers</text>
+
+  <!-- Method A Pros/Cons -->
+  <text x="80" y="465" fill="#10b981" font-size="11">✓ Intuitive (per-dollar basis)</text>
+  <text x="80" y="485" fill="#ef4444" font-size="11">✗ Ignores quadratic price effect</text>
+
+  <!-- VS Divider -->
+  <rect x="440" y="250" width="20" height="150" fill="#6b7280" rx="10"/>
+  <text x="450" y="335" fill="#0f1419" font-size="16" font-weight="bold" text-anchor="middle">VS</text>
+
+  <!-- Method B Box -->
+  <rect x="470" y="100" width="380" height="420" fill="url(#methodBGrad)" stroke="#10b981" stroke-width="2" rx="10"/>
+  <text x="660" y="135" fill="#10b981" font-size="18" font-weight="bold" text-anchor="middle">Method B: Taylor Expansion</text>
+  <text x="660" y="155" fill="#9ca3af" font-size="12" text-anchor="middle">(With 0.5 coefficient)</text>
+
+  <!-- Method B Formula -->
+  <rect x="500" y="180" width="320" height="60" fill="#1f2937" rx="5"/>
+  <text x="660" y="205" fill="#34d399" font-size="15" font-weight="bold" text-anchor="middle" font-family="monospace">GEX = 0.5 × Γ × OI × 100 × S²</text>
+  <text x="660" y="225" fill="#9ca3af" font-size="11" text-anchor="middle">From ΔV ≈ Δ·ΔS + 0.5·Γ·(ΔS)²</text>
+
+  <!-- Method B Example -->
+  <text x="500" y="270" fill="#f3f4f6" font-size="13" font-weight="bold">Same inputs:</text>
+  <text x="510" y="295" fill="#d1d5db" font-size="12" font-family="monospace">Γ = 0.001</text>
+  <text x="510" y="315" fill="#d1d5db" font-size="12" font-family="monospace">OI = 10,000 contracts</text>
+  <text x="510" y="335" fill="#d1d5db" font-size="12" font-family="monospace">Multiplier = 100</text>
+
+  <rect x="500" y="350" width="320" height="40" fill="#064e3b" opacity="0.3" rx="5"/>
+  <text x="660" y="365" fill="#34d399" font-size="13" font-family="monospace" text-anchor="middle">GEX = 0.5 × 0.001 × 10k × 100 × 4,500²</text>
+  <text x="660" y="383" fill="#10b981" font-size="16" font-weight="bold" text-anchor="middle">= $10.125B</text>
+
+  <!-- Method B Used by -->
+  <text x="500" y="420" fill="#9ca3af" font-size="11">Used by: SpotGamma,</text>
+  <text x="500" y="435" fill="#9ca3af" font-size="11">SqueezeMetrics</text>
+
+  <!-- Method B Pros/Cons -->
+  <text x="500" y="465" fill="#10b981" font-size="11">✓ Theoretically rigorous</text>
+  <text x="500" y="485" fill="#10b981" font-size="11">✓ Captures convexity</text>
+
+  <!-- Key Insight Box -->
+  <rect x="100" y="540" width="700" height="50" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="450" y="563" fill="#f3f4f6" font-size="14" font-weight="bold" text-anchor="middle">🎯 Key Takeaway: Same Gamma position, 2,250× different GEX number!</text>
+  <text x="450" y="580" fill="#d1d5db" font-size="12" text-anchor="middle">→ Never compare absolute GEX across platforms. Use trends and ratios instead.</text>
+</svg>

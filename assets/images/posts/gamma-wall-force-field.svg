@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="forceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#667eea;stop-opacity:0.2"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0f1419"/>
+
+  <!-- Grid -->
+  <g opacity="0.1">
+    <path d="M0,100 L800,100 M0,200 L800,200 M0,300 L800,300 M0,400 L800,400" stroke="#667eea" stroke-width="1"/>
+    <path d="M100,0 L100,500 M200,0 L200,500 M300,0 L300,500 M400,0 L400,500 M500,0 L500,500 M600,0 L600,500 M700,0 L700,500" stroke="#667eea" stroke-width="1"/>
+  </g>
+
+  <!-- Force field well (gravity well shape) -->
+  <path d="M 100,50 Q 400,400 700,50" fill="url(#forceGradient)" opacity="0.6"/>
+
+  <!-- Strike price level -->
+  <line x1="50" y1="250" x2="750" y2="250" stroke="#f59e0b" stroke-width="3" stroke-dasharray="10,5"/>
+  <text x="760" y="255" fill="#f59e0b" font-size="14" font-weight="bold">$450 Strike</text>
+
+  <!-- Price ball -->
+  <circle cx="400" cy="240" r="20" fill="#10b981" filter="url(#glow)"/>
+  <text x="400" y="245" fill="#0f1419" font-size="12" font-weight="bold" text-anchor="middle">Price</text>
+
+  <!-- Force arrows showing pull -->
+  <g opacity="0.8">
+    <!-- Down arrow from above -->
+    <path d="M 400,100 L 400,180" stroke="#ec4899" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="410" y="130" fill="#ec4899" font-size="13">Pull down</text>
+
+    <!-- Up arrow from below -->
+    <path d="M 400,380 L 400,300" stroke="#3b82f6" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    <text x="410" y="350" fill="#3b82f6" font-size="13">Pull up</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#ec4899"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0,0 10,5 0,10" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text x="400" y="30" fill="#f3f4f6" font-size="18" font-weight="bold" text-anchor="middle">Gamma Wall Force Field</text>
+  <text x="50" y="270" fill="#9ca3af" font-size="12">Above: Dealers sell (resistance)</text>
+  <text x="50" y="290" fill="#9ca3af" font-size="12">Below: Dealers buy (support)</text>
+
+  <!-- Price examples -->
+  <g opacity="0.7">
+    <circle cx="300" cy="150" r="8" fill="#ec4899" opacity="0.3"/>
+    <text x="250" y="140" fill="#ec4899" font-size="11">$455 → Pulled back</text>
+
+    <circle cx="500" cy="350" r="8" fill="#3b82f6" opacity="0.3"/>
+    <text x="520" y="355" fill="#3b82f6" font-size="11">$445 → Pushed up</text>
+  </g>
+</svg>

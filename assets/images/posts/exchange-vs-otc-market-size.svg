@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="icebergTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="icebergBottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:0.8"/>
+    </linearGradient>
+    <radialGradient id="waterGrad">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0284c7;stop-opacity:0.5"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background (sky and water) -->
+  <rect width="800" height="250" fill="#1e293b"/>
+  <rect y="250" width="800" height="350" fill="#0c4a6e"/>
+
+  <!-- Water surface line -->
+  <line x1="0" y1="250" x2="800" y2="250" stroke="#0ea5e9" stroke-width="3" opacity="0.7"/>
+  <path d="M 0,250 Q 100,245 200,250 T 400,250 T 600,250 T 800,250"
+        stroke="#22d3ee" stroke-width="2" fill="none" opacity="0.5"/>
+
+  <!-- Water ripples/distortion -->
+  <ellipse cx="400" cy="300" rx="300" ry="40" fill="url(#waterGrad)"/>
+  <ellipse cx="400" cy="400" rx="350" ry="50" fill="url(#waterGrad)" opacity="0.5"/>
+
+  <!-- Iceberg tip (visible - Exchange traded) -->
+  <path d="M 300,100 L 250,250 L 550,250 L 500,100 Z"
+        fill="url(#icebergTop)"
+        stroke="#60a5fa"
+        stroke-width="2"/>
+
+  <!-- Iceberg tip labels -->
+  <text x="400" y="160" fill="#0f1419" font-size="18" font-weight="bold" text-anchor="middle">VISIBLE</text>
+  <text x="400" y="185" fill="#0f1419" font-size="16" font-weight="bold" text-anchor="middle">Exchange-Traded</text>
+  <text x="400" y="210" fill="#1e293b" font-size="14" text-anchor="middle">Options</text>
+  <text x="400" y="235" fill="#1e3a8a" font-size="24" font-weight="bold" text-anchor="middle">30%</text>
+
+  <!-- Iceberg underwater (hidden - OTC) -->
+  <path d="M 250,250 L 150,350 L 100,500 L 700,500 L 650,350 L 550,250 Z"
+        fill="url(#icebergBottom)"
+        stroke="#1e40af"
+        stroke-width="2"
+        opacity="0.9"/>
+
+  <!-- OTC labels -->
+  <text x="400" y="340" fill="#f3f4f6" font-size="18" font-weight="bold" text-anchor="middle">INVISIBLE</text>
+  <text x="400" y="370" fill="#e0e7ff" font-size="20" font-weight="bold" text-anchor="middle">OTC (Over-The-Counter)</text>
+  <text x="400" y="400" fill="#dbeafe" font-size="14" text-anchor="middle">Derivatives Market</text>
+  <text x="400" y="450" fill="#93c5fd" font-size="32" font-weight="bold" text-anchor="middle">70%</text>
+
+  <!-- Side labels with arrows -->
+  <g opacity="0.9">
+    <!-- Visible portion -->
+    <rect x="600" y="140" width="180" height="85" fill="#1f2937" stroke="#60a5fa" stroke-width="2" rx="8"/>
+    <text x="690" y="163" fill="#60a5fa" font-size="13" font-weight="bold" text-anchor="middle">What You See:</text>
+    <text x="610" y="182" fill="#d1d5db" font-size="11">• CBOE, CME, Nasdaq</text>
+    <text x="610" y="198" fill="#d1d5db" font-size="11">• Public OI & volume</text>
+    <text x="610" y="214" fill="#d1d5db" font-size="11">• SpotGamma data</text>
+
+    <!-- Hidden portion -->
+    <rect x="20" y="320" width="200" height="100" fill="#1f2937" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="120" y="343" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">What You DON'T See:</text>
+    <text x="30" y="362" fill="#d1d5db" font-size="11">• Goldman, JPM, Citadel</text>
+    <text x="30" y="378" fill="#d1d5db" font-size="11">• Hedge fund custom options</text>
+    <text x="30" y="394" fill="#d1d5db" font-size="11">• Zero public reporting</text>
+    <text x="30" y="410" fill="#fca5a5" font-size="11" font-weight="bold">• 2-5× larger than exchange</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <line x1="550" y1="180" x2="600" y2="180" stroke="#60a5fa" stroke-width="2" opacity="0.5"/>
+  <line x1="220" y1="370" x2="250" y2="370" stroke="#ef4444" stroke-width="2" opacity="0.5"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">The Options Market Iceberg</text>
+  <text x="400" y="60" fill="#9ca3af" font-size="14" text-anchor="middle">You're trading with 30% visibility</text>
+
+  <!-- Bottom warning -->
+  <rect x="150" y="520" width="500" height="65" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="400" y="545" fill="#f3f4f6" font-size="15" font-weight="bold" text-anchor="middle">⚠️ Critical Implication</text>
+  <text x="400" y="565" fill="#e9d5ff" font-size="12" text-anchor="middle">Every "Gamma Wall" you see could be offset by invisible OTC positions.</text>
+  <text x="400" y="580" fill="#d8b4fe" font-size="11" text-anchor="middle">Price action is truth. Models show 30% of reality.</text>
+</svg>
