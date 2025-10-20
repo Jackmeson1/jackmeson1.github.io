@@ -1,0 +1,22 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Title -->
+    <text x="300" y="25" text-anchor="middle" font-size="16" font-weight="600" fill="#333">The C-Suite Scramble: New Roles in 2025</text>
+
+    <!-- CAIO -->
+    <circle cx="150" cy="100" r="50" fill="#0073b1" opacity="0.9"/>
+    <text x="150" y="95" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Chief AI</text>
+    <text x="150" y="110" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Officer</text>
+    <text x="150" y="165" text-anchor="middle" font-size="11" fill="#666">Strategy & Value</text>
+
+    <!-- AI Compliance Officer -->
+    <circle cx="300" cy="100" r="50" fill="#ff6b35" opacity="0.9"/>
+    <text x="300" y="95" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">AI Compliance</text>
+    <text x="300" y="110" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Officer</text>
+    <text x="300" y="165" text-anchor="middle" font-size="11" fill="#666">Risk & Regulation</text>
+
+    <!-- Director of AI Innovation -->
+    <circle cx="450" cy="100" r="50" fill="#4a90e2" opacity="0.9"/>
+    <text x="450" y="95" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Director of AI</text>
+    <text x="450" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#fff">Innovation</text>
+    <text x="450" y="165" text-anchor="middle" font-size="11" fill="#666">Legal Tech Integration</text>
+</svg>
