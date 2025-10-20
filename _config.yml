@@ -34,6 +34,14 @@ author:
       url: https://www.linkedin.com/in/jiajun-liang-qa/
       icon: fab fa-linkedin
 
+# Social Media for jekyll-seo-tag
+twitter:
+  username: jiajun_liang
+  card: summary_large_image
+
+# Default image for social sharing (fallback)
+logo: /assets/images/avatar.jpeg
+
 # Footer
 footer_links:
   - title: Privacy Policy
