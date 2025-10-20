@@ -7,7 +7,7 @@ categories: [compliance, ai-governance]
 tags: [eu-ai-act, ai-compliance, regulatory-compliance, ai-governance, legal-tech, enterprise-ai, risk-management, saas-compliance, gdpr, ccpa]
 author: Jiajun Liang
 description: "80% of companies have undocumented AI models. EU AI Act fines (€35M/7% revenue) are active NOW. 9 months until Aug 2026 compliance deadline. Why most companies are tracking the wrong timeline."
-image: /assets/images/posts/ai-compliance-social-preview.svg
+image: /assets/images/posts/ai-compliance-social-preview.png
 lang: en
 featured: true
 toc: true
