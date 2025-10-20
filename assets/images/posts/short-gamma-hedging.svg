@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="badGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:0.2"/>
+    </linearGradient>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0,0 0,6 10,3" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0,0 0,6 10,3" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="450" y="35" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">Short Gamma Hedging Flow</text>
+  <text x="450" y="60" fill="#9ca3af" font-size="13" text-anchor="middle">Why dealers selling options creates "buy high, sell low" behavior</text>
+
+  <!-- Central dealer -->
+  <rect x="350" y="280" width="200" height="90" fill="#1f2937" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+  <text x="450" y="310" fill="#8b5cf6" font-size="16" font-weight="bold" text-anchor="middle">DEALER</text>
+  <text x="450" y="333" fill="#ef4444" font-size="14" text-anchor="middle">Short Gamma Position</text>
+  <text x="450" y="353" fill="#9ca3af" font-size="12" text-anchor="middle">(sold options to clients)</text>
+
+  <!-- Scenario 1: Price Rises -->
+  <g transform="translate(200, 130)">
+    <rect x="-100" y="0" width="200" height="80" fill="url(#badGrad)" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="0" y="30" fill="#fca5a5" font-size="15" font-weight="bold" text-anchor="middle">PRICE RISES ↑</text>
+    <text x="0" y="50" fill="#d1d5db" font-size="12" text-anchor="middle">Stock: $100 → $105</text>
+    <text x="0" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">Delta goes up</text>
+
+    <!-- Arrow to dealer -->
+    <path d="M 50,90 L 330,270" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="190" y="180" fill="#ef4444" font-size="11" transform="rotate(-40 190 180)">Delta increases</text>
+  </g>
+
+  <!-- Dealer action for price rise -->
+  <g transform="translate(700, 130)">
+    <rect x="-100" y="0" width="200" height="100" fill="#1f2937" stroke="#10b981" stroke-width="3" rx="8"/>
+    <text x="0" y="30" fill="#10b981" font-size="14" font-weight="bold" text-anchor="middle">Dealer Response</text>
+    <text x="0" y="50" fill="#34d399" font-size="13" text-anchor="middle">Must BUY shares</text>
+    <text x="0" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">to stay hedged</text>
+    <text x="0" y="86" fill="#fca5a5" font-size="12" font-weight="bold" text-anchor="middle">= Buying at $105</text>
+
+    <!-- Arrow from dealer -->
+    <path d="M -50,110 L -330,270" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreen)"/>
+    <text x="-190" y="190" fill="#10b981" font-size="11" transform="rotate(40 -190 190)">Buy pressure</text>
+  </g>
+
+  <!-- Scenario 2: Price Falls -->
+  <g transform="translate(200, 450)">
+    <rect x="-100" y="0" width="200" height="80" fill="url(#badGrad)" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="0" y="30" fill="#fca5a5" font-size="15" font-weight="bold" text-anchor="middle">PRICE FALLS ↓</text>
+    <text x="0" y="50" fill="#d1d5db" font-size="12" text-anchor="middle">Stock: $105 → $100</text>
+    <text x="0" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">Delta goes down</text>
+
+    <!-- Arrow to dealer -->
+    <path d="M 50,-10 L 330,-190" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="190" y="-100" fill="#ef4444" font-size="11" transform="rotate(40 190 -100)">Delta decreases</text>
+  </g>
+
+  <!-- Dealer action for price fall -->
+  <g transform="translate(700, 450)">
+    <rect x="-100" y="0" width="200" height="100" fill="#1f2937" stroke="#ef4444" stroke-width="3" rx="8"/>
+    <text x="0" y="30" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">Dealer Response</text>
+    <text x="0" y="50" fill="#fca5a5" font-size="13" text-anchor="middle">Must SELL shares</text>
+    <text x="0" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">to stay hedged</text>
+    <text x="0" y="86" fill="#fecaca" font-size="12" font-weight="bold" text-anchor="middle">= Selling at $100</text>
+
+    <!-- Arrow from dealer -->
+    <path d="M -50,-10 L -330,-190" stroke="#ef4444" stroke-width="3" marker-end="url(#arrowRed)"/>
+    <text x="-190" y="-100" fill="#ef4444" font-size="11" transform="rotate(-40 -190 -100)">Sell pressure</text>
+  </g>
+
+  <!-- The problem box -->
+  <rect x="150" y="590" width="600" height="50" fill="#7c3aed" opacity="0.3" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="450" y="613" fill="#f3f4f6" font-size="14" font-weight="bold" text-anchor="middle">⚠️ The "Buy High, Sell Low" Problem</text>
+  <text x="450" y="632" fill="#e9d5ff" font-size="11" text-anchor="middle">Short gamma forces dealers to trade WITH momentum, but this stabilizes prices (counterintuitive!). Creates "walls" near strikes.</text>
+</svg>

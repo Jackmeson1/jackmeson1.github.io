@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="visibleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="hiddenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#4b5563;stop-opacity:0.8"/>
+    </linearGradient>
+    <radialGradient id="fogGrad">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:0.3"/>
+    </radialGradient>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0f1419"/>
+
+  <!-- Fog overlay -->
+  <rect width="900" height="600" fill="url(#fogGrad)" opacity="0.3"/>
+
+  <!-- Title -->
+  <text x="450" y="40" fill="#f3f4f6" font-size="26" font-weight="bold" text-anchor="middle">The OTC Fog of War</text>
+  <text x="450" y="68" fill="#9ca3af" font-size="14" text-anchor="middle">You're trading with 30% visibility—the rest is hidden</text>
+
+  <!-- Left side: Visible (Exchange-Traded) -->
+  <g opacity="0.9">
+    <rect x="50" y="120" width="350" height="400" fill="url(#visibleGrad)" stroke="#60a5fa" stroke-width="3" rx="12"/>
+
+    <!-- Visible label -->
+    <text x="225" y="160" fill="#f3f4f6" font-size="20" font-weight="bold" text-anchor="middle">What You CAN See</text>
+    <text x="225" y="190" fill="#dbeafe" font-size="28" font-weight="bold" text-anchor="middle">30%</text>
+
+    <!-- Exchange data sources -->
+    <rect x="80" y="220" width="290" height="270" fill="#1f2937" opacity="0.7" stroke="#60a5fa" stroke-width="2" rx="8"/>
+    <text x="225" y="250" fill="#60a5fa" font-size="15" font-weight="bold" text-anchor="middle">Exchange-Traded Options</text>
+
+    <text x="90" y="280" fill="#d1d5db" font-size="13">✓ CBOE Open Interest</text>
+    <text x="90" y="305" fill="#d1d5db" font-size="13">✓ CME Volume Data</text>
+    <text x="90" y="330" fill="#d1d5db" font-size="13">✓ Nasdaq Options Flow</text>
+    <text x="90" y="355" fill="#d1d5db" font-size="13">✓ Public GEX (SpotGamma)</text>
+    <text x="90" y="380" fill="#d1d5db" font-size="13">✓ Realtime Greeks</text>
+    <text x="90" y="405" fill="#d1d5db" font-size="13">✓ Strike-level OI</text>
+
+    <line x1="90" y1="425" x2="360" y2="425" stroke="#4b5563" stroke-width="1"/>
+
+    <text x="225" y="450" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle">Transparent & Reportable</text>
+    <text x="225" y="472" fill="#9ca3af" font-size="11" text-anchor="middle">SEC/CFTC mandated disclosure</text>
+  </g>
+
+  <!-- Right side: Hidden (OTC) -->
+  <g>
+    <rect x="500" y="120" width="350" height="400" fill="url(#hiddenGrad)" stroke="#ef4444" stroke-width="3" rx="12" opacity="0.8"/>
+
+    <!-- Fog effect on hidden side -->
+    <rect x="500" y="120" width="350" height="400" fill="url(#fogGrad)" filter="url(#blur)" rx="12"/>
+
+    <!-- Hidden label -->
+    <text x="675" y="160" fill="#f3f4f6" font-size="20" font-weight="bold" text-anchor="middle">What You CAN'T See</text>
+    <text x="675" y="190" fill="#fca5a5" font-size="28" font-weight="bold" text-anchor="middle">70%</text>
+
+    <!-- OTC data -->
+    <rect x="530" y="220" width="290" height="270" fill="#1f2937" opacity="0.9" stroke="#ef4444" stroke-width="2" rx="8"/>
+    <text x="675" y="250" fill="#ef4444" font-size="15" font-weight="bold" text-anchor="middle">OTC (Over-The-Counter)</text>
+
+    <text x="540" y="280" fill="#9ca3af" font-size="13">✗ Goldman Sachs desk trades</text>
+    <text x="540" y="305" fill="#9ca3af" font-size="13">✗ JPMorgan custom options</text>
+    <text x="540" y="330" fill="#9ca3af" font-size="13">✗ Citadel hedge positions</text>
+    <text x="540" y="355" fill="#9ca3af" font-size="13">✗ Bridgewater OTC collars</text>
+    <text x="540" y="380" fill="#9ca3af" font-size="13">✗ Corporate buyback hedges</text>
+    <text x="540" y="405" fill="#9ca3af" font-size="13">✗ Exotic structured products</text>
+
+    <line x1="540" y1="425" x2="810" y2="425" stroke="#4b5563" stroke-width="1"/>
+
+    <text x="675" y="450" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">Zero Public Reporting</text>
+    <text x="675" y="472" fill="#fca5a5" font-size="11" text-anchor="middle">2-5× larger than exchange market</text>
+  </g>
+
+  <!-- Dividing line -->
+  <line x1="450" y1="120" x2="450" y2="520" stroke="#fbbf24" stroke-width="4" stroke-dasharray="10,5" opacity="0.7"/>
+  <text x="450" y="110" fill="#fbbf24" font-size="12" font-weight="bold" text-anchor="middle">VISIBILITY WALL</text>
+
+  <!-- Bottom warning box -->
+  <rect x="100" y="540" width="700" height="50" fill="#7c3aed" opacity="0.3" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="450" y="563" fill="#f3f4f6" font-size="14" font-weight="bold" text-anchor="middle">⚠️ Critical Reality Check</text>
+  <text x="450" y="582" fill="#e9d5ff" font-size="12" text-anchor="middle">Every "Gamma Wall" you see could be completely offset by invisible OTC positions. Trade price action, not models.</text>
+</svg>

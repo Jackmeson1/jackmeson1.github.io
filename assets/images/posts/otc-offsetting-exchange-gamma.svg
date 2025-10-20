@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <linearGradient id="exchangeBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="otcBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#991b1b;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="netBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="450" y="35" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">OTC Positions Offsetting Exchange Gamma</text>
+  <text x="450" y="60" fill="#9ca3af" font-size="13" text-anchor="middle">Why the "wall" you see might not exist</text>
+
+  <!-- Scenario labels -->
+  <text x="220" y="100" fill="#f3f4f6" font-size="18" font-weight="bold" text-anchor="middle">Scenario 1: Real Wall</text>
+  <text x="670" y="100" fill="#f3f4f6" font-size="18" font-weight="bold" text-anchor="middle">Scenario 2: Fake Wall</text>
+
+  <!-- Dividing line -->
+  <line x1="450" y1="85" x2="450" y2="610" stroke="#4b5563" stroke-width="2"/>
+
+  <!-- SCENARIO 1: Real Wall (Left) -->
+  <g transform="translate(220, 150)">
+    <!-- Exchange Gamma bar -->
+    <rect x="-80" y="0" width="160" height="120" fill="url(#exchangeBar)" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <text x="0" y="65" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">Exchange GEX</text>
+    <text x="0" y="85" fill="#dbeafe" font-size="20" font-weight="bold" text-anchor="middle">+$500M</text>
+    <text x="0" y="103" fill="#93c5fd" font-size="11" text-anchor="middle">Call Wall at $500</text>
+
+    <!-- Arrow down -->
+    <path d="M 0,135 L 0,165" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowDown)"/>
+
+    <!-- OTC Position bar (small or zero) -->
+    <rect x="-80" y="180" width="160" height="40" fill="#1f2937" stroke="#6b7280" stroke-width="2" rx="5"/>
+    <text x="0" y="205" fill="#9ca3af" font-size="14" text-anchor="middle">OTC Offset: $0</text>
+
+    <!-- Arrow down -->
+    <path d="M 0,235 L 0,265" stroke="#10b981" stroke-width="3" marker-end="url(#arrowGreenDown)"/>
+
+    <!-- Net Result -->
+    <rect x="-100" y="280" width="200" height="80" fill="url(#netBar)" stroke="#10b981" stroke-width="3" rx="8"/>
+    <text x="0" y="310" fill="#fff" font-size="15" font-weight="bold" text-anchor="middle">NET GAMMA</text>
+    <text x="0" y="333" fill="#d1fae5" font-size="22" font-weight="bold" text-anchor="middle">+$500M</text>
+    <text x="0" y="352" fill="#6ee7b7" font-size="12" text-anchor="middle">Wall is REAL</text>
+
+    <!-- Outcome -->
+    <text x="0" y="400" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle">✓ Price respects wall</text>
+    <text x="0" y="420" fill="#9ca3af" font-size="11" text-anchor="middle">Dealers must sell at $500</text>
+    <text x="0" y="437" fill="#9ca3af" font-size="11" text-anchor="middle">Creates real resistance</text>
+  </g>
+
+  <!-- SCENARIO 2: Fake Wall (Right) -->
+  <g transform="translate(670, 150)">
+    <!-- Exchange Gamma bar (same size) -->
+    <rect x="-80" y="0" width="160" height="120" fill="url(#exchangeBar)" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <text x="0" y="65" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">Exchange GEX</text>
+    <text x="0" y="85" fill="#dbeafe" font-size="20" font-weight="bold" text-anchor="middle">+$500M</text>
+    <text x="0" y="103" fill="#93c5fd" font-size="11" text-anchor="middle">Call Wall at $500</text>
+
+    <!-- Arrow down -->
+    <path d="M 0,135 L 0,165" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowDown)"/>
+
+    <!-- OTC Position bar (OFFSETTING) -->
+    <rect x="-80" y="180" width="160" height="120" fill="url(#otcBar)" stroke="#ef4444" stroke-width="2" rx="5"/>
+    <text x="0" y="230" fill="#fff" font-size="16" font-weight="bold" text-anchor="middle">OTC Offset</text>
+    <text x="0" y="253" fill="#fecaca" font-size="20" font-weight="bold" text-anchor="middle">-$480M</text>
+    <text x="0" y="271" fill="#fca5a5" font-size="11" text-anchor="middle">Hedge funds bought</text>
+    <text x="0" y="286" fill="#fca5a5" font-size="11" text-anchor="middle">$500 calls OTC</text>
+
+    <!-- Arrow down -->
+    <path d="M 0,315 L 0,345" stroke="#fbbf24" stroke-width="3" marker-end="url(#arrowDown)"/>
+
+    <!-- Net Result (tiny) -->
+    <rect x="-100" y="360" width="200" height="80" fill="#1f2937" stroke="#6b7280" stroke-width="3" rx="8"/>
+    <text x="0" y="390" fill="#9ca3af" font-size="15" font-weight="bold" text-anchor="middle">NET GAMMA</text>
+    <text x="0" y="413" fill="#fbbf24" font-size="22" font-weight="bold" text-anchor="middle">+$20M</text>
+    <text x="0" y="432" fill="#f59e0b" font-size="12" text-anchor="middle">Wall is FAKE</text>
+
+    <!-- Outcome -->
+    <text x="0" y="480" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">✗ Price blows through</text>
+    <text x="0" y="500" fill="#9ca3af" font-size="11" text-anchor="middle">Dealer hedging neutralized</text>
+    <text x="0" y="517" fill="#9ca3af" font-size="11" text-anchor="middle">No real resistance</text>
+  </g>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowDown" markerWidth="10" markerHeight="10" refX="5" refY="9" orient="auto">
+      <polygon points="0,0 10,0 5,10" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrowGreenDown" markerWidth="10" markerHeight="10" refX="5" refY="9" orient="auto">
+      <polygon points="0,0 10,0 5,10" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom insight box -->
+  <rect x="100" y="570" width="700" height="70" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="450" y="595" fill="#f3f4f6" font-size="14" font-weight="bold" text-anchor="middle">💡 The Invisible Offset Problem</text>
+  <text x="450" y="615" fill="#e9d5ff" font-size="12" text-anchor="middle">SpotGamma shows $500M Call Wall → Looks strong → But invisible OTC positions neutralized 96%</text>
+  <text x="450" y="633" fill="#d8b4fe" font-size="11" text-anchor="middle">You think it's a wall, market maker thinks "meh, only $20M exposure." Price action is truth.</text>
+</svg>

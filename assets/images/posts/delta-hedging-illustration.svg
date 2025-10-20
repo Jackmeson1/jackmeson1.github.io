@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <defs>
+    <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="550" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="450" y="35" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">Delta Hedging Illustration</text>
+  <text x="450" y="60" fill="#9ca3af" font-size="13" text-anchor="middle">Continuous rebalancing to stay delta-neutral</text>
+
+  <!-- Timeline -->
+  <rect x="80" y="100" width="740" height="380" fill="url(#timeGrad)" opacity="0.2" rx="10"/>
+  <line x1="100" y1="120" x2="800" y2="120" stroke="#4b5563" stroke-width="2"/>
+  <text x="50" y="125" fill="#9ca3af" font-size="11">Time →</text>
+
+  <!-- T0: Initial state -->
+  <g transform="translate(150, 140)">
+    <circle cx="0" cy="0" r="8" fill="#3b82f6"/>
+    <text x="0" y="-20" fill="#3b82f6" font-size="13" font-weight="bold" text-anchor="middle">T0</text>
+
+    <rect x="-80" y="10" width="160" height="110" fill="#1f2937" stroke="#3b82f6" stroke-width="2" rx="5"/>
+    <text x="0" y="35" fill="#60a5fa" font-size="13" font-weight="bold" text-anchor="middle">Initial Position</text>
+    <text x="0" y="55" fill="#d1d5db" font-size="11" text-anchor="middle">Stock: $100</text>
+    <text x="0" y="72" fill="#d1d5db" font-size="11" text-anchor="middle">Short 100 Calls</text>
+    <text x="0" y="89" fill="#d1d5db" font-size="11" text-anchor="middle">Delta: -0.50</text>
+    <text x="0" y="106" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Hedge: +50 shares</text>
+
+    <text x="0" y="140" fill="#9ca3af" font-size="10" text-anchor="middle" font-style="italic">Delta neutral</text>
+  </g>
+
+  <!-- T1: Price rises -->
+  <g transform="translate(400, 140)">
+    <circle cx="0" cy="0" r="8" fill="#8b5cf6"/>
+    <text x="0" y="-20" fill="#8b5cf6" font-size="13" font-weight="bold" text-anchor="middle">T1</text>
+
+    <rect x="-80" y="10" width="160" height="130" fill="#1f2937" stroke="#8b5cf6" stroke-width="2" rx="5"/>
+    <text x="0" y="35" fill="#a78bfa" font-size="13" font-weight="bold" text-anchor="middle">Price Moves Up</text>
+    <text x="0" y="55" fill="#d1d5db" font-size="11" text-anchor="middle">Stock: $100 → $105</text>
+    <text x="0" y="72" fill="#d1d5db" font-size="11" text-anchor="middle">Short 100 Calls</text>
+    <text x="0" y="89" fill="#ef4444" font-size="11" text-anchor="middle">Delta: -0.50 → -0.60</text>
+    <text x="0" y="106" fill="#fbbf24" font-size="11" text-anchor="middle">Old hedge: +50 shares</text>
+    <text x="0" y="123" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">→ BUY +10 more</text>
+
+    <text x="0" y="160" fill="#fbbf24" font-size="10" text-anchor="middle" font-style="italic">Rebalancing...</text>
+  </g>
+
+  <!-- T2: Price falls -->
+  <g transform="translate(650, 140)">
+    <circle cx="0" cy="0" r="8" fill="#ec4899"/>
+    <text x="0" y="-20" fill="#ec4899" font-size="13" font-weight="bold" text-anchor="middle">T2</text>
+
+    <rect x="-80" y="10" width="160" height="130" fill="#1f2937" stroke="#ec4899" stroke-width="2" rx="5"/>
+    <text x="0" y="35" fill="#f9a8d4" font-size="13" font-weight="bold" text-anchor="middle">Price Moves Down</text>
+    <text x="0" y="55" fill="#d1d5db" font-size="11" text-anchor="middle">Stock: $105 → $98</text>
+    <text x="0" y="72" fill="#d1d5db" font-size="11" text-anchor="middle">Short 100 Calls</text>
+    <text x="0" y="89" fill="#10b981" font-size="11" text-anchor="middle">Delta: -0.60 → -0.45</text>
+    <text x="0" y="106" fill="#fbbf24" font-size="11" text-anchor="middle">Old hedge: +60 shares</text>
+    <text x="0" y="123" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="middle">→ SELL -15 shares</text>
+
+    <text x="0" y="160" fill="#fbbf24" font-size="10" text-anchor="middle" font-style="italic">Rebalancing...</text>
+  </g>
+
+  <!-- Connection arrows -->
+  <path d="M 230,200 L 320,200" stroke="#fbbf24" stroke-width="2" opacity="0.5" marker-end="url(#arrowRight)"/>
+  <path d="M 480,200 L 570,200" stroke="#fbbf24" stroke-width="2" opacity="0.5" marker-end="url(#arrowRight)"/>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowRight" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0,0 0,6 10,3" fill="#fbbf24"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom explanation -->
+  <rect x="100" y="490" width="700" height="50" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="450" y="513" fill="#f3f4f6" font-size="13" font-weight="bold" text-anchor="middle">🔄 Continuous Process</text>
+  <text x="450" y="532" fill="#e9d5ff" font-size="11" text-anchor="middle">Market makers constantly adjust hedge ratios as price moves. This creates massive buying/selling flow that stabilizes prices near strikes.</text>
+</svg>
