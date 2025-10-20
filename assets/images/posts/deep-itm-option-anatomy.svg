@@ -1,94 +1,81 @@
-<svg viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Deep ITM Call Option Structure</title>
-  <desc id="desc">Breakdown of intrinsic versus time value, payoff diagram, and delta characteristics for a deep in-the-money QQQ LEAPS contract.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
   <defs>
-    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f8fafc" />
-      <stop offset="100%" stop-color="#e0f2fe" />
+    <linearGradient id="intrinsic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="intrinsic" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#22c55e" />
-      <stop offset="100%" stop-color="#16a34a" />
+    <linearGradient id="extrinsic" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="time" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fb923c" />
-      <stop offset="100%" stop-color="#f97316" />
-    </linearGradient>
-    <linearGradient id="delta" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#0ea5e9" />
-    </linearGradient>
+    <radialGradient id="spotGlow">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/>
+    </radialGradient>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="720" rx="28" fill="url(#panel)" />
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#0f1419"/>
 
-  <text x="600" y="60" font-family="'Inter', 'Arial', sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#0f172a">
-    Deep ITM Call Option Anatomy (QQQ Example)
-  </text>
-  <text x="600" y="98" font-family="'Inter', 'Arial', sans-serif" font-size="18" text-anchor="middle" fill="#334155">
-    Contract behaves like high-conviction equity exposure because most of the premium is intrinsic value.
-  </text>
+  <!-- Title -->
+  <text x="500" y="40" fill="#f3f4f6" font-size="30" font-weight="bold" text-anchor="middle">Deep ITM Call Option Anatomy</text>
+  <text x="500" y="70" fill="#9ca3af" font-size="14" text-anchor="middle">QQQ @ $400 | Strike $300 | Delta 0.92 | Premium $110</text>
 
-  <g transform="translate(90, 140)">
-    <rect x="0" y="0" width="1020" height="120" rx="18" fill="#fff" stroke="#bae6fd" stroke-width="2" />
-    <text x="30" y="48" font-family="'Inter', sans-serif" font-size="18" font-weight="600" fill="#0369a1">Trade Setup</text>
-    <g transform="translate(30, 70)" font-family="'Inter', sans-serif" font-size="16" fill="#0f172a">
-      <text x="0" y="0">Underlying: <tspan font-weight="700">QQQ $400</tspan></text>
-      <text x="220" y="0">Strike: <tspan font-weight="700">$300 (75% moneyness)</tspan></text>
-      <text x="470" y="0">Premium: <tspan font-weight="700">$110</tspan></text>
-      <text x="650" y="0">Delta: <tspan font-weight="700">0.92</tspan></text>
-      <text x="790" y="0">Time to expiry: <tspan font-weight="700">30 months</tspan></text>
+  <!-- Main visual: Premium bar breakdown -->
+  <g transform="translate(150, 120)">
+    <!-- Glow effect -->
+    <ellipse cx="350" cy="80" rx="400" ry="100" fill="url(#spotGlow)"/>
+
+    <!-- Intrinsic value (large section) -->
+    <rect x="0" y="20" width="600" height="120" rx="10" fill="url(#intrinsic)" stroke="#10b981" stroke-width="3"/>
+    <text x="300" y="70" fill="#fff" font-size="24" font-weight="bold" text-anchor="middle">Intrinsic Value</text>
+    <text x="300" y="100" fill="#d1fae5" font-size="32" font-weight="bold" text-anchor="middle">$100 (91%)</text>
+
+    <!-- Extrinsic value (small section) -->
+    <rect x="610" y="20" width="90" height="120" rx="10" fill="url(#extrinsic)" stroke="#f59e0b" stroke-width="3"/>
+    <text x="655" y="65" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">Time</text>
+    <text x="655" y="85" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">Value</text>
+    <text x="655" y="110" fill="#fef3c7" font-size="20" font-weight="bold" text-anchor="middle">$10</text>
+    <text x="655" y="130" fill="#fbbf24" font-size="11" text-anchor="middle">(9%)</text>
+
+    <!-- Total label -->
+    <text x="350" y="170" fill="#9ca3af" font-size="16" text-anchor="middle">Total Premium: $110</text>
+  </g>
+
+  <!-- Formula breakdown (2 columns) -->
+  <g transform="translate(100, 320)">
+    <!-- Left: Intrinsic calculation -->
+    <rect x="0" y="0" width="380" height="140" rx="12" fill="#064e3b" opacity="0.3" stroke="#10b981" stroke-width="2"/>
+    <text x="190" y="35" fill="#34d399" font-size="18" font-weight="bold" text-anchor="middle">Intrinsic Value Formula</text>
+
+    <g transform="translate(40, 60)">
+      <text x="150" y="0" fill="#d1d5db" font-size="15" text-anchor="middle" font-family="monospace">max(0, Stock - Strike)</text>
+      <text x="150" y="25" fill="#d1d5db" font-size="15" text-anchor="middle" font-family="monospace">= max(0, $400 - $300)</text>
+      <text x="150" y="55" fill="#6ee7b7" font-size="22" font-weight="bold" text-anchor="middle">= $100</text>
+    </g>
+
+    <!-- Right: Extrinsic calculation -->
+    <rect x="420" y="0" width="380" height="140" rx="12" fill="#7c2d12" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+    <text x="610" y="35" fill="#fb923c" font-size="18" font-weight="bold" text-anchor="middle">Extrinsic (Time) Value</text>
+
+    <g transform="translate(460, 60)">
+      <text x="150" y="0" fill="#d1d5db" font-size="15" text-anchor="middle" font-family="monospace">Premium - Intrinsic</text>
+      <text x="150" y="25" fill="#d1d5db" font-size="15" text-anchor="middle" font-family="monospace">= $110 - $100</text>
+      <text x="150" y="55" fill="#fcd34d" font-size="22" font-weight="bold" text-anchor="middle">= $10 (decays)</text>
     </g>
   </g>
 
-  <g transform="translate(150, 300)">
-    <rect x="0" y="0" width="480" height="320" rx="22" fill="#f0fdf4" stroke="#22c55e" stroke-width="2" />
-    <text x="240" y="46" font-family="'Inter', sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#14532d">
-      Premium Composition
-    </text>
-    <g transform="translate(60, 90)">
-      <rect x="0" y="0" width="360" height="70" rx="12" fill="url(#intrinsic)" opacity="0.92" />
-      <text x="180" y="42" font-family="'Inter', sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#ecfdf5">
-        Intrinsic Value = $100 (91%)
-      </text>
-    </g>
-    <g transform="translate(60, 190)">
-      <rect x="0" y="0" width="160" height="60" rx="12" fill="url(#time)" opacity="0.92" />
-      <text x="80" y="36" font-family="'Inter', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#fff7ed">
-        Time Value = $10 (9%)
-      </text>
-    </g>
-    <g transform="translate(40, 270)" font-family="'Inter', sans-serif" font-size="15" fill="#166534">
-      <text x="0" y="0">Intrinsic = max(0, S − K) = max(0, 400 − 300) = $100</text>
-      <text x="0" y="26">Time Value = Premium − Intrinsic = 110 − 100 = $10</text>
-    </g>
-  </g>
+  <!-- Key insight box -->
+  <g transform="translate(100, 490)">
+    <rect x="0" y="0" width="800" height="90" rx="12" fill="#1e3a8a" opacity="0.3" stroke="#60a5fa" stroke-width="2"/>
 
-  <g transform="translate(690, 300)">
-    <rect x="0" y="0" width="420" height="320" rx="22" fill="#fff7ed" stroke="#fb923c" stroke-width="2" />
-    <text x="210" y="46" font-family="'Inter', sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#7c2d12">
-      Payoff Profile &amp; Delta
-    </text>
-    <g transform="translate(30, 90)">
-      <rect x="0" y="0" width="360" height="160" rx="18" fill="#fff" stroke="#fed7aa" stroke-width="2" />
-      <polyline points="20,130 120,70 340,30" fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round" />
-      <circle cx="120" cy="70" r="6" fill="#f97316" />
-      <text x="120" y="54" font-family="'Inter', sans-serif" font-size="14" text-anchor="middle" fill="#9a3412">Breakeven ≈ $310</text>
-      <text x="340" y="26" font-family="'Inter', sans-serif" font-size="14" text-anchor="end" fill="#c2410c">Δ ≈ 0.92 → slope near 1</text>
-      <line x1="20" y1="130" x2="340" y2="130" stroke="#cbd5f5" stroke-width="1.5" stroke-dasharray="6 6" />
-      <text x="30" y="148" font-family="'Inter', sans-serif" font-size="13" fill="#64748b">Strike $300</text>
-    </g>
-    <g transform="translate(30, 270)" font-family="'Inter', sans-serif" fill="#7c2d12" font-size="15">
-      <text x="0" y="0">• Contract moves ~$0.92 for each $1 move in QQQ</text>
-      <text x="0" y="24">• Economic exposure ≈ 92 shares while only 27.5% capital deployed</text>
-      <text x="0" y="48">• Theta bleed minimal because 91% of value is intrinsic</text>
-    </g>
-  </g>
+    <text x="400" y="32" fill="#93c5fd" font-size="17" font-weight="bold" text-anchor="middle">💡 Why Deep ITM Works</text>
 
-  <g transform="translate(120, 640)">
-    <rect x="0" y="0" width="960" height="60" rx="16" fill="url(#delta)" opacity="0.2" stroke="#0ea5e9" stroke-width="2" />
-    <text x="480" y="38" font-family="'Inter', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#0f172a">
-      Deep ITM LEAPS ≈ owning the shares, but TFSA shelters the gains while capital outlay stays compact.
-    </text>
+    <g transform="translate(30, 50)">
+      <text x="0" y="0" fill="#dbeafe" font-size="14">✓ <tspan font-weight="bold">91% intrinsic</tspan> → Protected from theta decay</text>
+      <text x="420" y="0" fill="#dbeafe" font-size="14">✓ <tspan font-weight="bold">Delta 0.92</tspan> → Moves like stock</text>
+      <text x="0" y="25" fill="#dbeafe" font-size="14">✓ <tspan font-weight="bold">$110 controls $400</tspan> → 2.7× leverage</text>
+      <text x="420" y="25" fill="#dbeafe" font-size="14">✓ <tspan font-weight="bold">24mo expiry</tspan> → Time is on your side</text>
+    </g>
   </g>
 </svg>
