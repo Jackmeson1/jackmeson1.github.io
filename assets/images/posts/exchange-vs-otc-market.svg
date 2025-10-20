@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="exchangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="otcGradBig" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6b7280;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#374151;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">Exchange vs OTC Options Market Size</text>
+  <text x="400" y="60" fill="#9ca3af" font-size="13" text-anchor="middle">Proportional comparison</text>
+
+  <!-- Exchange bar (smaller) -->
+  <rect x="100" y="120" width="180" height="300" fill="url(#exchangeGrad)" stroke="#3b82f6" stroke-width="3" rx="10"/>
+  <text x="190" y="220" fill="#fff" font-size="18" font-weight="bold" text-anchor="middle">Exchange</text>
+  <text x="190" y="245" fill="#fff" font-size="18" font-weight="bold" text-anchor="middle">Traded</text>
+  <text x="190" y="280" fill="#dbeafe" font-size="36" font-weight="bold" text-anchor="middle">30%</text>
+
+  <!-- Exchange details -->
+  <text x="190" y="340" fill="#93c5fd" font-size="11" text-anchor="middle">• CBOE</text>
+  <text x="190" y="358" fill="#93c5fd" font-size="11" text-anchor="middle">• CME</text>
+  <text x="190" y="376" fill="#93c5fd" font-size="11" text-anchor="middle">• Nasdaq</text>
+  <text x="190" y="394" fill="#60a5fa" font-size="11" font-weight="bold" text-anchor="middle">VISIBLE</text>
+
+  <!-- OTC bar (larger) -->
+  <rect x="350" y="120" width="420" height="300" fill="url(#otcGradBig)" stroke="#ef4444" stroke-width="3" rx="10"/>
+  <text x="560" y="220" fill="#f3f4f6" font-size="22" font-weight="bold" text-anchor="middle">OTC (Over-The-Counter)</text>
+  <text x="560" y="270" fill="#fca5a5" font-size="48" font-weight="bold" text-anchor="middle">70%</text>
+
+  <!-- OTC details -->
+  <rect x="380" y="310" width="360" height="90" fill="#1f2937" opacity="0.7" stroke="#fca5a5" stroke-width="2" rx="5"/>
+  <text x="560" y="335" fill="#d1d5db" font-size="11" text-anchor="middle">• Goldman Sachs, JPMorgan, Citadel (dealer desks)</text>
+  <text x="560" y="353" fill="#d1d5db" font-size="11" text-anchor="middle">• Hedge funds (custom strikes, exotic structures)</text>
+  <text x="560" y="371" fill="#d1d5db" font-size="11" text-anchor="middle">• Corporations (buyback hedges, collar strategies)</text>
+  <text x="560" y="389" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="middle">INVISIBLE (no public reporting)</text>
+
+  <!-- Bottom note -->
+  <rect x="100" y="440" width="600" height="50" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="400" y="463" fill="#f3f4f6" font-size="13" font-weight="bold" text-anchor="middle">⚠️ The Iceberg Problem</text>
+  <text x="400" y="482" fill="#e9d5ff" font-size="11" text-anchor="middle">SpotGamma shows the 30% tip. The 70% underwater is completely hidden. Gamma Walls are often mirages.</text>
+</svg>

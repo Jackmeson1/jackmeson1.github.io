@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="priceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="dataGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#f3f4f6" font-size="22" font-weight="bold" text-anchor="middle">Price Action vs Gamma Data Decision Tree</text>
+  <text x="400" y="58" fill="#9ca3af" font-size="13" text-anchor="middle">Which signal do you trust?</text>
+
+  <!-- Starting question box -->
+  <rect x="250" y="90" width="300" height="80" fill="#1f2937" stroke="#8b5cf6" stroke-width="3" rx="10"/>
+  <text x="400" y="120" fill="#f3f4f6" font-size="15" font-weight="bold" text-anchor="middle">Gamma Data shows massive</text>
+  <text x="400" y="140" fill="#f3f4f6" font-size="15" font-weight="bold" text-anchor="middle">Call Wall at $500</text>
+  <text x="400" y="160" fill="#9ca3af" font-size="12" text-anchor="middle">What do you do?</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="170" x2="400" y2="210" stroke="#fbbf24" stroke-width="3"/>
+  <polygon points="400,210 395,200 405,200" fill="#fbbf24"/>
+
+  <!-- Decision split -->
+  <text x="400" y="240" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle">Check Price Action First</text>
+
+  <!-- Left path: Price confirms wall -->
+  <g transform="translate(200, 270)">
+    <line x1="0" y1="0" x2="-50" y2="40" stroke="#10b981" stroke-width="3"/>
+    <polygon points="-50,40 -47,30 -43,37" fill="#10b981"/>
+
+    <rect x="-150" y="50" width="200" height="100" fill="url(#priceGrad)" stroke="#10b981" stroke-width="3" rx="8"/>
+    <text x="-50" y="80" fill="#fff" font-size="14" font-weight="bold" text-anchor="middle">Price RESPECTS wall</text>
+    <text x="-50" y="100" fill="#d1fae5" font-size="12" text-anchor="middle">• Multiple rejections</text>
+    <text x="-50" y="118" fill="#d1fae5" font-size="12" text-anchor="middle">• Volume spike on touch</text>
+    <text x="-50" y="136" fill="#d1fae5" font-size="12" text-anchor="middle">• Fails to break $500</text>
+
+    <line x1="-50" y1="150" x2="-50" y2="180" stroke="#10b981" stroke-width="3"/>
+    <polygon points="-50,180 -55,170 -45,170" fill="#10b981"/>
+
+    <rect x="-150" y="190" width="200" height="90" fill="#1f2937" stroke="#10b981" stroke-width="3" rx="8"/>
+    <text x="-50" y="215" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">✓ TRUST THE WALL</text>
+    <text x="-50" y="235" fill="#34d399" font-size="11" text-anchor="middle">• Gamma data confirmed</text>
+    <text x="-50" y="252" fill="#34d399" font-size="11" text-anchor="middle">• Short near $500</text>
+    <text x="-50" y="269" fill="#6ee7b7" font-size="11" text-anchor="middle">• Target lower strikes</text>
+  </g>
+
+  <!-- Right path: Price ignores wall -->
+  <g transform="translate(600, 270)">
+    <line x1="0" y1="0" x2="50" y2="40" stroke="#ef4444" stroke-width="3"/>
+    <polygon points="50,40 47,30 53,37" fill="#ef4444"/>
+
+    <rect x="-50" y="50" width="200" height="100" fill="#1f2937" stroke="#ef4444" stroke-width="3" rx="8"/>
+    <text x="50" y="80" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">Price IGNORES wall</text>
+    <text x="50" y="100" fill="#fca5a5" font-size="12" text-anchor="middle">• Blows through $500</text>
+    <text x="50" y="118" fill="#fca5a5" font-size="12" text-anchor="middle">• No resistance seen</text>
+    <text x="50" y="136" fill="#fca5a5" font-size="12" text-anchor="middle">• Momentum continues</text>
+
+    <line x1="50" y1="150" x2="50" y2="180" stroke="#ef4444" stroke-width="3"/>
+    <polygon points="50,180 45,170 55,170" fill="#ef4444"/>
+
+    <rect x="-50" y="190" width="200" height="90" fill="#1f2937" stroke="#ef4444" stroke-width="3" rx="8"/>
+    <text x="50" y="215" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">✗ WALL IS FAKE</text>
+    <text x="50" y="235" fill="#fca5a5" font-size="11" text-anchor="middle">• OTC offset likely</text>
+    <text x="50" y="252" fill="#fca5a5" font-size="11" text-anchor="middle">• Don't fight momentum</text>
+    <text x="50" y="269" fill="#fecaca" font-size="11" text-anchor="middle">• Follow price, not data</text>
+  </g>
+
+  <!-- Priority hierarchy box -->
+  <rect x="150" y="480" width="500" height="100" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="400" y="510" fill="#f3f4f6" font-size="16" font-weight="bold" text-anchor="middle">Priority Hierarchy</text>
+  <text x="400" y="535" fill="#e9d5ff" font-size="14" text-anchor="middle">1. Price Action (100% signal) → What IS happening</text>
+  <text x="400" y="556" fill="#d8b4fe" font-size="14" text-anchor="middle">2. Gamma Data (30% signal) → What MIGHT happen</text>
+  <text x="400" y="575" fill="#c4b5fd" font-size="12" text-anchor="middle" font-style="italic">Use Gamma for context, price for decisions</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="longGammaZone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="shortGammaZone" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0f1419"/>
+
+  <!-- Title -->
+  <text x="400" y="35" fill="#f3f4f6" font-size="22" font-weight="bold" text-anchor="middle">Dealer Hedging Perspective</text>
+  <text x="400" y="58" fill="#9ca3af" font-size="13" text-anchor="middle">How market makers view price movement vs their positions</text>
+
+  <!-- Price axis -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#4b5563" stroke-width="3"/>
+
+  <!-- Price markers -->
+  <g fill="#9ca3af" font-size="12">
+    <text x="200" y="330" text-anchor="middle">$400</text>
+    <text x="350" y="330" text-anchor="middle">$430</text>
+    <text x="450" y="330" text-anchor="middle">$450</text>
+    <text x="550" y="330" text-anchor="middle">$470</text>
+    <text x="650" y="330" text-anchor="middle">$500</text>
+  </g>
+
+  <!-- Gamma Flip Point -->
+  <line x1="350" y1="100" x2="350" y2="500" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="350" y="90" fill="#fbbf24" font-size="14" font-weight="bold" text-anchor="middle">Gamma Flip ($430)</text>
+
+  <!-- Current Price -->
+  <g transform="translate(450, 300)">
+    <circle r="12" fill="#8b5cf6" opacity="0.8"/>
+    <text y="5" fill="#fff" font-size="12" font-weight="bold" text-anchor="middle">P</text>
+    <line x1="0" y1="-20" x2="0" y2="-50" stroke="#8b5cf6" stroke-width="2"/>
+    <text y="-55" fill="#8b5cf6" font-size="13" font-weight="bold" text-anchor="middle">Current: $450</text>
+  </g>
+
+  <!-- Short Gamma Zone (below flip) -->
+  <rect x="100" y="350" width="250" height="180" fill="url(#shortGammaZone)" rx="10"/>
+  <text x="225" y="390" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">SHORT GAMMA Zone</text>
+  <text x="225" y="415" fill="#9ca3af" font-size="12" text-anchor="middle">(Below Flip Point)</text>
+
+  <rect x="120" y="430" width="210" height="90" fill="#1f2937" opacity="0.8" stroke="#ef4444" stroke-width="2" rx="5"/>
+  <text x="225" y="455" fill="#fca5a5" font-size="12" text-anchor="middle">Dealer Action:</text>
+  <text x="225" y="475" fill="#d1d5db" font-size="11" text-anchor="middle">↓ Price falls → SELL shares</text>
+  <text x="225" y="492" fill="#d1d5db" font-size="11" text-anchor="middle">↑ Price rises → BUY shares</text>
+  <text x="225" y="512" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">= AMPLIFY volatility</text>
+
+  <!-- Long Gamma Zone (above flip) -->
+  <rect x="450" y="100" width="250" height="180" fill="url(#longGammaZone)" rx="10"/>
+  <text x="575" y="140" fill="#10b981" font-size="16" font-weight="bold" text-anchor="middle">LONG GAMMA Zone</text>
+  <text x="575" y="165" fill="#9ca3af" font-size="12" text-anchor="middle">(Above Flip Point)</text>
+
+  <rect x="470" y="180" width="210" height="90" fill="#1f2937" opacity="0.8" stroke="#10b981" stroke-width="2" rx="5"/>
+  <text x="575" y="205" fill="#34d399" font-size="12" text-anchor="middle">Dealer Action:</text>
+  <text x="575" y="225" fill="#d1d5db" font-size="11" text-anchor="middle">↑ Price rises → SELL shares</text>
+  <text x="575" y="242" fill="#d1d5db" font-size="11" text-anchor="middle">↓ Price falls → BUY shares</text>
+  <text x="575" y="262" fill="#10b981" font-size="12" font-weight="bold" text-anchor="middle">= DAMPEN volatility</text>
+
+  <!-- Key insight box -->
+  <rect x="100" y="545" width="600" height="50" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="2" rx="8"/>
+  <text x="400" y="568" fill="#f3f4f6" font-size="13" font-weight="bold" text-anchor="middle">💡 The Flip Changes Everything</text>
+  <text x="400" y="587" fill="#e9d5ff" font-size="11" text-anchor="middle">Above flip: dealers stabilize prices (calm). Below flip: dealers destabilize prices (chaos). Same positions, opposite effects.</text>
+</svg>
