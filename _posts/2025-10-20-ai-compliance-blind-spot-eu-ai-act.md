@@ -6,17 +6,11 @@ last_modified_at: 2025-10-20 09:00:00 -0700
 categories: [compliance, ai-governance]
 tags: [eu-ai-act, ai-compliance, regulatory-compliance, ai-governance, legal-tech, enterprise-ai, risk-management, saas-compliance, gdpr, ccpa]
 author: Jiajun Liang
-description: "The regulatory deadline isn't coming—it's a dual countdown. Most companies are tracking 2026, but penalties activated in 2025. Discover why 80% of enterprises have undocumented AI models and what winners are doing right now."
+description: "80% of companies have undocumented AI models. EU AI Act fines (€35M/7% revenue) are active NOW. 9 months until Aug 2026 compliance deadline. Why most companies are tracking the wrong timeline."
 image: /assets/images/posts/ai-compliance-social-preview.svg
 lang: en
 featured: true
 toc: true
-seo_title: "EU AI Act Compliance Crisis 2025: The $50B Blind Spot in Enterprise AI"
-keywords: [eu ai act compliance, ai regulatory requirements, ai governance framework, enterprise ai compliance, ai act penalties, ai compliance software, saas ai liability, ai risk management, california sb 53, ai compliance deadline]
-# Social Media Optimization
-og_image: /assets/images/posts/ai-compliance-social-preview.svg
-twitter_card: summary_large_image
-social_description: "80% of companies have undocumented AI models. EU AI Act fines (€35M) are active NOW. 9 months until compliance deadline. Are you ready?"
 tldr:
   - "EU AI Act enforcement started February 2, 2025—prohibited practices already enforceable. Full penalty regime (€35M or 7% revenue) activated August 2, 2025."
   - "80% of enterprises have undocumented AI models. Your SaaS stack (Salesforce Einstein, HubSpot AI, Zendesk) is YOUR legal liability, not the vendor's."
