@@ -1,0 +1,39 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Timeline background -->
+    <line x1="50" y1="100" x2="550" y2="100" stroke="#ddd" stroke-width="3"/>
+
+    <!-- Past milestone (Feb 2025) -->
+    <circle cx="100" cy="100" r="12" fill="#ff6b35"/>
+    <text x="100" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#ff6b35">FEB 2025</text>
+    <text x="100" y="158" text-anchor="middle" font-size="10" fill="#666">Enforcement</text>
+    <text x="100" y="172" text-anchor="middle" font-size="10" fill="#666">Started</text>
+
+    <!-- Current milestone (Aug 2025) -->
+    <circle cx="250" cy="100" r="14" fill="#ff6b35" stroke="#fff" stroke-width="2"/>
+    <circle cx="250" cy="100" r="8" fill="#fff"/>
+    <text x="250" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#ff6b35">AUG 2025</text>
+    <text x="250" y="158" text-anchor="middle" font-size="10" fill="#666">€35M Fines</text>
+    <text x="250" y="172" text-anchor="middle" font-size="10" fill="#666">Active NOW</text>
+
+    <!-- Future milestone (Jan 2026) -->
+    <circle cx="350" cy="100" r="12" fill="#0073b1"/>
+    <text x="350" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#0073b1">JAN 2026</text>
+    <text x="350" y="158" text-anchor="middle" font-size="10" fill="#666">CA SB53</text>
+    <text x="350" y="172" text-anchor="middle" font-size="10" fill="#666">$1M/violation</text>
+
+    <!-- Critical deadline (Aug 2026) -->
+    <circle cx="450" cy="100" r="12" fill="#d32f2f"/>
+    <text x="450" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#d32f2f">AUG 2026</text>
+    <text x="450" y="158" text-anchor="middle" font-size="10" fill="#666">Annex III</text>
+    <text x="450" y="172" text-anchor="middle" font-size="10" fill="#666">High-Risk</text>
+
+    <!-- Final deadline (Aug 2027) -->
+    <circle cx="530" cy="100" r="12" fill="#d32f2f"/>
+    <text x="530" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#d32f2f">AUG 2027</text>
+    <text x="530" y="158" text-anchor="middle" font-size="10" fill="#666">Annex I</text>
+    <text x="530" y="172" text-anchor="middle" font-size="10" fill="#666">Regulated</text>
+
+    <!-- Warning label -->
+    <text x="300" y="30" text-anchor="middle" font-size="14" font-weight="600" fill="#d32f2f">⚠️ YOU ARE HERE</text>
+    <line x1="300" y1="35" x2="250" y2="85" stroke="#d32f2f" stroke-width="2" stroke-dasharray="4"/>
+</svg>
