@@ -1,152 +1,127 @@
-<svg viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">TFSA Deep ITM LEAPS Strategy Overview</title>
-  <desc id="desc">Diagram explaining how a TFSA account structure and Deep In-The-Money LEAPS combine to deliver a tax-free leveraged growth flywheel.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#eef2ff" />
-      <stop offset="100%" stop-color="#f7fafc" />
+    <linearGradient id="tfsaGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.9"/>
     </linearGradient>
-    <linearGradient id="pillarA" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1" />
-      <stop offset="100%" stop-color="#4338ca" />
+    <linearGradient id="leapsGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.9"/>
     </linearGradient>
-    <linearGradient id="pillarB" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#f97316" />
-      <stop offset="100%" stop-color="#ea580c" />
+    <linearGradient id="outcomeGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.05"/>
     </linearGradient>
-    <linearGradient id="pillarC" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#14b8a6" />
-      <stop offset="100%" stop-color="#0f766e" />
-    </linearGradient>
-    <linearGradient id="flywheel" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="100%" stop-color="#0ea5e9" />
-    </linearGradient>
-    <linearGradient id="metric" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#c084fc" />
-      <stop offset="100%" stop-color="#8b5cf6" />
-    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0"/>
+    </radialGradient>
   </defs>
 
-  <rect x="0" y="0" width="1200" height="760" fill="url(#bg)" rx="24" />
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#0f1419"/>
 
-  <text x="600" y="70" font-family="'Inter', 'Arial', sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#1e293b">
-    TFSA × Deep ITM LEAPS = Tax-Free Leverage Flywheel
+  <!-- Title -->
+  <text x="500" y="45" fill="#f3f4f6" font-size="32" font-weight="bold" text-anchor="middle">TFSA × Deep ITM LEAPS Strategy</text>
+  <text x="500" y="75" fill="#9ca3af" font-size="15" text-anchor="middle">Tax-free leveraged compounding through options</text>
+
+  <!-- Left: TFSA Component -->
+  <g transform="translate(120, 140)">
+    <!-- Glow effect -->
+    <ellipse cx="160" cy="140" rx="200" ry="160" fill="url(#glow)" opacity="0.3"/>
+
+    <!-- Main box -->
+    <rect x="0" y="0" width="320" height="280" rx="16" fill="url(#tfsaGlow)" stroke="#8b5cf6" stroke-width="3"/>
+
+    <!-- Icon -->
+    <g transform="translate(160, 60)">
+      <circle r="35" fill="white" opacity="0.2"/>
+      <text y="12" fill="#fff" font-size="38" font-weight="bold" text-anchor="middle">🇨🇦</text>
+    </g>
+
+    <text x="160" y="130" fill="#fff" font-size="26" font-weight="bold" text-anchor="middle">TFSA Account</text>
+
+    <!-- Key benefits -->
+    <g transform="translate(35, 160)">
+      <text x="0" y="0" fill="#e9d5ff" font-size="15" font-weight="bold">✓ Zero tax on gains</text>
+      <text x="0" y="30" fill="#e9d5ff" font-size="15" font-weight="bold">✓ Zero tax on rollovers</text>
+      <text x="0" y="60" fill="#e9d5ff" font-size="15" font-weight="bold">✓ Options permitted (L2+)</text>
+      <text x="0" y="90" fill="#e9d5ff" font-size="15" font-weight="bold">✓ Clean compounding</text>
+    </g>
+  </g>
+
+  <!-- Right: LEAPS Component -->
+  <g transform="translate(560, 140)">
+    <!-- Glow effect -->
+    <ellipse cx="160" cy="140" rx="200" ry="160" fill="url(#glow)" opacity="0.3"/>
+
+    <!-- Main box -->
+    <rect x="0" y="0" width="320" height="280" rx="16" fill="url(#leapsGlow)" stroke="#ec4899" stroke-width="3"/>
+
+    <!-- Icon -->
+    <g transform="translate(160, 60)">
+      <circle r="35" fill="white" opacity="0.2"/>
+      <text y="12" fill="#fff" font-size="38" font-weight="bold" text-anchor="middle">📈</text>
+    </g>
+
+    <text x="160" y="130" fill="#fff" font-size="26" font-weight="bold" text-anchor="middle">Deep ITM LEAPS</text>
+
+    <!-- Key benefits -->
+    <g transform="translate(35, 160)">
+      <text x="0" y="0" fill="#fecdd3" font-size="15" font-weight="bold">✓ Delta ≈ 0.90 (stock-like)</text>
+      <text x="0" y="30" fill="#fecdd3" font-size="15" font-weight="bold">✓ 24-36 month horizon</text>
+      <text x="0" y="60" fill="#fecdd3" font-size="15" font-weight="bold">✓ ~2× capital efficiency</text>
+      <text x="0" y="90" fill="#fecdd3" font-size="15" font-weight="bold">✓ Low theta decay</text>
+    </g>
+  </g>
+
+  <!-- Center: Synergy Arrow -->
+  <g transform="translate(500, 280)">
+    <!-- Double-headed arrow -->
+    <path d="M -140,0 L 140,0" stroke="#fbbf24" stroke-width="4" opacity="0.6"/>
+    <polygon points="-140,0 -125,-8 -125,8" fill="#fbbf24" opacity="0.6"/>
+    <polygon points="140,0 125,-8 125,8" fill="#fbbf24" opacity="0.6"/>
+
+    <rect x="-60" y="-25" width="120" height="50" rx="8" fill="#1f2937" stroke="#fbbf24" stroke-width="2"/>
+    <text y="5" fill="#fbbf24" font-size="16" font-weight="bold" text-anchor="middle">SYNERGY</text>
+  </g>
+
+  <!-- Bottom: Outcome -->
+  <g transform="translate(150, 480)">
+    <rect x="0" y="0" width="700" height="180" rx="16" fill="url(#outcomeGlow)" stroke="#10b981" stroke-width="3"/>
+
+    <text x="350" y="45" fill="#f3f4f6" font-size="24" font-weight="bold" text-anchor="middle">Expected Outcome</text>
+
+    <!-- Split into 3 columns -->
+    <g transform="translate(40, 75)">
+      <!-- Returns -->
+      <g>
+        <rect x="0" y="0" width="190" height="75" rx="8" fill="#064e3b" opacity="0.4"/>
+        <text x="95" y="28" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle">Returns</text>
+        <text x="95" y="50" fill="#6ee7b7" font-size="18" font-weight="bold" text-anchor="middle">12-18% CAGR</text>
+        <text x="95" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">vs QQQ 8-10%</text>
+      </g>
+
+      <!-- Risk -->
+      <g transform="translate(220, 0)">
+        <rect x="0" y="0" width="190" height="75" rx="8" fill="#7c2d12" opacity="0.4"/>
+        <text x="95" y="28" fill="#fca5a5" font-size="14" font-weight="bold" text-anchor="middle">Drawdown Risk</text>
+        <text x="95" y="50" fill="#fecaca" font-size="18" font-weight="bold" text-anchor="middle">-50% to -65%</text>
+        <text x="95" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">vs QQQ -35%</text>
+      </g>
+
+      <!-- Time -->
+      <g transform="translate(440, 0)">
+        <rect x="0" y="0" width="190" height="75" rx="8" fill="#1e3a8a" opacity="0.4"/>
+        <text x="95" y="28" fill="#93c5fd" font-size="14" font-weight="bold" text-anchor="middle">Time Commitment</text>
+        <text x="95" y="50" fill="#dbeafe" font-size="18" font-weight="bold" text-anchor="middle">&lt;10 hrs/year</text>
+        <text x="95" y="68" fill="#9ca3af" font-size="11" text-anchor="middle">Quarterly reviews</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="500" y="685" fill="#6b7280" font-size="13" text-anchor="middle" font-style="italic">
+    Leverage meets tax shelter: Compounding without friction
   </text>
-  <text x="600" y="110" font-family="'Inter', 'Arial', sans-serif" font-size="18" text-anchor="middle" fill="#475569">
-    Wrap long-dated, high-delta QQQ calls inside the TFSA shield to amplify returns without triggering taxable events.
-  </text>
-
-  <g transform="translate(80, 160)">
-    <rect x="0" y="0" width="300" height="320" rx="18" fill="url(#pillarA)" opacity="0.92" />
-    <text x="150" y="46" font-family="'Inter', sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#f8fafc">
-      TFSA Envelope
-    </text>
-    <line x1="36" y1="64" x2="264" y2="64" stroke="#c7d2fe" stroke-width="2" opacity="0.6" />
-    <g font-family="'Inter', sans-serif" font-size="16" fill="#eef2ff" transform="translate(40, 96)">
-      <g transform="translate(0,0)">
-        <circle cx="10" cy="4" r="7" fill="#c7d2fe" opacity="0.9" />
-        <text x="26" y="8">100% tax-free gains</text>
-      </g>
-      <g transform="translate(0,52)">
-        <circle cx="10" cy="4" r="7" fill="#c7d2fe" opacity="0.9" />
-        <text x="26" y="8">Rollovers create no capital events</text>
-      </g>
-      <g transform="translate(0,104)">
-        <circle cx="10" cy="4" r="7" fill="#c7d2fe" opacity="0.9" />
-        <text x="26" y="8">Options permission (Level 2+) required</text>
-      </g>
-      <g transform="translate(0,156)">
-        <circle cx="10" cy="4" r="7" fill="#c7d2fe" opacity="0.9" />
-        <text x="26" y="8">Contribution room is scarce → use efficiently</text>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(450, 160)">
-    <rect x="0" y="0" width="300" height="320" rx="18" fill="url(#pillarB)" opacity="0.92" />
-    <text x="150" y="46" font-family="'Inter', sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#fff7ed">
-      Deep ITM LEAPS
-    </text>
-    <line x1="36" y1="64" x2="264" y2="64" stroke="#fed7aa" stroke-width="2" opacity="0.55" />
-    <g font-family="'Inter', sans-serif" font-size="16" fill="#fff7ed" transform="translate(40, 96)">
-      <g transform="translate(0,0)">
-        <circle cx="10" cy="4" r="7" fill="#fed7aa" opacity="0.9" />
-        <text x="26" y="8">Delta 0.85–0.95 → behaves like stock</text>
-      </g>
-      <g transform="translate(0,52)">
-        <circle cx="10" cy="4" r="7" fill="#fed7aa" opacity="0.9" />
-        <text x="26" y="8">24–36 month expiry → low theta bleed</text>
-      </g>
-      <g transform="translate(0,104)">
-        <circle cx="10" cy="4" r="7" fill="#fed7aa" opacity="0.9" />
-        <text x="26" y="8">Strike 55–75% of spot → intrinsic heavy</text>
-      </g>
-      <g transform="translate(0,156)">
-        <circle cx="10" cy="4" r="7" fill="#fed7aa" opacity="0.9" />
-        <text x="26" y="8">Controls 100 shares with ~30% capital</text>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(820, 160)">
-    <rect x="0" y="0" width="300" height="320" rx="18" fill="url(#pillarC)" opacity="0.92" />
-    <text x="150" y="46" font-family="'Inter', sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#ecfdf5">
-      Resulting Flywheel
-    </text>
-    <line x1="36" y1="64" x2="264" y2="64" stroke="#99f6e4" stroke-width="2" opacity="0.55" />
-    <g font-family="'Inter', sans-serif" font-size="16" fill="#ecfdf5" transform="translate(40, 96)">
-      <g transform="translate(0,0)">
-        <circle cx="10" cy="4" r="7" fill="#99f6e4" opacity="0.9" />
-        <text x="26" y="8">Tax-free compounding on 2× delta</text>
-      </g>
-      <g transform="translate(0,52)">
-        <circle cx="10" cy="4" r="7" fill="#99f6e4" opacity="0.9" />
-        <text x="26" y="8">No daily reset drag like leveraged ETFs</text>
-      </g>
-      <g transform="translate(0,104)">
-        <circle cx="10" cy="4" r="7" fill="#99f6e4" opacity="0.9" />
-        <text x="26" y="8">Annual roll keeps delta inside 1.5–2.0× band</text>
-      </g>
-      <g transform="translate(0,156)">
-        <circle cx="10" cy="4" r="7" fill="#99f6e4" opacity="0.9" />
-        <text x="26" y="8">Spreads + commissions &lt;0.5% per year</text>
-      </g>
-    </g>
-  </g>
-
-  <g transform="translate(220, 508)">
-    <path d="M0 80 C120 -20, 560 -20, 680 80" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" />
-    <path d="M0 160 C120 260, 560 260, 680 160" fill="none" stroke="#0ea5e9" stroke-width="6" stroke-linecap="round" opacity="0.6" />
-    <g transform="translate(0, 70)">
-      <circle cx="0" cy="0" r="16" fill="#38bdf8" />
-      <text x="28" y="6" font-family="'Inter', sans-serif" font-size="18" font-weight="600" fill="#0f172a">Deposit / contribute annually</text>
-    </g>
-    <g transform="translate(680, 70)">
-      <circle cx="0" cy="0" r="16" fill="#0ea5e9" />
-      <text x="28" y="6" font-family="'Inter', sans-serif" font-size="18" font-weight="600" fill="#0f172a">Roll &amp; redeploy gains</text>
-    </g>
-    <g transform="translate(330, -16)">
-      <rect x="-120" y="0" width="240" height="60" rx="12" fill="url(#flywheel)" opacity="0.18" stroke="#0ea5e9" stroke-width="2" />
-      <text x="0" y="24" font-family="'Inter', sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#0f172a">
-        Repeat yearly → delta stays productive
-      </text>
-    </g>
-    <g transform="translate(330, 150)">
-      <rect x="-150" y="0" width="300" height="72" rx="14" fill="url(#flywheel)" opacity="0.2" stroke="#38bdf8" stroke-width="2" />
-      <text x="0" y="28" font-family="'Inter', sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#0f172a">
-        Cash buffer absorbs drawdowns → no forced selling
-      </text>
-    </g>
-  </g>
-
-  <g transform="translate(140, 640)">
-    <rect x="0" y="0" width="920" height="80" rx="18" fill="url(#metric)" opacity="0.18" stroke="#8b5cf6" stroke-width="2" />
-    <text x="460" y="34" font-family="'Inter', sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#312e81">
-      Modeled outcome: $100k TFSA → $316k–$471k over 10 years (base cases) versus $223k owning QQQ outright
-    </text>
-    <text x="460" y="60" font-family="'Inter', sans-serif" font-size="15" text-anchor="middle" fill="#4338ca">
-      Inputs: QQQ μ = 10%, σ = 20%, annual roll at T &lt; 12 months, maintain 1.5–2.0× delta with cash buffer
-    </text>
-  </g>
 </svg>
