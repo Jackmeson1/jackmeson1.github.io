@@ -1,250 +1,107 @@
-<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
   <defs>
-    <linearGradient id="step1-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    <linearGradient id="selectGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="step2-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    <linearGradient id="maintainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="step3-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    <linearGradient id="rollGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1"/>
     </linearGradient>
+    <radialGradient id="centerGlow">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0"/>
+    </radialGradient>
   </defs>
 
+  <!-- Background -->
+  <rect width="900" height="700" fill="#0f1419"/>
+
   <!-- Title -->
-  <text x="600" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1a202c">
-    LEAPS 2×Δ Strategy Framework
-  </text>
-  <text x="600" y="85" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4a5568">
-    Three-Step Operational Process: Select → Maintain → Roll
-  </text>
+  <text x="450" y="40" fill="#f3f4f6" font-size="30" font-weight="bold" text-anchor="middle">LEAPS 2× Strategy Framework</text>
+  <text x="450" y="70" fill="#9ca3af" font-size="14" text-anchor="middle">Annual cycle: Select contracts → Maintain Delta → Roll forward</text>
 
-  <!-- Step 1: Contract Selection -->
-  <g transform="translate(100, 140)">
-    <rect x="0" y="0" width="320" height="280" rx="15" fill="url(#step1-grad)" opacity="0.9"/>
+  <!-- Center circle (annual cycle indicator) -->
+  <g transform="translate(450, 300)">
+    <!-- Glow -->
+    <circle r="180" fill="url(#centerGlow)"/>
 
-    <text x="160" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
-      Step 1: Select
-    </text>
-    <line x1="30" y1="50" x2="290" y2="50" stroke="white" stroke-width="2" opacity="0.5"/>
+    <!-- Circular arrows showing cycle -->
+    <path d="M 0,-120 A 120,120 0 1,1 -1,-120" fill="none" stroke="#fbbf24" stroke-width="4" opacity="0.5" stroke-dasharray="10,5"/>
 
-    <g transform="translate(30, 75)">
-      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
-        Contract Parameters:
-      </text>
-
-      <g transform="translate(0, 25)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Underlying: <tspan font-weight="bold">QQQ</tspan>
-        </text>
-      </g>
-
-      <g transform="translate(0, 50)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Expiration: <tspan font-weight="bold">24-36 months</tspan>
-        </text>
-      </g>
-
-      <g transform="translate(0, 75)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Strike: <tspan font-weight="bold">55-75% of price</tspan>
-        </text>
-      </g>
-
-      <g transform="translate(0, 100)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Delta Target: <tspan font-weight="bold">0.85-0.95</tspan>
-        </text>
-      </g>
-
-      <g transform="translate(0, 125)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Open Interest: <tspan font-weight="bold">&gt;1,000</tspan>
-        </text>
-      </g>
-
-      <g transform="translate(0, 150)">
-        <circle cx="8" cy="0" r="5" fill="white" opacity="0.9"/>
-        <text x="20" y="5" font-family="Arial, sans-serif" font-size="14" fill="white">
-          Spread: <tspan font-weight="bold">&lt;0.5% mid</tspan>
-        </text>
-      </g>
-    </g>
+    <!-- Center text -->
+    <circle r="60" fill="#1f2937" stroke="#fbbf24" stroke-width="3"/>
+    <text y="-10" fill="#fbbf24" font-size="18" font-weight="bold" text-anchor="middle">Annual</text>
+    <text y="12" fill="#fbbf24" font-size="18" font-weight="bold" text-anchor="middle">Cycle</text>
+    <text y="35" fill="#9ca3af" font-size="13" text-anchor="middle">&lt;10 hrs/year</text>
   </g>
 
-  <!-- Step 2: Maintain Delta Band -->
-  <g transform="translate(460, 140)">
-    <rect x="0" y="0" width="320" height="280" rx="15" fill="url(#step2-grad)" opacity="0.9"/>
+  <!-- Step 1: SELECT (Top) -->
+  <g transform="translate(450, 110)">
+    <ellipse cx="0" cy="0" rx="180" ry="70" fill="url(#selectGrad)" stroke="#8b5cf6" stroke-width="3" rx="15"/>
 
-    <text x="160" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
-      Step 2: Maintain
-    </text>
-    <line x1="30" y1="50" x2="290" y2="50" stroke="white" stroke-width="2" opacity="0.5"/>
-
-    <g transform="translate(30, 75)">
-      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
-        Delta Band Management:
-      </text>
-
-      <g transform="translate(0, 30)">
-        <rect x="0" y="0" width="260" height="35" rx="5" fill="white" opacity="0.2"/>
-        <text x="130" y="23" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
-          Target: 1.5× - 2.0× Delta
-        </text>
-      </g>
-
-      <g transform="translate(0, 55)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
-          Quarterly Review:
-        </text>
-
-        <text x="0" y="25" font-family="Arial, sans-serif" font-size="13" fill="white">
-          • Calculate net Delta
-        </text>
-        <text x="0" y="45" font-family="Arial, sans-serif" font-size="13" fill="white">
-          • Check time remaining
-        </text>
-        <text x="0" y="65" font-family="Arial, sans-serif" font-size="13" fill="white">
-          • Monitor IV environment
-        </text>
-      </g>
-
-      <g transform="translate(0, 135)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
-          Rebalance Triggers:
-        </text>
-
-        <text x="0" y="22" font-family="Arial, sans-serif" font-size="12" fill="white">
-          If Δ &gt; 2.1× → Reduce position
-        </text>
-        <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="white">
-          If Δ &lt; 1.4× → Add position
-        </text>
-      </g>
-    </g>
+    <text y="-35" fill="#fff" font-size="22" font-weight="bold" text-anchor="middle">① SELECT</text>
+    <text y="-10" fill="#e9d5ff" font-size="13" text-anchor="middle">QQQ • 24-36mo • Δ 0.85-0.95</text>
+    <text y="10" fill="#e9d5ff" font-size="13" text-anchor="middle">Strike 55-75% of price</text>
+    <text y="35" fill="#c4b5fd" font-size="11" text-anchor="middle">Initial setup: 3-5 hours</text>
   </g>
 
-  <!-- Step 3: Roll on Time Trigger -->
-  <g transform="translate(820, 140)">
-    <rect x="0" y="0" width="320" height="280" rx="15" fill="url(#step3-grad)" opacity="0.9"/>
-
-    <text x="160" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">
-      Step 3: Roll
-    </text>
-    <line x1="30" y1="50" x2="290" y2="50" stroke="white" stroke-width="2" opacity="0.5"/>
-
-    <g transform="translate(30, 75)">
-      <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
-        Annual Rolling Process:
-      </text>
-
-      <g transform="translate(0, 30)">
-        <rect x="0" y="0" width="260" height="35" rx="5" fill="white" opacity="0.2"/>
-        <text x="130" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="white">
-          Trigger: T &lt; 12 months
-        </text>
-      </g>
-
-      <g transform="translate(0, 80)">
-        <text x="0" y="0" font-family="Arial, sans-serif" font-size="13" fill="white">
-          1. Identify new 24-36mo contract
-        </text>
-        <text x="0" y="22" font-family="Arial, sans-serif" font-size="13" fill="white">
-          2. Check IV (prefer &lt;40%)
-        </text>
-        <text x="0" y="44" font-family="Arial, sans-serif" font-size="13" fill="white">
-          3. Sell old / Buy new (spread)
-        </text>
-        <text x="0" y="66" font-family="Arial, sans-serif" font-size="13" fill="white">
-          4. Recalculate position Delta
-        </text>
-        <text x="0" y="88" font-family="Arial, sans-serif" font-size="13" fill="white">
-          5. Adjust quantity if needed
-        </text>
-      </g>
-
-      <g transform="translate(0, 185)">
-        <text x="130" y="0" font-family="Arial, sans-serif" font-size="13" font-style="italic" text-anchor="middle" fill="white">
-          Tax-free in TFSA ✓
-        </text>
-      </g>
-    </g>
+  <!-- Arrow 1 to 2 -->
+  <g transform="translate(600, 180)">
+    <path d="M 0,0 Q 20,40 10,80" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)"/>
   </g>
 
-  <!-- Bottom Summary -->
-  <g transform="translate(100, 460)">
-    <rect x="0" y="0" width="1000" height="280" rx="15" fill="#edf2f7" stroke="#cbd5e0" stroke-width="2"/>
+  <!-- Step 2: MAINTAIN (Right) -->
+  <g transform="translate(680, 300)">
+    <ellipse cx="0" cy="0" rx="180" ry="70" fill="url(#maintainGrad)" stroke="#ec4899" stroke-width="3"/>
 
-    <text x="500" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a202c">
-      Expected Time Commitment: &lt;10 Hours/Year
-    </text>
+    <text y="-35" fill="#fff" font-size="22" font-weight="bold" text-anchor="middle">② MAINTAIN</text>
+    <text y="-10" fill="#fecdd3" font-size="13" text-anchor="middle">Quarterly Delta check</text>
+    <text y="10" fill="#fecdd3" font-size="13" text-anchor="middle">Target: 1.5× - 2.0× Δ</text>
+    <text y="35" fill="#fda4af" font-size="11" text-anchor="middle">15 min/quarter (1 hr/year)</text>
+  </g>
 
-    <!-- Time Breakdown -->
-    <g transform="translate(80, 80)">
-      <!-- Initial Setup -->
-      <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="270" height="70" rx="8" fill="#667eea" opacity="0.15" stroke="#667eea" stroke-width="2"/>
-        <text x="135" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#2d3748">
-          Initial Setup (Once)
-        </text>
-        <text x="135" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
-          3-5 hours research + execution
-        </text>
-      </g>
+  <!-- Arrow 2 to 3 -->
+  <g transform="translate(600, 420)">
+    <path d="M 10,0 Q -20,40 0,80" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
 
-      <!-- Quarterly Review -->
-      <g transform="translate(310, 0)">
-        <rect x="0" y="0" width="270" height="70" rx="8" fill="#f093fb" opacity="0.15" stroke="#f093fb" stroke-width="2"/>
-        <text x="135" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#2d3748">
-          Quarterly Review (4×/year)
-        </text>
-        <text x="135" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
-          15 minutes each = 1 hour total
-        </text>
-      </g>
+  <!-- Step 3: ROLL (Bottom) -->
+  <g transform="translate(450, 530)">
+    <ellipse cx="0" cy="0" rx="180" ry="70" fill="url(#rollGrad)" stroke="#06b6d4" stroke-width="3"/>
 
-      <!-- Annual Roll -->
-      <g transform="translate(620, 0)">
-        <rect x="0" y="0" width="270" height="70" rx="8" fill="#4facfe" opacity="0.15" stroke="#4facfe" stroke-width="2"/>
-        <text x="135" y="25" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#2d3748">
-          Annual Roll (1×/year)
-        </text>
-        <text x="135" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#4a5568">
-          1-2 hours execution + verification
-        </text>
-      </g>
-    </g>
+    <text y="-35" fill="#fff" font-size="22" font-weight="bold" text-anchor="middle">③ ROLL</text>
+    <text y="-10" fill="#cffafe" font-size="13" text-anchor="middle">When T &lt; 12 months</text>
+    <text y="10" fill="#cffafe" font-size="13" text-anchor="middle">Sell old → Buy new 24-36mo</text>
+    <text y="35" fill="#a5f3fc" font-size="11" text-anchor="middle">1-2 hours (tax-free in TFSA)</text>
+  </g>
 
-    <!-- Key Principles -->
-    <g transform="translate(50, 180)">
-      <text x="450" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2d3748">
-        Core Principles
-      </text>
+  <!-- Arrow 3 to 1 -->
+  <g transform="translate(300, 420)">
+    <path d="M 10,80 Q -20,40 0,0" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)"/>
+  </g>
 
-      <g transform="translate(0, 20)">
-        <circle cx="10" cy="5" r="6" fill="#48bb78"/>
-        <text x="25" y="10" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-          <tspan font-weight="bold">Minimize Friction:</tspan> Low-frequency adjustments reduce transaction costs
-        </text>
+  <!-- Arrow 1 continuation (left side) -->
+  <g transform="translate(300, 180)">
+    <path d="M 0,0 Q -20,40 -10,80" fill="none" stroke="#f59e0b" stroke-width="3"/>
+  </g>
 
-        <circle cx="10" cy="35" r="6" fill="#4299e1"/>
-        <text x="25" y="40" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-          <tspan font-weight="bold">Stable Leverage:</tspan> Maintain 1.5-2.0× Delta band for consistent exposure
-        </text>
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0,0 0,6 10,3" fill="#f59e0b"/>
+    </marker>
+  </defs>
 
-        <circle cx="10" cy="65" r="6" fill="#9f7aea"/>
-        <text x="25" y="70" font-family="Arial, sans-serif" font-size="15" fill="#2d3748">
-          <tspan font-weight="bold">Time Efficiency:</tspan> Most quarters require NO action — patience wins
-        </text>
-      </g>
-    </g>
+  <!-- Bottom insight box -->
+  <g transform="translate(50, 630)">
+    <rect x="0" y="0" width="800" height="55" rx="10" fill="#1e3a8a" opacity="0.3" stroke="#60a5fa" stroke-width="2"/>
+
+    <text x="400" y="25" fill="#93c5fd" font-size="15" font-weight="bold" text-anchor="middle">💡 Key Insight</text>
+    <text x="400" y="45" fill="#dbeafe" font-size="13" text-anchor="middle">Most quarters require ZERO action. Patience beats activity. The system runs itself.</text>
   </g>
 </svg>
