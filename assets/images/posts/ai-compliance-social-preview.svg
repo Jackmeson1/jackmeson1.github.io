@@ -1,0 +1,83 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1200" height="630" fill="#0f172a"/>
+
+    <!-- Gradient overlay -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+    <!-- Title Section -->
+    <text x="600" y="100" text-anchor="middle" font-size="52" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">
+        The $50B Blind Spot
+    </text>
+    <text x="600" y="155" text-anchor="middle" font-size="28" fill="#94a3b8" font-family="Arial, sans-serif">
+        Why 80% of Companies Don't Know They're Breaking AI Laws
+    </text>
+
+    <!-- Timeline Container -->
+    <rect x="100" y="220" width="1000" height="300" fill="#1e293b" rx="12" stroke="#334155" stroke-width="2"/>
+
+    <!-- Timeline Title -->
+    <text x="600" y="260" text-anchor="middle" font-size="20" font-weight="600" fill="#e2e8f0">
+        EU AI Act Enforcement Timeline
+    </text>
+
+    <!-- Timeline line -->
+    <line x1="150" y1="350" x2="1050" y2="350" stroke="#475569" stroke-width="4"/>
+
+    <!-- Past milestone (Feb 2025) -->
+    <circle cx="250" cy="350" r="16" fill="#ff6b35"/>
+    <text x="250" y="400" text-anchor="middle" font-size="16" font-weight="600" fill="#ff6b35">FEB 2025</text>
+    <text x="250" y="425" text-anchor="middle" font-size="13" fill="#cbd5e1">Enforcement</text>
+    <text x="250" y="445" text-anchor="middle" font-size="13" fill="#cbd5e1">Started</text>
+
+    <!-- Current milestone (Aug 2025) - YOU ARE HERE -->
+    <circle cx="450" cy="350" r="18" fill="#ff6b35" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="450" cy="350" r="10" fill="#ffffff"/>
+    <text x="450" y="300" text-anchor="middle" font-size="18" font-weight="700" fill="#fbbf24">⚠️ YOU ARE HERE</text>
+    <line x1="450" y1="305" x2="450" y2="325" stroke="#fbbf24" stroke-width="3" stroke-dasharray="6"/>
+    <text x="450" y="400" text-anchor="middle" font-size="16" font-weight="600" fill="#ff6b35">AUG 2025</text>
+    <text x="450" y="425" text-anchor="middle" font-size="13" fill="#cbd5e1">€35M Fines</text>
+    <text x="450" y="445" text-anchor="middle" font-size="13" fill="#cbd5e1">Active NOW</text>
+
+    <!-- Future milestone (Jan 2026) -->
+    <circle cx="650" cy="350" r="16" fill="#3b82f6"/>
+    <text x="650" y="400" text-anchor="middle" font-size="16" font-weight="600" fill="#3b82f6">JAN 2026</text>
+    <text x="650" y="425" text-anchor="middle" font-size="13" fill="#cbd5e1">CA SB53</text>
+    <text x="650" y="445" text-anchor="middle" font-size="13" fill="#cbd5e1">$1M/violation</text>
+
+    <!-- Critical deadline (Aug 2026) -->
+    <circle cx="850" cy="350" r="16" fill="#dc2626"/>
+    <text x="850" y="400" text-anchor="middle" font-size="16" font-weight="600" fill="#dc2626">AUG 2026</text>
+    <text x="850" y="425" text-anchor="middle" font-size="13" fill="#cbd5e1">Annex III</text>
+    <text x="850" y="445" text-anchor="middle" font-size="13" fill="#cbd5e1">High-Risk AI</text>
+
+    <!-- Final deadline (Aug 2027) -->
+    <circle cx="1000" cy="350" r="16" fill="#dc2626"/>
+    <text x="1000" y="400" text-anchor="middle" font-size="16" font-weight="600" fill="#dc2626">AUG 2027</text>
+    <text x="1000" y="425" text-anchor="middle" font-size="13" fill="#cbd5e1">Annex I</text>
+    <text x="1000" y="445" text-anchor="middle" font-size="13" fill="#cbd5e1">All Regulated</text>
+
+    <!-- Key stat boxes -->
+    <rect x="150" y="480" width="280" height="70" fill="#ef4444" fill-opacity="0.15" rx="8" stroke="#ef4444" stroke-width="2"/>
+    <text x="290" y="510" text-anchor="middle" font-size="32" font-weight="700" fill="#ef4444">80%</text>
+    <text x="290" y="535" text-anchor="middle" font-size="13" fill="#cbd5e1">Undocumented AI</text>
+
+    <rect x="460" y="480" width="280" height="70" fill="#f59e0b" fill-opacity="0.15" rx="8" stroke="#f59e0b" stroke-width="2"/>
+    <text x="600" y="510" text-anchor="middle" font-size="32" font-weight="700" fill="#f59e0b">€35M</text>
+    <text x="600" y="535" text-anchor="middle" font-size="13" fill="#cbd5e1">Max Penalty (7% Revenue)</text>
+
+    <rect x="770" y="480" width="280" height="70" fill="#3b82f6" fill-opacity="0.15" rx="8" stroke="#3b82f6" stroke-width="2"/>
+    <text x="910" y="510" text-anchor="middle" font-size="32" font-weight="700" fill="#3b82f6">9 Mo</text>
+    <text x="910" y="535" text-anchor="middle" font-size="13" fill="#cbd5e1">Until Compliance Deadline</text>
+
+    <!-- Footer -->
+    <text x="600" y="600" text-anchor="middle" font-size="16" fill="#64748b">
+        jackmeson1.github.io/compliance/ai-act
+    </text>
+</svg>
