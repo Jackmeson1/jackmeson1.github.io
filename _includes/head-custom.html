@@ -1,6 +1,7 @@
 <!-- Custom CSS and Visual Enhancements -->
 <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/visual-enhancements.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/home-enhanced.css' | relative_url }}">
 
 <!-- Additional Web Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +21,10 @@
 
 <!-- Add scrolled class to header on scroll -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.site-header');
     if (header) {
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         if (window.scrollY > 10) {
           header.classList.add('scrolled');
         } else {
