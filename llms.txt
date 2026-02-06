@@ -4,7 +4,7 @@ permalink: /llms.txt
 ---
 Priority-Pages:
   - https://jackmeson1.github.io/
-  - https://jackmeson1.github.io/pages/about/
+  - https://jackmeson1.github.io/about/
   - https://jackmeson1.github.io/pages/portfolio/
   - https://jackmeson1.github.io/pages/blog/
   - https://jackmeson1.github.io/pages/travel/
