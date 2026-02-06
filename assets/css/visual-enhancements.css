@@ -178,7 +178,7 @@
 .post-card:hover,
 .surface-card:hover,
 .latest-item:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-6px) scale(1.005);
   box-shadow: var(--shadow-2xl);
   border-color: rgba(99, 102, 241, 0.2);
 }
@@ -379,6 +379,12 @@
 
 .animated-link:hover::after {
   width: 100%;
+}
+
+.animated-link:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.5);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* ========================================
