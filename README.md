@@ -140,6 +140,10 @@ jackmeson1.github.io/
 
 ---
 
+## 📝 Documentation Notes
+
+- [README update summary (Oct 13, 2025)](docs/README-UPDATE-SUMMARY.md)
+
 ## ✍️ Writing New Content
 
 ### Create a Blog Post
