@@ -5,8 +5,8 @@ permalink: /robots.txt
 User-agent: *
 Allow: /
 Allow: /index.html
-Allow: /pages/about.html
-Allow: /pages/about/
+Allow: /about.html
+Allow: /about/
 Allow: /pages/blog.html
 Allow: /pages/blog/
 Allow: /pages/travel.html
